@@ -907,6 +907,21 @@ body {
 		width: 9px;
 		height: 9px;
 	}
+
+	// hover effect
+	ul li:hover a span {
+		margin: -2px 0 0 -2px;
+		width: 9px;
+		height: 9px;
+		transform: scale(1.5)
+	}
+	ul li:hover a.active span {
+		margin: -2px 0 0 -2px;
+		width: 9px;
+		height: 9px;
+		transform: scale(1.5)
+
+	}
 }
 
 .prevFullSlide,
@@ -917,6 +932,7 @@ body {
 	outline: none;
 	background-color: transparent;
 	cursor: pointer;
+	padding: 0;
 	width: 39px;
 	height: 22px;
 	position: fixed;
@@ -947,4 +963,68 @@ body {
 	&:active {
 		transform: scale(1.2) rotate(180deg);
 	}
+}
+
+
+.burger {
+	display: none;
+	z-index: 99;
+    position: fixed;
+    top: 20px;
+    right: calc(0%);
+    width: 87px;
+    height: 70px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 65px 0 0 65px;
+    overflow: hidden;
+	&:hover {
+		cursor: pointer;
+	}
+
+	svg {
+		overflow: hidden;
+    height: 70px;
+	}
+}
+.burger-svg__base {
+	fill: #fff;
+}
+
+.burger-svg__bars {
+	fill: #000;
+}
+
+.isNavOpen {
+	overflow: hidden;
+}
+
+
+
+
+//  -----------------MEDIA ---------------------------
+
+@media screen and (max-width: 1199px) {
+
+	#fp-nav {
+	
+		&.right {
+			right: 30px;
+		}
+	}
+
+	.nextFullSlide, .prevFullSlide {
+
+		right: 22px;
+	}
+
+	// burger
+
+	.burger {
+
+		display: block;
+	}
+
 }
