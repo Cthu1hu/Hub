@@ -7,9 +7,17 @@ $(function(){
   var innovationGallerySlider = $('.conference__slider').owlCarousel({
       items : 2,
       nav : false,
-      loop: true
+      loop: false,
+      responsive : {
+        0 : {
+          items : 1
+        },
+        1199 : {
+          items : 2
+        }
+      }
   });
- 
+
 
  // little slider
   var innovationGallerySlider = $('.innovationGallery__slider').owlCarousel({
@@ -46,6 +54,7 @@ $(function(){
     navigationPosition: 'right',
     showActiveTooltip: true,
     slidesNavigation: true,
+    scrollOverflow: true,
       // use afterLoad instead afterSlideLoad
     afterLoad: function(anchorLink, index){
         if(index == 2 || index == 4 || index == 5){
@@ -54,7 +63,7 @@ $(function(){
           $('body').removeClass('dark-nav');
         }
       },
- 
+
   });
 
   $('.prevFullSlide').on('click', function () {
@@ -93,14 +102,14 @@ $(function(){
   // Enable map zooming with mouse scroll when the user clicks the map
   $('.footer__map').on('click', onMapClickHandler);
 
-  
+
 });
 
 
 // burger menu
 
   $(function(){
-  
+
   var $burger = $('.burger');
   var $bars = $('.burger-svg__bars');
   var $bar = $('.burger-svg__bar');
@@ -110,9 +119,9 @@ $(function(){
   var isChangingState = false;
   var isOpen = false;
   var burgerTL = new TimelineMax();
-  
+
   function burgerOver() {
-      
+
     if(!isChangingState) {
       burgerTL.clear();
       if(!isOpen) {
@@ -126,7 +135,7 @@ $(function(){
       }
     }
   }
-  
+
   function burgerOut() {
     if(!isChangingState) {
       burgerTL.clear();
@@ -141,7 +150,7 @@ $(function(){
       }
     }
   }
-  
+
   function showCloseBurger() {
     burgerTL.clear();
     burgerTL.to($bar1, 0.3, { y: 6, ease: Power4.easeIn })
@@ -151,7 +160,7 @@ $(function(){
         .set($bar2, { opacity: 0, immediateRender: false }, "-=0.5")
         .to($bar3, 0.5, { rotation: -45, ease: Elastic.easeOut, transformOrigin: "50% 50%", onComplete: function() { isChangingState = false; isOpen = true; } }, "-=0.5");
   }
-  
+
   function showOpenBurger() {
     burgerTL.clear();
     burgerTL.to($bar1, 0.3, { scaleX: 0, ease: Back.easeIn })
@@ -165,22 +174,28 @@ $(function(){
   }
 
   $burger.on('click', function(e) {
-    
+
     if(!isChangingState) {
       isChangingState = true;
-    
+
       if(!isOpen) {
         showCloseBurger();
+        $('.navigation').fadeIn('fast', function() {
+          $('.navigation').addClass('active');
+        });
       }
       else {
         showOpenBurger();
-      } 
+        $('.navigation').fadeOut('fast', function() {
+          $('.navigation').removeClass('active');
+        });
+      }
     }
-    
+
   });
-  
+
   $burger.hover( burgerOver, burgerOut );
-  
+
 });
 
 console.clear();
