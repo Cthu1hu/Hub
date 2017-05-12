@@ -198,4 +198,25 @@ $(function(){
 
 });
 
-console.clear();
+
+
+$(function () {
+   
+  $('.coworking__item__title').on('click', function () {
+
+    var dataAttr = $(this).attr('data-cow-id');
+
+     
+    if (!($(this).parent().hasClass('active'))) {
+      $('.coworking__item.active').removeClass('active');
+      $(this).parent().addClass('active');
+      $('.coworking__info__item.active').fadeOut('fast', function () {
+        $('.coworking__info__item.active').removeClass('active');
+        $('#' + dataAttr).addClass('active');
+        $('#' + dataAttr).fadeIn('fast');
+      })
+    }
+
+  })
+
+});

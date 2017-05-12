@@ -425,6 +425,7 @@ body {
 	font-family: @GB;
 	padding-left: 35px;
 	padding-right: 35px;
+	padding-top: 3px;
 	border-radius: 15px;
 
 }
@@ -458,20 +459,34 @@ body {
 .coworking {
 
 	margin-left: 65px;
+	.clearfix;
+
+	&__title__list,
+	&__info__list {
+
+		display: inline-block;
+		vertical-align: middle;
+		
+	}
+
+	&__title__list {
+		width: 60%;
+	}
+	&__info__list {
+		width: 39%;
+	}
+
 
 	&__item{
 
 		&.active {
-
 			display: block;
+
 			.coworking__item__title {
 				font-size: 91px;
 				color: @Dgreen;
 			}
-			.coworking__info {
 
-				display: block;
-			}
 
 		}
 	}
@@ -488,6 +503,12 @@ body {
 		line-height: 1;
 		cursor: pointer;
 		display: inline-block;
+		transition: 0.3s ease-out;
+	}
+
+	&__info__item {
+
+		display: none;
 	}
 
 	&__info {
@@ -496,26 +517,11 @@ body {
 		vertical-align: middle;
 		line-height: 1;
 		text-align: left;
-    margin-right: 200px;
-    display: none;
-    position: relative;
-    float: right;
-
-    &:after {
-
-			content:'';
-			display: block;
-			background-color: @Lgreen;
-			height: 1px;
-			width: 167px;
-
-			position: absolute;
-			top: 10px;
-    	left: -185px;
-		}
+   // margin-right: 200px;
 
 	}
 
+	
 
 	&__text {
 
@@ -945,7 +951,6 @@ body {
 	position: fixed;
   z-index: 98;
   right: 52px;
-
   transition: ease-out 0.3s;
   background: url('../img/icons/white-nav-arrow.png') no-repeat;
 
@@ -1110,6 +1115,11 @@ body {
 		}
 	}
 
+	.coworking__item.active .coworking__item__title {
+
+		font-size: 70px;
+	}
+
 	.coworking__item__title {
 		font-size: 45px;
 	}
@@ -1142,9 +1152,14 @@ body {
 		font-size: 55px;
 	}
 
+	.coworking__title__list {
+		width: 50%;
+	}
+
 	.coworking__item__title {
     font-size: 31px;
 	}
+
 
 	.footer__container {
 		width: 600px;
@@ -1152,6 +1167,31 @@ body {
 }
 
 @media (max-width:767px) {
+
+	// header on mobile
+	.logo__container {
+		width: 130px;
+    height: 59px;
+	}
+
+	.logo__img {
+		padding-left: 19px;
+    padding-top: 12px;
+    width: 85px;
+	}
+
+	.burger {
+
+		height: 59px;
+
+		svg {
+			height: 67px;
+	    margin-left: 20px;
+	    margin-top: -3px;
+		}
+	}
+
+
 	.first-info {
     margin-left: 25px;
 	}
@@ -1159,6 +1199,18 @@ body {
 	.first-info__title {
 		font-size: 100px;
 		line-height: 80px;
+	}
+
+	.section-2 {
+
+		margin-bottom: 30px;
+	}
+
+	.conference {
+
+		position: static;
+		transform: none;
+		 padding-top: 50px;
 	}
 
 	.conference__item {
@@ -1170,6 +1222,52 @@ body {
 		height: 290px;
 		margin: 0 auto 15px auto;
 	}
+
+	.look__all__container {
+
+		position: static;
+		margin-bottom: 30px;
+	}
+
+
+	.coworking {
+		width: 100%;
+		margin: 0;
+		padding: 0 2.5%;
+		padding-top: 60px;
+
+		&__title__list,
+		&__info__list {
+
+			width: 100%;
+    	text-align: center;
+		}
+
+		.title__top {
+
+			text-align: center;
+			margin: 0;
+			padding-right: 29px;
+		}
+
+		&__title__list{
+
+			margin-bottom: 50px;
+		}
+
+		&__info {
+
+			text-align: center;
+			margin-right: 0;
+		}
+	}
+.coworking__item.active .coworking__item__title {
+
+	font-size: 45px;
+}
+
+
+
 
 	.innovationGallery__info {
 		margin: 50px 5%;
@@ -1236,6 +1334,13 @@ body {
 	}
 }
 
+@media (max-width:767px) and (orientation: landscape){
+
+	.coworking {
+		padding-bottom: 60px;
+	}
+}
+
 @media (max-width:480px) {
 	.conference__item__wrap {
 		width: 320px;
@@ -1248,5 +1353,21 @@ body {
 	.innovationGallery__text {
     font-size: 15px;
     padding-right: 25px;
+	}
+}
+
+@media (max-width:350px) {
+
+	
+	.coworking {
+
+		
+		&__item {
+
+			padding-right: 29px;
+		}
+		&__text {
+			padding-right: 45px;
+		}
 	}
 }
