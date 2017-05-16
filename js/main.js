@@ -25,10 +25,9 @@ $(function(){
 			nav : true,
 			navContainer: $('.innovationGallery__slider__controls'),
 			navText: ['', ''],
-			loop: true
-      // animateIn: "fadeInRight",
-      // animateOut: "fadeOutLeft"
-
+			loop: true,
+      animateIn: "fadeInRight",
+      animateOut: "fadeOutLeft"
   });
 
 
@@ -204,12 +203,12 @@ $(function(){
 
 
 $(function () {
-   
+
   $('.coworking__item__title').on('click', function () {
 
     var dataAttr = $(this).attr('data-cow-id');
 
-     
+
     if (!($(this).parent().hasClass('active'))) {
       $('.coworking__item.active').removeClass('active');
       $(this).parent().addClass('active');

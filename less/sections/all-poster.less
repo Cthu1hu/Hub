@@ -4,7 +4,7 @@
 
 		margin-bottom: 35px;
 	}
-	
+
 	// в зависимости от того платное или нет мероприятие
 	.other-events__item {
 		&:nth-of-type(1) {
@@ -38,7 +38,7 @@
 		&:after {
 			content:'';
 			position: absolute;
-			top: 2px;
+			top: 1px;
 			left: -22px;
 			display: block;
 			width: 15px;
@@ -104,13 +104,21 @@
 .more__posters {
 
 	background-color: @blue;
+	border: 2px solid @blue;
+	color: white;
 	width: auto;
 	font-family: @GB;
 	font-size: 20px;
-	line-height: 36px;
-	height: 36px;
+	line-height: 32px;
+	height: 32px;
 	padding: 0 25px;
 	border-radius: 20px;
+	transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+	&:hover {
+		background-color: transparent;
+		color: @blue;
+	}
 
 }
 
@@ -137,7 +145,7 @@
 
 }
 @media (max-width:767px){
-	
+
 	.all-poster {
 
 		.other-events__wrap {
@@ -159,7 +167,7 @@
 
 
 @media (max-width:480px){
-	
+
 	.poster__filter {
 
 		&__list{
@@ -191,6 +199,3 @@
 		width: 120px;
 	}
 }
-
-
-
