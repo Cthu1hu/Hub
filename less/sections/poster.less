@@ -199,6 +199,16 @@
 		color: #fff;
 		margin-bottom: 30px;
 
+		&:hover {
+			.conference__pic {
+					transform: scale(0.9);
+					.conference__circle {
+
+						transform: translate(-50%, -50%) scale(1.15);
+					}
+			}
+		}
+
 
 		&:nth-of-type(2n) {
 
@@ -245,6 +255,13 @@
 		//margin-top: -70px;
 	}
 	.main-event__buy {
+
+		border: 2px solid white;
+		border-radius: 30px;
+		&:hover {
+			background-color: transparent;
+			color: white;
+		}
 
 			background-color: #fff;
 			color: @gray;
