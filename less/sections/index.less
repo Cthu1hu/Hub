@@ -5,7 +5,7 @@ body {
 
 		.navigation__link {
 			color: @gray;
-			
+
 			&:after {
 				background-color: @gray;
 			}
@@ -31,7 +31,7 @@ body {
 	}
 
 	.index-wrapper {
-		
+
 		overflow: visible;
 	}
 }
@@ -485,7 +485,7 @@ body {
 
 		display: inline-block;
 		vertical-align: middle;
-		
+
 	}
 
 	&__title__list {
@@ -499,7 +499,6 @@ body {
 	&__item{
 
 		&.active {
-			display: block;
 
 			.coworking__item__title {
 				font-size: 91px;
@@ -523,6 +522,10 @@ body {
 		cursor: pointer;
 		display: inline-block;
 		transition: 0.3s ease-out;
+
+		&:hover {
+			font-size: 70px;
+		}
 	}
 
 	&__info__item {
@@ -540,7 +543,7 @@ body {
 
 	}
 
-	
+
 
 	&__text {
 
@@ -1421,10 +1424,10 @@ body {
 
 @media (max-width:350px) {
 
-	
+
 	.coworking {
 
-		
+
 		&__item {
 
 			padding-right: 29px;
