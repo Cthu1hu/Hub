@@ -247,8 +247,7 @@ $(function () {
 
 
 
-    // popup slider
-
+  // popup slider
 
   var popupGallerySlider = $('.all-innovations__author__gallery').owlCarousel({
       items : 3,
@@ -283,3 +282,31 @@ $(function () {
 
 
 });
+
+
+$(function () {
+   // freespace slider
+
+  var freespaceSlider = $('.freespace__slider').owlCarousel({
+      items : 1,
+      nav : true,
+      navContainer: $('.freespace__gallery__controls'),
+      navText: ['', ''],
+      loop: true
+     
+  });
+
+    $('.freespace__gallery__btn-prev').click(function(e) {
+      e.preventDefault();
+    freespaceSlider.trigger('prev.owl.carousel');
+   });
+
+
+  $('.freespace__gallery__btn-next').click(function(e) {
+    e.preventDefault();
+    freespaceSlider.trigger('next.owl.carousel');
+   });
+
+
+});
+ 
