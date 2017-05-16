@@ -1,0 +1,575 @@
+.fixed-innovation-container {
+
+	.section-4 {
+		margin-top: 140px;
+		margin-bottom: 115px;
+		height: auto;
+	}
+	.innovationGallery {
+
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.infoToGallerySlider {
+
+		position: absolute;
+		right: -140px;
+		top: 0;
+		z-index: 5;
+		
+		&__pic,
+		&__text {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+
+		&__text {
+
+			font-size: 14px;
+			font-family: @GL;
+		}
+	}
+
+}
+
+.demonstrate-icon {
+	fill: #52519a;
+	fill-rule: evenodd;
+}
+
+
+
+// new gallerry
+.newInnovationGalleryContainer {
+	margin-bottom: 120px;
+	width: 150%;
+	margin-right:-25%;
+	margin-left: -25%;
+
+}
+
+.newInnovationGallery__slider {
+	
+
+	&__item {
+
+		width: 305px;
+		text-align: center;
+		margin: 0 auto;
+
+		.more__link {
+
+			background-color: @orange;
+		}
+	}
+
+	&__pic {
+		position: relative;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			background: url('../img/icons/demonstrate.svg') no-repeat;
+
+		}
+
+	}
+
+
+	&__title {
+
+		font-family: @GB;
+		font-size: 24px;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-top: 40px;
+		margin-bottom: 35px;
+		position: relative;
+		display: inline-block;
+
+		&:after {
+			content: "Rotorvox";
+			position: absolute;
+			top: -15px;
+			right: 0;
+			font-family: @GL;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 1;
+			color: @orange;
+		}
+	}
+	&__info {
+
+		.more__link {
+
+			margin-top: 50px;
+		}
+	}
+}
+
+// form
+.innovations__form__section {
+	margin-bottom: 120px;
+
+	.form__wrap {
+		width: 1000px;
+		margin: 0 auto;
+		background-color: @orange;
+
+	}
+
+	.form__headline {
+
+		text-align: center;
+		padding: 30px 0;
+		font-size: 24px;
+		font-family: @GB;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	.form__innovation {
+		width: 680px;
+		margin: 0 auto;
+
+		.form__block{
+
+			.clearfix;
+		}
+
+		.form__input {
+			float: left;
+
+			font-family: @GL;
+			width: 280px;
+			height: 50px;
+			padding-top: 2px;
+			padding-bottom: 0;
+			padding-left: 15px;
+			padding-right: 10px;
+			background-color: #fff;
+			color: @gray;
+			transition: all 0.4s ease-out;
+			line-height: 50px;
+			font-size: 18px;
+			margin-bottom: 33px;
+			box-sizing: border-box;
+			border: 2px solid transparent;
+			transition: 0.3s ease-out;
+
+		}
+
+		.main__input_second {
+
+			float: right;
+		}
+
+		.form__button {
+
+			height: 50px;
+			display: inline-block;
+			background-color: transparent;
+			border: none;
+			font-family: @GB;
+			color: black;
+			font-size: 18px;
+			text-transform: uppercase;
+			cursor: pointer;
+			width: 100%;
+			background-color: #fff;
+			color: @orange;
+			box-sizing: border-box;
+			transition: 0.3s ease-out;
+
+			margin-bottom: 50px;
+		}
+	}
+
+}
+
+.error {
+	border: solid 2px red;
+}
+
+/* не прозрачный placeholder */
+::-webkit-input-placeholder { color: @gray; opacity: 1;  }
+::-moz-placeholder  { color: @gray; opacity: 1;  }/* Firefox 19+ */
+:-moz-placeholder   { color: @gray; opacity: 1;  } /* Firefox 18- */
+:-ms-input-placeholder  { color: @gray; opacity: 1;  }
+
+
+.btn-offer {
+
+	background-color: @Dgreen;
+	color: #fff;
+	font-size: 14px;
+	font-family: @GB;
+	width: auto;
+	padding: 0 15px;
+	margin-top: -65px;
+	border-radius: 15px;
+
+	height: 26px;
+	line-height: 26px;
+
+}
+
+
+//all-innovations__popup 
+
+.all-innovations__popup {
+
+	max-width: 1300px;
+	margin: 0 auto;
+	border: 40px solid @orange;
+	position: relative;
+
+}
+
+.all-innovations__author {
+
+	margin-left: 160px;
+	margin-top: 120px;
+	margin-bottom: 20px;
+
+	&__info,
+	&__pic {
+
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__info {
+
+		text-align: right;
+		text-transform: uppercase;
+	}
+
+	&__headline {
+		
+		font-family: @GL;
+		font-size: 16px;
+		line-height: 1;
+		margin-bottom: 20px;
+
+	}
+
+	&__name {
+
+		font-family: @GB;
+		font-size: 32px;
+		line-height: 1;
+	}
+
+	// all-innovations__author__gallery
+	&__gallery {
+
+		margin-left: 140px;
+		margin-bottom: 65px;
+		width: calc(~"100% - 140px");
+		&__item {
+
+			width: 300px;
+
+		}
+
+		&__title {
+
+			padding-left: 65px;
+			font-size: 21px;
+			line-height: 1;
+			font-family: @GB;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+
+		}
+
+		&__info{
+
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 15px;
+			line-height: 1.2;
+			font-family: @G;
+		}
+
+	}
+}
+
+	// controls
+
+	.all-innovations__author__gallery__controls {
+
+		display: inline-block;
+		margin-left: 160px;
+		margin-bottom: 75px;
+	}
+
+	.all-innovations__author__gallery__btn-prev,
+	.all-innovations__author__gallery__btn-next{
+		width: 110px;
+
+		border-radius: 15px;
+		background-color: @orange;
+		position: static;
+		display: inline-block;
+		vertical-align: middle;
+
+		
+	}
+
+	.all-innovations__author__gallery__btn-prev {
+
+		img {		
+			padding-left: 15px;
+			padding-bottom: 3px;
+		}
+	}
+
+	.all-innovations__author__gallery__btn-next {
+
+		margin-left: 50px;
+
+		img {
+			padding-left: 15px;
+			padding-bottom: 2px;
+		}
+	}
+
+	.close-popup {
+
+		width: 50px;
+		height: 50px;
+		font-size: 0;
+		background-color: transparent;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		&:before,
+		&:after {
+
+			content:'';
+			display: block;
+			width: 2px;
+			height: 50px;
+			background-color: @gray;
+			position: absolute;
+			top: 40px;
+    	right: 45px;
+			transform: rotate(45deg);
+			box-shadow: 0 0 4px rgba(0,0,0,0.5);
+		}
+
+		&:after {
+			
+			transform: rotate(-45deg);
+
+		}
+	}
+
+// END    all-innovations__popup 
+
+
+//  -----------------MEDIA ---------------------------
+
+@media (max-width:1280px){
+
+	.all-poster {
+
+		.innovationGallery__left,
+		.innovationGallery__right {
+
+			width: 50%;
+		}
+
+
+		.innovationGallery__info {
+
+			margin-left: 50px;
+			margin-right: 50px;
+			margin-top: 50px;
+
+		}
+	}
+
+
+
+}
+
+@media (max-width:1199px){
+
+
+
+}
+
+
+@media (max-width:1023px){
+
+	.all-poster {
+
+		.innovationGallery__left,
+		.innovationGallery__right {
+
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
+
+
+		.innovationGallery__info {
+
+			margin: 0;
+			margin-bottom: 50px;
+
+		}
+		
+		.innovations__form__section {
+
+
+			.form__wrap {
+
+				width: 100%;
+			}
+		}
+	}
+
+	// popup
+	.all-innovations__author {
+		margin-left: 50px;
+	}
+	.all-innovations__author__gallery {
+
+		margin-left: 30px;
+		margin-bottom: 65px;
+		width: calc(~"100% - 30px");
+	}
+	.all-innovations__author__gallery__controls {
+
+		margin-left: 50px;
+	}
+
+}
+@media (max-width:767px){
+	.all-poster {
+
+		.innovations__form__section {
+
+			.form__innovation {
+
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			.form__input {
+
+				width: 100%;
+				float: none;
+				text-align: left;
+			}
+		}
+
+		.fixed-innovation-container  {
+			
+			.section-4 {
+				margin-top: 50px;
+			}
+
+			.infoToGallerySlider {
+
+				right: 0;
+			}
+
+		}
+
+		.newInnovationGalleryContainer {
+
+			margin-bottom: 50px;
+		}
+	}
+
+	//popup
+
+	.all-innovations__popup {
+
+		text-align: center;
+		border: 10px solid @orange;
+	}
+
+	.all-innovations__author {
+
+		margin-left: 0;
+		margin-bottom: 50px;
+
+		&__info {
+
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+	}
+
+	.all-innovations__author__gallery {
+		margin: 0;
+		width: 100%;
+		margin-bottom: 50px;
+
+		&__item {
+
+			margin: 0 auto;
+		}
+
+		&__title {
+
+			padding-left: 0;
+		}
+
+		&__controls {
+
+			margin-left: 0;
+		}
+	}
+
+	.close-popup:after, .close-popup:before {
+
+		top: 20px;
+    right: 35px
+	}
+
+
+}
+
+
+@media (max-width:480px){
+
+	.all-poster {
+
+		.innovations__form__section {
+			margin-bottom: 50px;
+
+			.form__headline {
+
+				font-size: 20px;
+			}
+		}
+
+
+
+	}
+}
+
+@media (max-width:380px){
+
+
+}
+
+
+

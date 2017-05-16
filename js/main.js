@@ -4,7 +4,7 @@
 $(function(){
 
   // conference slider
-  var innovationGallerySlider = $('.conference__slider').owlCarousel({
+  var conferenceSlider = $('.conference__slider').owlCarousel({
       items : 2,
       nav : false,
       loop: false,
@@ -26,6 +26,9 @@ $(function(){
 			navContainer: $('.innovationGallery__slider__controls'),
 			navText: ['', ''],
 			loop: true
+      // animateIn: "fadeInRight",
+      // animateOut: "fadeOutLeft"
+
   });
 
 
@@ -218,5 +221,65 @@ $(function () {
     }
 
   })
+
+});
+
+
+
+// new innovation
+
+$(function () {
+
+    var newInnovationGallerySlider = $('.newInnovationGallery__slider').owlCarousel({
+      items : 3,
+      nav : true,
+      navText: ['', ''],
+      loop: true,
+      responsive : {
+        0 : {
+          items : 1
+        },
+        1199 : {
+          items : 3
+        }
+      }
+  });
+
+
+
+    // popup slider
+
+
+  var popupGallerySlider = $('.all-innovations__author__gallery').owlCarousel({
+      items : 3,
+      nav : true,
+      navContainer: $('.all-innovations__author__gallery__controls'),
+      navText: ['', ''],
+      loop: true,
+      responsive : {
+        0 : {
+          items : 1
+        },
+        768 : {
+          items : 2
+        },
+        1280 : {
+          items : 3
+        }
+      }
+  });
+
+    $('.all-innovations__author__gallery__btn-prev').click(function(e) {
+      e.preventDefault();
+    popupGallerySlider.trigger('prev.owl.carousel');
+   });
+
+
+  $('.all-innovations__author__gallery__btn-next').click(function(e) {
+    e.preventDefault();
+    popupGallerySlider.trigger('next.owl.carousel');
+   });
+
+
 
 });

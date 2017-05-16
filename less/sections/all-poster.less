@@ -1,0 +1,196 @@
+.all-poster {
+
+	.other-events__wrap {
+
+		margin-bottom: 35px;
+	}
+	
+	// в зависимости от того платное или нет мероприятие
+	.other-events__item {
+		&:nth-of-type(1) {
+			.main-event__buy-ticket {
+
+				display: inline-block;
+			}
+
+		}
+	}
+
+
+}
+
+.poster__filter {
+
+	&__list {
+
+		margin: 30px 0;
+		text-align: center;
+	}
+
+	&__item {
+
+		display: inline-block;
+		margin-right: 45px;
+		font-family: @G;
+		font-size: 12.5px;
+		position: relative;
+
+		&:after {
+			content:'';
+			position: absolute;
+			top: 2px;
+			left: -22px;
+			display: block;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: red;
+		}
+
+		&:last-of-type {
+
+			margin-right: 0;
+
+		}
+
+		&:nth-of-type(1) {
+
+			&:after {
+				background-color: @orange;
+			}
+		}
+		&:nth-of-type(2) {
+
+			&:after {
+				background-color: @Dgreen;
+			}
+		}
+		&:nth-of-type(3) {
+
+			&:after {
+				background-color: @blue;
+			}
+		}
+		&:nth-of-type(4) {
+
+			&:after {
+				background-color: @yellow;
+			}
+		}
+
+
+	}
+
+	&__link {
+
+		color: @gray;
+	}
+
+}
+.main-event__buy-ticket {
+
+	margin-left: 15px;
+	display: none;
+}
+
+
+
+.more__posters__container {
+
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.more__posters {
+
+	background-color: @blue;
+	width: auto;
+	font-family: @GB;
+	font-size: 20px;
+	line-height: 36px;
+	height: 36px;
+	padding: 0 25px;
+	border-radius: 20px;
+
+}
+
+
+//  -----------------MEDIA ---------------------------
+
+
+@media (max-width:1199px){
+
+	.main-event__buy-ticket {
+
+		margin-left: 0;
+	}
+
+}
+
+
+@media (max-width:1023px){
+
+	.main-event__buy-ticket {
+
+		margin-left: 10px;
+	}
+
+}
+@media (max-width:767px){
+	
+	.all-poster {
+
+		.other-events__wrap {
+			margin-bottom: 0;
+		}
+
+		.other-events__item {
+
+		margin-bottom: 30px;
+
+		&:nth-of-type(2n) {
+			margin-bottom: 30px;
+		}
+	}
+
+	}
+
+}
+
+
+@media (max-width:480px){
+	
+	.poster__filter {
+
+		&__list{
+		margin: 30px 10px;
+		margin-left: 50px;
+	}
+
+	&__item {
+
+		width: 150px;
+		margin-right: 15px;
+
+		&:nth-of-type(2n) {
+
+			margin-right: 0;
+
+		}
+	}
+
+
+	}
+
+
+}
+
+@media (max-width:380px){
+
+	.poster__filter__item {
+		width: 120px;
+	}
+}
+
+
+
