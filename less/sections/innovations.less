@@ -283,9 +283,12 @@
 	// all-innovations__author__gallery
 	&__gallery {
 
-		margin-left: 140px;
+
 		margin-bottom: 65px;
-		width: calc(~"100% - 140px");
+		.owl-stage-outer {
+			padding-left: 140px;
+		}
+
 		&__item {
 
 			width: 300px;
@@ -424,6 +427,10 @@
 
 
 @media (max-width:1023px){
+
+	.all-innovations__author__gallery .owl-stage-outer {
+		padding-left: 0px;
+	}
 
 	.all-poster {
 
