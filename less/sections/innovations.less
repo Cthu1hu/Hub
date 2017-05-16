@@ -17,7 +17,7 @@
 		right: -140px;
 		top: 0;
 		z-index: 5;
-		
+
 		&__pic,
 		&__text {
 			display: inline-block;
@@ -51,7 +51,7 @@
 }
 
 .newInnovationGallery__slider {
-	
+
 
 	&__item {
 
@@ -60,8 +60,15 @@
 		margin: 0 auto;
 
 		.more__link {
-
 			background-color: @orange;
+			border: 1px solid @orange;
+			color: white;
+			margin-bottom: 2px;
+
+			&:hover {
+				background-color: transparent;
+				color: @orange;
+			}
 		}
 	}
 
@@ -174,10 +181,9 @@
 
 		.form__button {
 
-			height: 50px;
+			height: 46px;
+			border: 2px solid white;
 			display: inline-block;
-			background-color: transparent;
-			border: none;
 			font-family: @GB;
 			color: black;
 			font-size: 18px;
@@ -187,9 +193,14 @@
 			background-color: #fff;
 			color: @orange;
 			box-sizing: border-box;
-			transition: 0.3s ease-out;
+			transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
 			margin-bottom: 50px;
+
+			&:hover {
+				background-color: transparent;
+				color: white;
+			}
 		}
 	}
 
@@ -223,7 +234,7 @@
 }
 
 
-//all-innovations__popup 
+//all-innovations__popup
 
 .all-innovations__popup {
 
@@ -254,7 +265,7 @@
 	}
 
 	&__headline {
-		
+
 		font-family: @GL;
 		font-size: 16px;
 		line-height: 1;
@@ -323,12 +334,12 @@
 		display: inline-block;
 		vertical-align: middle;
 
-		
+
 	}
 
 	.all-innovations__author__gallery__btn-prev {
 
-		img {		
+		img {
 			padding-left: 15px;
 			padding-bottom: 3px;
 		}
@@ -370,13 +381,13 @@
 		}
 
 		&:after {
-			
+
 			transform: rotate(-45deg);
 
 		}
 	}
 
-// END    all-innovations__popup 
+// END    all-innovations__popup
 
 
 //  -----------------MEDIA ---------------------------
@@ -431,7 +442,7 @@
 			margin-bottom: 50px;
 
 		}
-		
+
 		.innovations__form__section {
 
 
@@ -459,6 +470,11 @@
 
 }
 @media (max-width:767px){
+
+	.infoToGallerySlider__text {
+		display: none;
+	}
+
 	.all-poster {
 
 		.innovations__form__section {
@@ -478,7 +494,7 @@
 		}
 
 		.fixed-innovation-container  {
-			
+
 			.section-4 {
 				margin-top: 50px;
 			}
@@ -570,6 +586,3 @@
 
 
 }
-
-
-
