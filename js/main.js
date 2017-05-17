@@ -308,4 +308,34 @@ $(function () {
 
 
 });
+
+$(function () {
+   // news slider
+
+  var newsSlider = $('.news__slider').owlCarousel({
+      items : 1,
+      nav : true,
+      navText: ['', ''],
+      loop: true
+     
+  });
+
+  $('.news__slider__btn-next').click(function(e) {
+    e.preventDefault();
+    newsSlider.trigger('next.owl.carousel');
+   });
+
+
+
+
+});
+
+
+$(function () {
+
+  $('.news__slider__item__pic').imagefill(); 
+  $('.all__news__item__pic').imagefill(); 
+
+})
+
  
