@@ -5,42 +5,42 @@ $(function(){
 
   // conference slider
   var conferenceSlider = $('.conference__slider').owlCarousel({
-      items : 2,
-      nav : false,
-      loop: false,
-      responsive : {
-        0 : {
-          items : 1
-        },
-        1199 : {
-          items : 2
-        }
+    items : 2,
+    nav : false,
+    loop: false,
+    responsive : {
+      0 : {
+        items : 1
+      },
+      1199 : {
+        items : 2
       }
+    }
   });
 
 
- // little slider
+  // little slider
   var innovationGallerySlider = $('.innovationGallery__slider').owlCarousel({
-	  	items : 1,
-			nav : true,
-			navContainer: $('.innovationGallery__slider__controls'),
-			navText: ['', ''],
-			loop: true,
-      animateIn: "fadeInRight",
-      animateOut: "fadeOutLeft"
+    items : 1,
+    nav : true,
+    navContainer: $('.innovationGallery__slider__controls'),
+    navText: ['', ''],
+    loop: true,
+    animateIn: "fadeInRight",
+    animateOut: "fadeOutLeft"
   });
 
 
   $('.innovationGallery__btn-prev').click(function(e) {
-  		e.preventDefault();
+    e.preventDefault();
     innovationGallerySlider.trigger('prev.owl.carousel');
-	 });
+  });
 
 
   $('.innovationGallery__btn-next').click(function(e) {
   	e.preventDefault();
     innovationGallerySlider.trigger('next.owl.carousel');
-	 });
+  });
 
 
 });
@@ -50,59 +50,63 @@ $(function(){
 $(function(){
 
  $('#fullpage').fullpage({
-    //Navigation
-    menu: '.header',
-    navigation: true,
-    navigationPosition: 'right',
-    showActiveTooltip: true,
-    slidesNavigation: true,
-    scrollOverflow: true,
-      // use afterLoad instead afterSlideLoad
-    afterLoad: function(anchorLink, index){
-        if(index == 2 || index == 4 || index == 5){
-          $('body').addClass('dark-nav');
-        } else {
-          $('body').removeClass('dark-nav');
-        }
-      },
+  //Navigation
+  menu: '.header',
+  navigation: true,
+  navigationPosition: 'right',
+  showActiveTooltip: true,
+  slidesNavigation: true,
+  scrollOverflow: true,
+  // use afterLoad instead afterSlideLoad
+  afterLoad: function(anchorLink, index){
+    if(index == 2 || index == 4 || index == 5){
+      $('.header').addClass('dark-nav');
+      $(' #fp-nav ').addClass('dark-nav');
+      $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
+    } else {
+      $('.header').removeClass('dark-nav');
+      $(' #fp-nav ').removeClass('dark-nav');
+      $('.prevFullSlide, .nextFullSlide').removeClass('dark-nav');
+    }
+  },
 
-  });
+});
 
-  $('.prevFullSlide').on('click', function () {
-    $.fn.fullpage.moveSectionUp();
-  });
+ $('.prevFullSlide').on('click', function () {
+  $.fn.fullpage.moveSectionUp();
+});
 
-   $('.nextFullSlide').on('click', function () {
-    $.fn.fullpage.moveSectionDown();
-  });
+ $('.nextFullSlide').on('click', function () {
+  $.fn.fullpage.moveSectionDown();
+});
 
 
-   // for google map
+ // for google map
 
-   // Disable scroll zooming and bind back the click event
-  var onMapMouseleaveHandler = function (event) {
-    var that = $(this);
+ // Disable scroll zooming and bind back the click event
+ var onMapMouseleaveHandler = function (event) {
+  var that = $(this);
 
-    that.on('click', onMapClickHandler);
-    that.off('mouseleave', onMapMouseleaveHandler);
-    that.find('iframe').css("pointer-events", "none");
-  }
+  that.on('click', onMapClickHandler);
+  that.off('mouseleave', onMapMouseleaveHandler);
+  that.find('iframe').css("pointer-events", "none");
+}
 
-  var onMapClickHandler = function (event) {
-    var that = $(this);
+var onMapClickHandler = function (event) {
+  var that = $(this);
 
-    // Disable the click handler until the user leaves the map area
-    that.off('click', onMapClickHandler);
+  // Disable the click handler until the user leaves the map area
+  that.off('click', onMapClickHandler);
 
-    // Enable scrolling zoom
-    that.find('iframe').css("pointer-events", "auto");
+  // Enable scrolling zoom
+  that.find('iframe').css("pointer-events", "auto");
 
-    // Handle the mouse leave event
-    that.on('mouseleave', onMapMouseleaveHandler);
-  }
+  // Handle the mouse leave event
+  that.on('mouseleave', onMapMouseleaveHandler);
+}
 
-  // Enable map zooming with mouse scroll when the user clicks the map
-  $('.footer__map').on('click', onMapClickHandler);
+// Enable map zooming with mouse scroll when the user clicks the map
+$('.footer__map').on('click', onMapClickHandler);
 
 
 });
@@ -110,7 +114,7 @@ $(function(){
 
 // burger menu
 
-  $(function(){
+$(function(){
 
   var $burger = $('.burger');
   var $bars = $('.burger-svg__bars');
@@ -128,12 +132,12 @@ $(function(){
       burgerTL.clear();
       if(!isOpen) {
         burgerTL.to($bar1, 0.5, { y: -2, ease: Elastic.easeOut })
-            .to($bar2, 0.5, { scaleX: 0.6, ease: Elastic.easeOut, transformOrigin: "50% 50%" }, "-=0.5")
-            .to($bar3, 0.5, { y: 2, ease: Elastic.easeOut }, "-=0.5");
+        .to($bar2, 0.5, { scaleX: 0.6, ease: Elastic.easeOut, transformOrigin: "50% 50%" }, "-=0.5")
+        .to($bar3, 0.5, { y: 2, ease: Elastic.easeOut }, "-=0.5");
       }
       else {
         burgerTL.to($bar1, 0.5, { scaleX: 1.2, ease: Elastic.easeOut })
-            .to($bar3, 0.5, { scaleX: 1.2, ease: Elastic.easeOut }, "-=0.5");
+        .to($bar3, 0.5, { scaleX: 1.2, ease: Elastic.easeOut }, "-=0.5");
       }
     }
   }
@@ -143,12 +147,12 @@ $(function(){
       burgerTL.clear();
       if(!isOpen) {
         burgerTL.to($bar1, 0.5, { y: 0, ease: Elastic.easeOut })
-            .to($bar2, 0.5, { scaleX: 1, ease: Elastic.easeOut, transformOrigin: "50% 50%" }, "-=0.5")
-            .to($bar3, 0.5, { y: 0, ease: Elastic.easeOut }, "-=0.5");
+        .to($bar2, 0.5, { scaleX: 1, ease: Elastic.easeOut, transformOrigin: "50% 50%" }, "-=0.5")
+        .to($bar3, 0.5, { y: 0, ease: Elastic.easeOut }, "-=0.5");
       }
       else {
         burgerTL.to($bar1, 0.5, { scaleX: 1, ease: Elastic.easeOut })
-            .to($bar3, 0.5, { scaleX: 1, ease: Elastic.easeOut }, "-=0.5");
+        .to($bar3, 0.5, { scaleX: 1, ease: Elastic.easeOut }, "-=0.5");
       }
     }
   }
@@ -156,23 +160,23 @@ $(function(){
   function showCloseBurger() {
     burgerTL.clear();
     burgerTL.to($bar1, 0.3, { y: 6, ease: Power4.easeIn })
-        .to($bar2, 0.3, { scaleX: 1, ease: Power4.easeIn }, "-=0.3")
-        .to($bar3, 0.3, { y: -6, ease: Power4.easeIn }, "-=0.3")
-        .to($bar1, 0.5, { rotation: 45, ease: Elastic.easeOut, transformOrigin: "50% 50%" })
-        .set($bar2, { opacity: 0, immediateRender: false }, "-=0.5")
-        .to($bar3, 0.5, { rotation: -45, ease: Elastic.easeOut, transformOrigin: "50% 50%", onComplete: function() { isChangingState = false; isOpen = true; } }, "-=0.5");
+    .to($bar2, 0.3, { scaleX: 1, ease: Power4.easeIn }, "-=0.3")
+    .to($bar3, 0.3, { y: -6, ease: Power4.easeIn }, "-=0.3")
+    .to($bar1, 0.5, { rotation: 45, ease: Elastic.easeOut, transformOrigin: "50% 50%" })
+    .set($bar2, { opacity: 0, immediateRender: false }, "-=0.5")
+    .to($bar3, 0.5, { rotation: -45, ease: Elastic.easeOut, transformOrigin: "50% 50%", onComplete: function() { isChangingState = false; isOpen = true; } }, "-=0.5");
   }
 
   function showOpenBurger() {
     burgerTL.clear();
     burgerTL.to($bar1, 0.3, { scaleX: 0, ease: Back.easeIn })
-        .to($bar3, 0.3, { scaleX: 0, ease: Back.easeIn }, "-=0.3")
-        .set($bar1, { rotation: 0, y: 0 })
-        .set($bar2, { scaleX: 0, opacity: 1 })
-        .set($bar3, { rotation: 0, y: 0 })
-        .to($bar2, 0.5, { scaleX: 1, ease: Elastic.easeOut })
-        .to($bar1, 0.5, { scaleX: 1, ease: Elastic.easeOut }, "-=0.4")
-        .to($bar3, 0.5, { scaleX: 1, ease: Elastic.easeOut, onComplete: function() { isChangingState = false; isOpen = false; } }, "-=0.5");
+    .to($bar3, 0.3, { scaleX: 0, ease: Back.easeIn }, "-=0.3")
+    .set($bar1, { rotation: 0, y: 0 })
+    .set($bar2, { scaleX: 0, opacity: 1 })
+    .set($bar3, { rotation: 0, y: 0 })
+    .to($bar2, 0.5, { scaleX: 1, ease: Elastic.easeOut })
+    .to($bar1, 0.5, { scaleX: 1, ease: Elastic.easeOut }, "-=0.4")
+    .to($bar3, 0.5, { scaleX: 1, ease: Elastic.easeOut, onComplete: function() { isChangingState = false; isOpen = false; } }, "-=0.5");
   }
 
   $burger.on('click', function(e) {
@@ -229,19 +233,19 @@ $(function () {
 
 $(function () {
 
-    var newInnovationGallerySlider = $('.newInnovationGallery__slider').owlCarousel({
-      items : 3,
-      nav : true,
-      navText: ['', ''],
-      loop: true,
-      responsive : {
-        0 : {
-          items : 1
-        },
-        1199 : {
-          items : 3
-        }
+  var newInnovationGallerySlider = $('.newInnovationGallery__slider').owlCarousel({
+    items : 3,
+    nav : true,
+    navText: ['', ''],
+    loop: true,
+    responsive : {
+      0 : {
+        items : 1
+      },
+      1199 : {
+        items : 3
       }
+    }
   });
 
 
@@ -249,34 +253,34 @@ $(function () {
   // popup slider
 
   var popupGallerySlider = $('.all-innovations__author__gallery').owlCarousel({
-      items : 3,
-      nav : true,
-      navContainer: $('.all-innovations__author__gallery__controls'),
-      navText: ['', ''],
-      loop: true,
-      responsive : {
-        0 : {
-          items : 1
-        },
-        768 : {
-          items : 2
-        },
-        1280 : {
-          items : 3
-        }
+    items : 3,
+    nav : true,
+    navContainer: $('.all-innovations__author__gallery__controls'),
+    navText: ['', ''],
+    loop: true,
+    responsive : {
+      0 : {
+        items : 1
+      },
+      768 : {
+        items : 2
+      },
+      1280 : {
+        items : 3
       }
+    }
   });
 
-    $('.all-innovations__author__gallery__btn-prev').click(function(e) {
-      e.preventDefault();
+  $('.all-innovations__author__gallery__btn-prev').click(function(e) {
+    e.preventDefault();
     popupGallerySlider.trigger('prev.owl.carousel');
-   });
+  });
 
 
   $('.all-innovations__author__gallery__btn-next').click(function(e) {
     e.preventDefault();
     popupGallerySlider.trigger('next.owl.carousel');
-   });
+  });
 
 
 
@@ -284,58 +288,126 @@ $(function () {
 
 
 $(function () {
-   // freespace slider
+ // freespace slider
 
-  var freespaceSlider = $('.freespace__slider').owlCarousel({
-      items : 1,
-      nav : true,
-      navContainer: $('.freespace__gallery__controls'),
-      navText: ['', ''],
-      loop: true
-     
-  });
+ var freespaceSlider = $('.freespace__slider').owlCarousel({
+  items : 1,
+  nav : true,
+  navContainer: $('.freespace__gallery__controls'),
+  navText: ['', ''],
+  loop: true
+  
+});
 
-    $('.freespace__gallery__btn-prev').click(function(e) {
-      e.preventDefault();
-    freespaceSlider.trigger('prev.owl.carousel');
-   });
+ $('.freespace__gallery__btn-prev').click(function(e) {
+  e.preventDefault();
+  freespaceSlider.trigger('prev.owl.carousel');
+});
 
 
-  $('.freespace__gallery__btn-next').click(function(e) {
-    e.preventDefault();
-    freespaceSlider.trigger('next.owl.carousel');
-   });
+ $('.freespace__gallery__btn-next').click(function(e) {
+  e.preventDefault();
+  freespaceSlider.trigger('next.owl.carousel');
+});
 
 
 });
 
 $(function () {
-   // news slider
+ // news slider
 
-  var newsSlider = $('.news__slider').owlCarousel({
-      items : 1,
-      nav : true,
-      navText: ['', ''],
-      loop: true
-     
-  });
+ var newsSlider = $('.news__slider').owlCarousel({
+  items : 1,
+  nav : true,
+  navText: ['', ''],
+  loop: true
+  
+});
 
-  $('.news__slider__btn-next').click(function(e) {
-    e.preventDefault();
-    newsSlider.trigger('next.owl.carousel');
-   });
+ $('.news__slider__btn-next').click(function(e) {
+  e.preventDefault();
+  newsSlider.trigger('next.owl.carousel');
+});
 
+ // single page news
 
+ var singleNewsSlider = $('.single__news__slider').owlCarousel({
+  items : 1,
+  nav : true,
+  navText: ['', ''],
+  loop: true
+  
+});
+ $('.single__news__slider__btn-prev').click(function(e) {
+  e.preventDefault();
+  singleNewsSlider.trigger('prev.owl.carousel');
+});
+
+ $('.single__news__slider__btn-next').click(function(e) {
+  e.preventDefault();
+  singleNewsSlider.trigger('next.owl.carousel');
+});
 
 
 });
+
+
+// conference double slider
+$(function () {
+  // large slider
+  var conferenceLargeSlider = $('.page-conference__item__slider__large').owlCarousel({
+    items : 1,
+    nav : true,
+    navText: ['', ''],
+    loop: true
+    
+  });
+  $('.page-conference__item__slider__large__btn-prev').click(function(e) {
+    e.preventDefault();
+    conferenceLargeSlider.trigger('next.owl.carousel');
+  });
+
+  $('.page-conference__item__slider__large__btn-next').click(function(e) {
+    e.preventDefault();
+    conferenceLargeSlider.trigger('prev.owl.carousel');
+  });
+
+  // dsmallslider
+  var conferenceSmallSlider = $('.page-conference__item__slider__small').owlCarousel({
+    items : 3,
+    nav : true,
+    navText: ['', ''],
+    loop: true
+    
+  });
+
+  $('.page-conference__item__slider__small__btn-prev').click(function(e) {
+    e.preventDefault();
+    conferenceSmallSlider.trigger('next.owl.carousel');
+  });
+  $('.page-conference__item__slider__small__btn-next').click(function(e) {
+    e.preventDefault();
+    conferenceSmallSlider.trigger('prev.owl.carousel');
+  });
+
+  conferenceSmallSlider.on('click', '.owl-item', function(){
+    n = $(this).index();
+    console.log($(this));
+
+    conferenceLargeSlider.trigger('to.owl.carousel', n);
+  });
+
+});
+
 
 
 $(function () {
 
   $('.news__slider__item__pic').imagefill(); 
   $('.all__news__item__pic').imagefill(); 
+  $('.page-conference__item__slider__large__item').imagefill(); 
+  $('.page-conference__item__slider__small__item').imagefill(); 
 
 })
 
- 
+

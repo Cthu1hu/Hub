@@ -10,11 +10,6 @@
 			}
 	}
 
-	.header {
-
-		position: static;
-	}
-
 	// change circle
 	.conference__item {
 		width: auto;
@@ -302,6 +297,10 @@
 			font-size: 37px;
 			margin-bottom: 20px;
 			text-transform: uppercase;
+			height: 75px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+	
 		}
 		.main-event__text {
 
@@ -348,13 +347,14 @@
 
 		 .other-events__info {
 
-		 	width: calc(~"100% - 210px");
+		 	width: calc(~"100% - 195px");
 		 }
 	}
 
 	.other-events__wrap .other-events__info .other-events__info__title {
 		font-size: 30px;
 		margin-bottom: 0px;
+		height: 60px;
 	}
 }
 

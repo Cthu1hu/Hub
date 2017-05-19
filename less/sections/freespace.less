@@ -1,13 +1,35 @@
 .freespace-wrapper {
 
-	.navigation__link {
-		
-		color: @gray;
-		&.active {
 
-			color: @Dgreen;
+	.navigation {
+
+		&.active {
+			.navigation__link {
+
+				color:@gray;
+			}
 		}
 	}
+
+	.navigation__item {
+		&.active {
+			.navigation__link {
+				color: @Dgreen;
+				&:after {
+					background-color: @Dgreen;
+				}
+			}
+		}
+		.navigation__link {
+
+			color: #fff;
+		}
+
+	}
+
+
+
+
 
 	.section-1 {
 
@@ -265,7 +287,7 @@
 
 		.freespace__slider__title {
 			font-size: 50px;
-   		margin-bottom: -24px;
+			margin-bottom: -24px;
 		}
 
 
