@@ -1,88 +1,32 @@
-.coworking-wrap {
+.shower {
+
+	height: 40px;
+}
+#coworking__main__slider {
+
+	img {
+		width: auto;
+    margin: 0 auto;
+	}
+}
+.coworking-1-wrap  {
 
 	.section-1 {
+		.freespace__info__headline {
 
-		.freespace__info__text {
-
-			font-family: @G;
-			> p {
-				margin-bottom: 30px;
-			}
+			text-transform: uppercase;
 		}
 	}
+
 
 }
 
-.coworking__main__content {
+.coworking-1__main__content {
 	
-	.coworking__main__slider__wrap {
-
-		.clearfix;
-		margin-top: 60px;
-	}
-
 	.main__nav__coworking__container {
 
-		float: left;
-		width: 300px;
-		position: relative;
-		z-index: 5;
-
-		&__title {
-			font-size: 24px;
-			line-height: 1;
-			font-family: @GB;
-			text-transform: uppercase;
-			padding-left: 35px;
-		}
-
-		&__list {
-			
-			margin-top: 60px;
-			margin-left: 35px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			border-left: 1px solid @gray;
-			position: relative;
-			&:before,
-			&:after {
-				content: "";
-				display: block;
-				position: absolute;
-				left: -9px;
-				background-color: @gray;
-				height: 18px;
-				width: 18px;
-				border-radius: 50%;
-			}
-
-			&:before {
-				top: -18px;
-			}
-			&:after {
-				bottom: -18px;
-			}
-		}
 
 		&__item {
-
-			text-transform: uppercase;
-			text-align: center;
-			width: 130px;
-			height: 20px;
-			line-height: 20px;
-			background-color: @Dgreen;
-			color: #fff;
-			cursor: pointer;
-			border-radius: 15px;
-			margin-bottom: 96px;
-			margin-left: 42px;
-			position: relative;
-
-			&:last-of-type {
-
-				margin-bottom: 0;
-			}
 
 			&.active {
 
@@ -90,287 +34,94 @@
 
 				&:after {
 
-					content: attr(data-square);
-					font-family: @GL;
-					font-size: 14px;
-					line-height: 1;
-					position: absolute;
-					top: 4px;
-					left: 130px;
-					color: #4b5053;
-					width: 80px;
-					color: @gray;
-					text-transform: initial;
+					content: "";
 
 				}
 			}
+		}
+	}
 
+	.freespace__icon__row {
 
-			&:before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: 8px;
-				left: -42px;
-				background-color: @gray;
-				height: 1px;
-				width: 27px;
-			}
+		margin-bottom: 70px;
+	}
+
+	.coworking__main__slider__item__details {
+
+		.enter__your__question {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			line-height: 1;
+			width: 580px;
+			text-align: right;
 		}
 	}
 
 }
 
+.coworking__slide__nav {
 
-#coworking__main__slider {
-	& img {
-
-		width: auto;
-		margin: 0 auto;
-	}
-
+	font-family: @GB;
+	font-size: 20px;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
-.coworking__main__slider {
-	// .clearfix;
 
-	&__item {
+ 
+ //  - -------------------     media   
+ @media (max-width:1280px){
 
 
-		width: 980px;
-		border: 1px solid red;
-
-		&__top {
-			.clearfix;
-			margin-bottom: 60px;
-
-			.freespace__icon {
-
-				width: 400px;
-				float: left;
-				margin-top: 105px;
-
-				.coworking__icon__title {
-
-					text-align: center;
-					font-family: @G;
-					z-index: 18;
-					line-height: 1;
-					text-transform: uppercase;
-				}
-
-				&__row{
-
-					&:first-of-type {
-						
-						margin-top: 30px;
-					}
-
-					&:last-of-type {
-						
-						margin-top: 15px;
-					}
-				}
-
-				&__item {
-
-					margin-right: 30px;
-				}
-
-				&__pic {
-
-					&__number {
-						font-size: 27px;
-						line-height: 1;
-						color: @Dgreen;
-						font-family: @GL;
-					}
-				}
+	.coworking-1__main__content {
+		.coworking__main__slider__item__details {
+			.enter__your__question {
+				width: 450px;
 			}
-
-			.freespace__slider__wrap {
-
-				width: 525px;
-				float: right;
 			}
+	}
+}
 
-			.freespace__slider__title {
+ @media (max-width:1170px){
 
-				font-size: 48px;
-				top: 24px;
-				margin-left: -16px;
-			}
-
-			.freespace__slider__item {
-				
-				width: 525px;
-				height: 350px;
-			}
-
-		}
-
-		// coworking__main__slider__item__details
-
-		&__details {
-
-
-			text-align: center;
-			margin-bottom: 50px;
-
-			&__list {
-				font-family: @GB;
-				margin-bottom: 35px;
-			}
-
-			&__item {
-
-				display: inline-block;
-				vertical-align: top;
-				margin-right: 35px;
-
-				&:last-of-type {
-
-					margin-right: 0;
-				}
-			}
-
-			&__price {
-				font-size: 24px;
-				line-height: 1;
-				color: red;
-				margin-bottom: 5px;
-			}
-		}
-
-		// coworking__main__slider__item__bottom
-
-		&__bottom {
-
-			text-align: center;
-			padding-left: 30px;
-			padding-right: 30px;
-
-			&__title {
-
+ 		.coworking-1__main__content {
+		.coworking__main__slider__item__details {
+			.enter__your__question {
+				width: auto;
 				text-align: center;
-				margin-bottom: 30px;
 			}
-
-			&__slider__wrap {
-
-				position: relative;
 			}
-
-			// bottom slider 
-			
-			&__slider {
-
-				&__item {
-
-					margin-bottom: 35px;
-					// width: 320px;
-					// height: 210px;
-
-					&__pic {
-						width: 320px;
-						height: 210px;
-					}
-
-					&__title {
-
-						font-family: @GB;
-						font-size: 20px;
-						line-height: 1;
-						text-align: center;
-						text-transform: uppercase;
-					}
-
-
-				}
-
-
-			}
-		}
-
-		.more-conference-btn.btn-red {
-
-			background-color: red;
-		}
-
 	}
 }
 
-// modificated sliders 
 
-.coworking__main__slider__wrap {
 
-	.owl-carousel .owl-nav .owl-prev,
-	.owl-carousel .owl-nav .owl-next {
-
-		background-color: transparent;
-		position: absolute;
-		background: url('../img/icons/green-long-arrow.png') no-repeat center;
-		background-size: cover;
-
-		display: block;
-		width: 83px;
-		height: 29px;
-		transition: 0.3s ease-out;
-
-		&:hover {
-
-			transform: translateX(-5%);
-		}
-	}
-	.owl-carousel .owl-nav .owl-next {
-
-		right: 0;
-		left: initial;
-		transform: rotate(180deg);
-
-		&:hover {
-			transform: rotate(180deg) translateX(-5%);
-		}
-	}
+@media (max-width:767px){
 
 }
 
 
-#evolution__top__slider {
+@media (max-width:767px){
 
-	.owl-nav .owl-prev,
-	.owl-nav .owl-next {
 
-		bottom: -50px;
-	}
-}
 
-#evolution__bottom__slider {
 
-	.owl-nav .owl-prev,
-	.owl-nav .owl-next {
-
-		bottom: initial;
-		top: calc(~"105px - 14px");
-	}
-
-	.owl-nav .owl-prev, {
-		left: -28px;
-	}
-
-	.owl-nav .owl-next{
-		right: -28px;
-	}
 
 }
 
 
+@media (max-width:480px){
 
 
+}
+
+@media (max-width:380px){
 
 
-
-
-
-
-
+}

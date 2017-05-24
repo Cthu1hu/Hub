@@ -427,26 +427,28 @@ $(function () {
 
 $(function () {
 
- // coworking   sliders
+ // conference   sliders
 
  // main slider
 
- var coworkingMainSlider = $('#coworking__main__slider').owlCarousel({
+ var conferenceMainSlider = $('#conference__main__slider').owlCarousel({
   items : 1,
   nav : false,
   navText: ['', ''],
   loop: false,
-  mouseDrag: false
+  mouseDrag: false,
+  touchDrag: false,
+  center: true
   
 });
 
- $('.main__nav__coworking__container__list').on('click', function (e) {
+ $('.conference__main__slider__wrapper .main__nav__coworking__container__list').on('click', function (e) {
 
   if($(e.target).hasClass('main__nav__coworking__container__item') && !($(e.target).hasClass('active'))) {
     var curNumNav = $(e.target).attr('data-num') - 1;
     $('.main__nav__coworking__container__item.active').removeClass('active');
     $(e.target).addClass('active');
-    coworkingMainSlider.trigger('to.owl.carousel', curNumNav);
+    conferenceMainSlider.trigger('to.owl.carousel', curNumNav);
  
   }
 
@@ -488,7 +490,21 @@ $(function () {
   nav : true,
   navText: ['', ''],
   loop: true,
-  margin: 280
+  responsive : {
+      0 : {
+        items : 1
+      },
+      768 : {
+        items : 1,
+        margin: 0
+      },
+      1169 : {
+        margin: 170
+      },
+      1280 : {
+        margin: 280
+      }
+    }
   
 });
 
@@ -498,12 +514,30 @@ $(function () {
   nav : true,
   navText: ['', ''],
   loop: true,
-  margin: 280
+  responsive : {
+      0 : {
+        items : 1
+      },
+      768 : {
+        items : 1,
+        margin: 0
+      },
+      1169 : {
+        margin: 170
+      },
+      1280 : {
+        margin: 280
+      }
+    }
   
 });
 
 
+// hide show navigation
 
+  $('.main__nav__coworking__container .nav__icon').on('click', function () {
+    $('.main__nav__coworking__container').toggleClass('active');
+  });
 
 
 
@@ -520,19 +554,79 @@ $(function () {
   $('.page-conference__item__slider__small__item').imagefill(); 
   $('.coworking__main__slider__item__bottom__slider__item__pic').imagefill(); 
 
+
+  $('.freespace__slider__pic').imagefill(); 
+
 })
 
 
 
+
+// coworking -1 
+
 $(function () {
+
+  // main slider
+ var coworkingMainSlider = $('#coworking__main__slider').owlCarousel({
+  items : 1,
+  nav : false,
+  navText: ['', ''],
+  loop: false,
+  mouseDrag: false,
+  touchDrag: false,
+  center: true
   
-  var arrayNavItem = function () {
-    mainNavItem = $('.main__nav__coworking__container__item');
-   
-   var arrayNav = [];
-   for(i=0; mainNavItem.length; i++){
-    arrayNav = arrayNav.push[i];
-   }
-   console.log(arrayNav);
+});
+
+
+ $('.coworking__main__slider__wrap .main__nav__coworking__container__list').on('click', function (e) {
+
+  if($(e.target).hasClass('main__nav__coworking__container__item') && !($(e.target).hasClass('active'))) {
+    var curNumNav = $(e.target).attr('data-num') - 1;
+    $('.main__nav__coworking__container__item.active').removeClass('active');
+    $(e.target).addClass('active');
+    coworkingMainSlider.trigger('to.owl.carousel', curNumNav);
+ 
   }
+
+
+});
+
+
+
+
+  var coworking1Slider = $('#coworking1__top__slider').owlCarousel({
+  items : 1,
+  nav : true,
+  navText: ['', ''],
+  loop: false,
+  onInitialized: allSlidesCountOnInit,
+  onTranslate: sliderCurrentCounter
+
+});
+    var coworking2Slider = $('#coworking2__top__slider').owlCarousel({
+  items : 1,
+  nav : true,
+  navText: ['', ''],
+  loop: false,
+  onInitialized: allSlidesCountOnInit,
+  onTranslate: sliderCurrentCounter
+
+});
+
+  
+
+
+
+
+  function allSlidesCountOnInit (e) {
+    $('.coworking__slide__nav__total').html(e.item.count);
+        console.log(e);
+        
+  }
+
+  function sliderCurrentCounter (e) {
+    $('.coworking__slide__nav__current').html(e.item.index + 1);
+  }
+    
 });
