@@ -560,6 +560,9 @@ $(function () {
 
   $('.freespace__slider__pic').imagefill();
 
+  
+  $('.opened__innovations__author__pic').imagefill();
+
 })
 
 

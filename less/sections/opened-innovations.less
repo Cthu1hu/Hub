@@ -16,7 +16,7 @@
 		margin-bottom: 160px;
 	}
 
-	 .conference__img {
+	.conference__img {
 
 		width: 185px !important;
 	}
@@ -44,20 +44,38 @@
 		margin-left: 40px;
 	}
 
+	.other-events__info {
+
+		margin-top: 75px;
+
+		.other-events__info__name {
+
+			font-family: @GL;
+		}
+		.other-events__info__title {
+			margin-bottom: 0;
+		}
+		.main-event__text {
+			margin-top: 0;
+		}
+		.main-event__buy {
+			height: 25px;
+			line-height: 25px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+
+
 
 }
-
-// .fixed-innovation-container {
-// 	max-width: 1300px;
-// 	margin: 0 auto;
-
-// }
 
 
 .opened__innovations__author {
 
 	border: solid 36px @orange;
-	margin-top: 180px;
+	margin-top: 90px;
 	margin-bottom: 160px;
 	position: relative;
 
@@ -80,12 +98,14 @@
 		font-size: 37px;
 		margin-bottom: 20px;
 		margin-top: 40px;
+		font-family: @GB;
 
 		&-top {
 			font-size: 37px;
 			color: @orange;
 			position: absolute;
 			top: -68px;
+			font-family: @GB;
 		}
 	}
 
@@ -103,54 +123,53 @@
 		// float: right;
 		text-align: right;
 		text-align: right;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+		position: absolute;
+		right: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+    width: 490px;
+    height: 490px;
+    margin-top: -55px;
 
 
 
-		img {
+    img {
 
-			width: 90%;
-			margin-left: -5%;
-			margin-right: -1%;
-			margin-top: -10%;
-			margin-bottom: -10%;
-		}
 
-		&__description {
+    }
 
-			position: absolute;
-			bottom: -80px;
-   	  left: -86px;
+    &__description {
 
-			&_text,
-			.crowfunding-icon {
-				display: inline-block;
-				vertical-align: bottom;
-			}
+    	position: absolute;
+    	bottom: -80px;
+    	left: calc(~"100% - 670px");
 
-			&_text {
+    	&_text,
+    	.crowfunding-icon {
+    		display: inline-block;
+    		vertical-align: bottom;
+    	}
 
-				font-family: @GL;
-				font-size: 14px;
-				line-height: 1;
-				padding-bottom: 25px;
-			}
+    	&_text {
 
-			.crowfunding-icon  {
+    		font-family: @GL;
+    		font-size: 14px;
+    		line-height: 1;
+    		padding-bottom: 25px;
+    	}
 
-				width: 130px;
-				height: 130px;
+    	.crowfunding-icon  {
 
-				svg {
-					width: 100%;
-					height: 100%;
-				}
-			}
-		}
-	}
+    		width: 130px;
+    		height: 130px;
+
+    		svg {
+    			width: 100%;
+    			height: 100%;
+    		}
+    	}
+    }
+  }
 }
 
 .opened__innovations__author__btn {
@@ -177,6 +196,21 @@
 
 
 @media (max-width:1023px){
+	.opened-innovations-wrapper {
+		.opened__innovations__author {
+			margin-bottom: 90px;
+		}
+		.section-2 {
+			margin-bottom: 90px;
+		}
+		 .other-events__item:nth-of-type(2n) .other-events__info {
+
+		 	margin-top: 75px;
+		 }
+
+	}
+
+
 
 	.opened__innovations__author__info {
 
@@ -185,7 +219,8 @@
 
 	.opened__innovations__author__pic {
 
-		width: 45%;
+		width: 340px;
+		height: 340px;
 	}
 
 	.opened__innovations__author__pic__description {
@@ -206,10 +241,55 @@
 }
 @media (max-width:767px){
 
-		.opened__innovations__author {
 
-			margin-top: 70px;
-			margin-bottom: 30px;
+
+	.opened-innovations-wrapper {
+		
+		.section {
+			height: auto;
+		}
+		.section-2 {
+			margin-bottom: 0;
+		}
+
+		.other-events__item {
+			
+
+				.other-events__info {
+
+				 	margin-top: 30px;
+				 	margin-bottom: 0;
+				 }
+				.may-buy-top {
+					display: none;
+				}
+			&:nth-of-type(2n) {
+
+
+				.other-events__info {
+
+				 	margin-top: 30px;
+				 	margin-bottom: 0;
+				 }
+
+				.may-buy-top {
+					display: none;
+				}
+
+			
+			}
+		}
+
+
+		
+		
+	}
+
+
+	.opened__innovations__author {
+
+		margin-top: 70px;
+		margin-bottom: 30px;
 
 		&__pic,
 		&__info {
@@ -220,19 +300,20 @@
 
 		&__pic {
 
-			position: static;
+			position:;
 			transform: none;
 			margin: 30px 0;
-			
-			img {
-
-				margin: 0 auto;
-				width: auto;
-			}
+			margin-top: 0;
+			width: 350px;
+			height: 350px;
+			right: initial;
+			left: 50%;
+			transform: translateX(-50%);
 
 			&__description {
 
-				position: static;
+				// position: static;
+				bottom: -57px;
 			}
 		}
 
@@ -240,19 +321,13 @@
 
 			padding: 0;
 			padding-bottom: 30px;
+			padding-top: 400px;
+			width: 90%;
+			margin: 0 5%;
 		}
 	}
 
-	.opened-innovations-wrapper {
-		
-		.section {
-			height: auto;
-		}
-		.section-2 {
-			margin-bottom: 0;
-		}
-		
-	}
+
 	.opened__innovations__author__title-top{
 		width: 100%;
 		text-align: center;
@@ -283,6 +358,15 @@
 }
 
 @media (max-width:380px){
+	.opened__innovations__author {
 
+		&__pic {
+			width: 280px;
+			height: 280px;
+		}
 
+		&__info {
+			padding-top: 300px;
+		}
+	}
 }
