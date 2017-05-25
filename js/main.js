@@ -324,7 +324,6 @@ $(function () {
   navContainer: $('.freespace__gallery__controls'),
   navText: ['', ''],
   loop: true
-  
 });
 
  $('.freespace__gallery__btn-prev').click(function(e) {
@@ -349,7 +348,7 @@ $(function () {
   nav : true,
   navText: ['', ''],
   loop: true
-  
+
 });
 
  $('.news__slider__btn-next').click(function(e) {
@@ -364,7 +363,7 @@ $(function () {
   nav : true,
   navText: ['', ''],
   loop: true
-  
+
 });
  $('.single__news__slider__btn-prev').click(function(e) {
   e.preventDefault();
@@ -388,7 +387,7 @@ $(function () {
     nav : true,
     navText: ['', ''],
     loop: true
-    
+
   });
   $('.page-conference__item__slider__large__btn-prev').click(function(e) {
     e.preventDefault();
@@ -406,7 +405,7 @@ $(function () {
     nav : true,
     navText: ['', ''],
     loop: true
-    
+
   });
 
   $('.page-conference__item__slider__small__btn-prev').click(function(e) {
@@ -443,7 +442,7 @@ $(function () {
   mouseDrag: false,
   touchDrag: false,
   center: true
-  
+
 });
 
  $('.conference__main__slider__wrapper .main__nav__coworking__container__list').on('click', function (e) {
@@ -453,7 +452,7 @@ $(function () {
     $('.main__nav__coworking__container__item.active').removeClass('active');
     $(e.target).addClass('active');
     conferenceMainSlider.trigger('to.owl.carousel', curNumNav);
- 
+
   }
 
 
@@ -472,7 +471,7 @@ $(function () {
   nav : true,
   navText: ['', ''],
   loop: true
-  
+
 });
 
 
@@ -482,7 +481,7 @@ $(function () {
   nav : true,
   navText: ['', ''],
   loop: true
-  
+
 });
 
 
@@ -509,7 +508,7 @@ $(function () {
         margin: 280
       }
     }
-  
+
 });
 
   // bottom inteligence
@@ -533,7 +532,7 @@ $(function () {
         margin: 280
       }
     }
-  
+
 });
 
 
@@ -552,21 +551,21 @@ $(function () {
 
 $(function () {
 
-  $('.news__slider__item__pic').imagefill(); 
-  $('.all__news__item__pic').imagefill(); 
-  $('.page-conference__item__slider__large__item').imagefill(); 
-  $('.page-conference__item__slider__small__item').imagefill(); 
-  $('.coworking__main__slider__item__bottom__slider__item__pic').imagefill(); 
+  $('.news__slider__item__pic').imagefill();
+  $('.all__news__item__pic').imagefill();
+  $('.page-conference__item__slider__large__item').imagefill();
+  $('.page-conference__item__slider__small__item').imagefill();
+  $('.coworking__main__slider__item__bottom__slider__item__pic').imagefill();
 
 
-  $('.freespace__slider__pic').imagefill(); 
+  $('.freespace__slider__pic').imagefill();
 
 })
 
 
 
 
-// coworking -1 
+// coworking -1
 
 $(function () {
 
@@ -578,8 +577,9 @@ $(function () {
   loop: false,
   mouseDrag: false,
   touchDrag: false,
-  center: true
-  
+  center: true,
+  animateIn: "fadeInUp",
+  animateOut: "fadeOutDown"
 });
 
 
@@ -590,7 +590,7 @@ $(function () {
     $('.main__nav__coworking__container__item.active').removeClass('active');
     $(e.target).addClass('active');
     coworkingMainSlider.trigger('to.owl.carousel', curNumNav);
- 
+
   }
 
 
@@ -606,7 +606,6 @@ $(function () {
   loop: false,
   onInitialized: allSlidesCountOnInit,
   onTranslate: sliderCurrentCounter
-
 });
     var coworking2Slider = $('#coworking2__top__slider').owlCarousel({
   items : 1,
@@ -614,11 +613,13 @@ $(function () {
   navText: ['', ''],
   loop: false,
   onInitialized: allSlidesCountOnInit,
-  onTranslate: sliderCurrentCounter
+  onTranslate: sliderCurrentCounter,
+  animateIn: "fadeInRight",
+  animateOut: "fadeOutLeft"
 
 });
 
-  
+
 
 
 
@@ -626,12 +627,35 @@ $(function () {
   function allSlidesCountOnInit (e) {
     $('.coworking__slide__nav__total').html(e.item.count);
         console.log(e);
-        
+
   }
 
   function sliderCurrentCounter (e) {
     $('.coworking__slide__nav__current').html(e.item.index + 1);
   }
+
+
+});
+
+
+// Animation
+
+$(function () {
+
+  var scrollNow;
+
+			$('#secondScrollLayout').css({
+				transition : 'all 0.3s ease-out'
+			});
+
+			$(window).on('scroll', function () {
+					if ($(window).height() > ($(this).scrollTop() * 2)) { scrollNow = $(this).scrollTop()};
+					$('#secondScrollLayout').css({
+						'margin-top' : -scrollNow
+					})
+				})
+
+});
     
 });
 
