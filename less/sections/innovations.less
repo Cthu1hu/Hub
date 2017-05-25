@@ -125,8 +125,14 @@
 			color: @orange;
 		}
 	}
+
 	&__info {
 
+    &__text {
+			height: 90px;
+			text-overflow: ellipsis;
+	    overflow: hidden;
+    }
 		.more__link {
 
 			margin-top: 50px;
@@ -485,7 +491,7 @@
 		.innovationGallery__info {
 
 			margin: 0 auto;
-			margin-bottom: 50px;
+			margin-bottom: 100px;
 
 		}
 
@@ -512,7 +518,7 @@
 	}
 	.all-innovations__author__gallery {
 
-		margin-left: 30px;
+		//margin-left: 30px;
 		margin-bottom: 65px;
 		width: calc(~"100% - 30px");
 	}
@@ -566,6 +572,8 @@
 		}
 
 
+
+
 	}
 
 	//popup
@@ -587,6 +595,10 @@
 			text-align: center;
 			margin-bottom: 30px;
 		}
+	}
+	.close-popup {
+		right: initial;
+		left: 0;
 	}
 
 	.all-innovations__author__gallery {

@@ -651,10 +651,11 @@ $(function () {
 					if ($(window).height() > ($(this).scrollTop() * 2)) { scrollNow = $(this).scrollTop()};
 					$('#secondScrollLayout').css({
 						'margin-top' : -scrollNow
-					})
-				})
+					});
+          
+				});
 
-  })
+});
 
 
 
