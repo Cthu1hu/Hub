@@ -654,10 +654,11 @@ $(function () {
 					if ($(window).height() > ($(this).scrollTop() * 2)) { scrollNow = $(this).scrollTop()};
 					$('#secondScrollLayout').css({
 						'margin-top' : -scrollNow
-					})
+					});
+
 
 				});
-    
+
 });
 
 
@@ -711,17 +712,22 @@ $('a[href*="#"]')
 $(function () {
 
   $('.opened__innovations__author__btn').on('click', function() {
-    $('.all-innovations__popup__wrap').addClass('active');
     $('body').css({
       'overflow': 'hidden'
     })
+    $('.all-innovations__popup__wrap').scrollTop(0);
+    $('.all-innovations__popup__wrap').addClass('active');
+
   });
 
   $('.close-popup').on('click', function() {
     $('.all-innovations__popup__wrap').removeClass('active');
-    $('body').css({
-      'overflow': 'initial'
-    })
+    setTimeout(function () {
+      $('body').css({
+        'overflow': 'initial'
+      })
+    }, 300);
+
   });
 
 
