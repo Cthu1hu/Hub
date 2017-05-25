@@ -653,9 +653,7 @@ $(function () {
 					$('#secondScrollLayout').css({
 						'margin-top' : -scrollNow
 					})
-				})
-
-});
+				});
     
 });
 
