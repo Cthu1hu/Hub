@@ -634,7 +634,6 @@ $(function () {
     $('.coworking__slide__nav__current').html(e.item.index + 1);
   }
 
-
 });
 
 
@@ -653,9 +652,11 @@ $(function () {
 					$('#secondScrollLayout').css({
 						'margin-top' : -scrollNow
 					})
+
 				});
     
 });
+
 
 
 
@@ -670,8 +671,8 @@ $('a[href*="#"]')
   .click(function(event) {
     // On-page links
     if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
       location.hostname == this.hostname
     ) {
       // Figure out element to scroll to
@@ -705,7 +706,7 @@ $('a[href*="#"]')
 
 // opened-innovations
 $(function () {
-  
+
   $('.opened__innovations__author__btn').on('click', function() {
     $('.all-innovations__popup__wrap').addClass('active');
     $('body').css({
