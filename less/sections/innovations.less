@@ -14,7 +14,7 @@
 	.infoToGallerySlider {
 
 		position: absolute;
-		right: -140px;
+		right: 0;
 		top: 0;
 		z-index: 5;
 
@@ -30,6 +30,11 @@
 			font-size: 14px;
 			font-family: @GL;
 		}
+	}
+	
+	.innovationGallery__info {
+		margin-right: 0;
+		margin-top: 50px;
 	}
 
 }
@@ -88,6 +93,12 @@
 
 		}
 
+	}
+
+	&__img {
+
+		border-radius: 50%;
+    overflow: hidden;
 	}
 
 
@@ -235,6 +246,28 @@
 
 
 //all-innovations__popup
+.all-innovations__popup__wrap {
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	overflow: scroll;
+
+	z-index: 20;
+	background-color: #fff;
+
+
+	display: none;
+
+	&.active {
+		display: block;
+
+
+	}
+}
 
 .all-innovations__popup {
 
@@ -256,6 +289,12 @@
 
 		display: inline-block;
 		vertical-align: top;
+	}
+
+	&__img {
+
+		border-radius: 50%;
+		overflow: hidden;
 	}
 
 	&__info {
@@ -291,7 +330,7 @@
 
 		&__item {
 
-			width: 300px;
+			width: 270px;
 
 		}
 
@@ -445,7 +484,7 @@
 
 		.innovationGallery__info {
 
-			margin: 0;
+			margin: 0 auto;
 			margin-bottom: 50px;
 
 		}
@@ -459,6 +498,13 @@
 			}
 		}
 	}
+	.newInnovationGalleryContainer {
+	margin-bottom: 120px;
+	width: 170%;
+	margin-right:-35%;
+	margin-left: -35%;
+
+}
 
 	// popup
 	.all-innovations__author {
