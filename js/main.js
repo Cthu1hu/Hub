@@ -441,7 +441,9 @@ $(function () {
   loop: false,
   mouseDrag: false,
   touchDrag: false,
-  center: true
+  center: true,  
+  animateIn: "fadeInUp",
+  animateOut: "fadeOutDown"
 
 });
 
@@ -616,10 +618,7 @@ $(function () {
   navText: ['', ''],
   loop: false,
   onInitialized: allSlidesCountOnInit,
-  onTranslate: sliderCurrentCounter,
-  animateIn: "fadeInRight",
-  animateOut: "fadeOutLeft"
-
+  onTranslate: sliderCurrentCounter
 });
 
 
@@ -712,21 +711,20 @@ $('a[href*="#"]')
 $(function () {
 
   $('.opened__innovations__author__btn').on('click', function() {
-    $('body').css({
-      'overflow': 'hidden'
-    })
     $('.all-innovations__popup__wrap').scrollTop(0);
     $('.all-innovations__popup__wrap').addClass('active');
+    setTimeout(function () {
+      $('body').css({'overflow': 'hidden' });
+      $('.all-innovations__popup__wrap').css({'overflow-y': 'scroll'});
+    }, 300);
 
   });
 
   $('.close-popup').on('click', function() {
+    $('body').css({'overflow': 'initial'});
+    $('.all-innovations__popup__wrap').css({'overflow-y': 'hidden'});
     $('.all-innovations__popup__wrap').removeClass('active');
-    setTimeout(function () {
-      $('body').css({
-        'overflow': 'initial'
-      })
-    }, 300);
+
 
   });
 

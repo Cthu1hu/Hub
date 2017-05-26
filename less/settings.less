@@ -18,7 +18,7 @@ body {
   background: #fff;
   color: @gray;
   letter-spacing: -0.025em;
-	
+
 }
 
 .wrapper {
@@ -33,7 +33,7 @@ body {
 }
 
 .btn {
-	
+
 	display: inline-block;
   width: 200px;
   color: #fff;
@@ -51,6 +51,8 @@ body {
   vertical-align: middle;
   margin: 0;
   padding: 10px;
+	border: 1px solid transparent;
+	transition: all 0.3s ease-out;
 
   &-red {
     background-color:  #e80b4f ;
@@ -58,6 +60,12 @@ body {
 
   &-green {
     background-color:  @Dgreen;
+		border-color: @Dgreen !important;
+
+		&:hover {
+			background-color: transparent;
+			color: @Dgreen;
+		}
   }
 
 }
