@@ -560,7 +560,7 @@ $(function () {
 
   $('.freespace__slider__pic').imagefill();
 
-  
+
   $('.opened__innovations__author__pic').imagefill();
 
 })
@@ -651,7 +651,7 @@ $(function () {
 			});
 
 			$(window).on('scroll', function () {
-					if ($(window).height() > ($(this).scrollTop() * 2)) { scrollNow = $(this).scrollTop()};
+					if ($(window).height() > ($(this).scrollTop() * 3)) { scrollNow = $(this).scrollTop()};
 					$('#secondScrollLayout').css({
 						'margin-top' : -scrollNow
 					});
