@@ -189,6 +189,21 @@
 			border: 2px solid transparent;
 			transition: 0.3s ease-out;
 
+			&::placeholder {
+				transition: all 0.4s ease-out;
+			}
+
+			&:focus {
+				background-color: transparent;
+				color: white;
+				border-color: white;
+				outline: none;
+
+				&::placeholder {
+					color: white;
+				}
+			}
+
 		}
 
 		.main__input_second {
@@ -260,7 +275,7 @@
 	top: -100%;
 	left: 0%;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: hidden;
 
 	z-index: 20;
 	background-color: transparent;
