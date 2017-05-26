@@ -560,8 +560,7 @@ $(function () {
 
   $('.freespace__slider__pic').imagefill();
 
-  
-  $('.opened__innovations__author__pic').imagefill();
+
 
 })
 
@@ -729,6 +728,69 @@ $(function () {
     }, 300);
 
   });
+
+
+
+});
+
+
+// about 
+
+
+$(function() {
+    // topslider
+ var aboutTopBgSlider = $('#about__top__bg__slider').owlCarousel({
+  items : 1,
+  nav : false,
+  navText: ['', ''],
+  loop: true
+});
+
+   $('.about__top__bg__slider__btn-next').click(function(e) {
+    e.preventDefault();
+    aboutTopBgSlider.trigger('next.owl.carousel');
+  });
+
+
+       // mission  slider
+ var aboutMissionSlider = $('#about__mission__slider').owlCarousel({
+  items : 1,
+  nav : false,
+  navText: ['', ''],
+  loop: true,
+  autoHeight:true
+});
+
+   $('.about__mission__slider__item__btn-next').click(function(e) {
+    e.preventDefault();
+    aboutMissionSlider.trigger('next.owl.carousel');
+  });
+
+
+  // partners  slider
+ var aboutPartnersSlider = $('#about__partners__slider').owlCarousel({
+  items : 4,
+  nav : false,
+  navText: ['', ''],
+  loop: true,
+  autoWidth:true,
+  margin: 70,
+  responsive : {
+      0 : {
+        items : 1,
+        center:true
+      },
+      767 : {
+        items : 2
+      },
+      1023 : {
+        items : 4
+      }
+
+    }
+});
+
+
 
 
 

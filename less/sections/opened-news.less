@@ -161,7 +161,7 @@
 .all__news__container {
 
 	width: 95%;
-  margin: 0 auto;
+	margin: 0 auto;
 	.clearfix;
 }
 
@@ -189,6 +189,19 @@
 	&__pic {
 		width: 470px;
 		height: 315px;
+
+		&:after {
+
+			content: "H";
+			color: @yellow;
+			font-size: 130px;
+			line-height: 1;
+			font-family: @GB;
+			position: absolute;
+			bottom: -17px;
+			left: -11px;
+
+		}
 	}
 
 	&__title {
@@ -402,7 +415,7 @@
 
 	// all item
 
-		.all__news__item {
+	.all__news__item {
 
 
 		&__pic {
