@@ -137,6 +137,11 @@
 			color: @Dgreen;
 		}
 	}
+
+	.language {
+		margin-bottom: 20px;
+    margin-top: -55px;
+	}
 }
 
 .freespace__more__container {
@@ -160,6 +165,7 @@
 
 	position: relative;
 	width: 520px;
+	padding-bottom: 50px;
 
 }
 
@@ -189,7 +195,7 @@
 .freespace__gallery__btn-next {
 
 	background-color: transparent;
-	bottom: -50px;
+	bottom: 0;
 
 	&:hover {
 
@@ -214,7 +220,12 @@
 
 @media (max-width:1199px){
 
+.freespace-wrapper {
 
+	.freespace__icon {
+		width: calc(~"100% - 550px");
+	}
+}
 
 }
 
