@@ -160,6 +160,8 @@
 		background-color: @blue;
 		border-radius: 50%;
 
+		transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 		&:before {
 			content: "";
 			width: 135px;
@@ -233,7 +235,7 @@
 }
 
 
-// -------- MEDIA 
+// -------- MEDIA
 
 
 
@@ -392,7 +394,7 @@
 	.about__mission__slider__item {
 		font-size: 18px;
 	}
-	
+
 	.about__mission__slider__item__btn-next {
 
 		position: static;
@@ -414,11 +416,9 @@
 }
 
 @media (max-width:380px){
-	
+
 	.about__top__right__item {
 		width: 96px;
 	}
 
 }
-
-

@@ -441,7 +441,7 @@ $(function () {
   loop: false,
   mouseDrag: false,
   touchDrag: false,
-  center: true,  
+  center: true,
   animateIn: "fadeInUp",
   animateOut: "fadeOutDown"
 
@@ -467,75 +467,54 @@ $(function () {
 
  // top sliders
 
-// top evolution
- var evolutionTopSlider = $('#evolution__top__slider').owlCarousel({
+ var topSlidersOptions = {
   items : 1,
   nav : true,
   navText: ['', ''],
   loop: true
+};
 
-});
+var bottomSliderOptions = {
+ items : 2,
+ nav : true,
+ navText: ['', ''],
+ loop: true,
+ responsive : {
+     0 : {
+       items : 1
+     },
+     768 : {
+       items : 1,
+       margin: 0
+     },
+     1169 : {
+       margin: 170
+     },
+     1280 : {
+       margin: 280
+     }
+   }
 
+};
 
- // top intelligence
-  var intelligenceTopSlider = $('#intelligence__top__slider').owlCarousel({
-  items : 1,
-  nav : true,
-  navText: ['', ''],
-  loop: true
-
-});
+ var evolutionTopSlider = $('#evolution__top__slider').owlCarousel(topSlidersOptions);
+ var intelligenceTopSlider = $('#intelligence__top__slider').owlCarousel(topSlidersOptions);
+ var EDUCATIONTopSlider = $('#EDUCATION__top__slider').owlCarousel(topSlidersOptions);
+ var AuditoriumTopSlider = $('#Auditorium__top__slider').owlCarousel(topSlidersOptions);
+ var room1TopSlider = $('#room1__top__slider').owlCarousel(topSlidersOptions);
+ var room2TopSlider = $('#room2__top__slider').owlCarousel(topSlidersOptions);
+ var terassaTopSlider = $('#terassa__top__slider').owlCarousel(topSlidersOptions);
 
 
  // bottom slider
 
- // bottom evolution
- var evolutionBottomSlider = $('#evolution__bottom__slider').owlCarousel({
-  items : 2,
-  nav : true,
-  navText: ['', ''],
-  loop: true,
-  responsive : {
-      0 : {
-        items : 1
-      },
-      768 : {
-        items : 1,
-        margin: 0
-      },
-      1169 : {
-        margin: 170
-      },
-      1280 : {
-        margin: 280
-      }
-    }
-
-});
-
-  // bottom inteligence
- var intelligenceBottomSlider = $('#intelligence__bottom__slider').owlCarousel({
-  items : 2,
-  nav : true,
-  navText: ['', ''],
-  loop: true,
-  responsive : {
-      0 : {
-        items : 1
-      },
-      768 : {
-        items : 1,
-        margin: 0
-      },
-      1169 : {
-        margin: 170
-      },
-      1280 : {
-        margin: 280
-      }
-    }
-
-});
+ var evolutionBottomSlider = $('#evolution__bottom__slider').owlCarousel(bottomSliderOptions);
+ var intelligenceBottomSlider = $('#intelligence__bottom__slider').owlCarousel(bottomSliderOptions);
+ var EDUCATIONBottomSlider = $('#EDUCATION__bottom__slider').owlCarousel(bottomSliderOptions);
+ var AuditoriumBottomSlider = $('#Auditorium__bottom__slider').owlCarousel(bottomSliderOptions);
+ var room1BottomSlider = $('#room1__bottom__slider').owlCarousel(bottomSliderOptions);
+ var room2BottomSlider = $('#room2__bottom__slider').owlCarousel(bottomSliderOptions);
+ var terassaBottomSlider = $('#terassa__bottom__slider').owlCarousel(bottomSliderOptions);
 
 
 // hide show navigation
@@ -561,12 +540,6 @@ $(function () {
 
 
   $('.freespace__slider__pic').imagefill();
-
-
-<<<<<<< HEAD
-=======
-  $('.opened__innovations__author__pic').imagefill();
->>>>>>> 776366d25132218deeade13c81d4d08a42ba8f8e
 
 })
 
@@ -622,6 +595,24 @@ $(function () {
   loop: false,
   onInitialized: allSlidesCountOnInit,
   onTranslate: sliderCurrentCounter
+});
+
+var coworking3Slider = $('#coworking3__top__slider').owlCarousel({
+items : 1,
+nav : true,
+navText: ['', ''],
+loop: false,
+onInitialized: allSlidesCountOnInit,
+onTranslate: sliderCurrentCounter
+});
+
+var coworking4Slider = $('#coworking4__top__slider').owlCarousel({
+items : 1,
+nav : true,
+navText: ['', ''],
+loop: false,
+onInitialized: allSlidesCountOnInit,
+onTranslate: sliderCurrentCounter
 });
 
 
@@ -736,7 +727,7 @@ $(function () {
 });
 
 
-// about 
+// about
 
 
 $(function() {
@@ -763,8 +754,14 @@ $(function() {
   autoHeight:true
 });
 
+var rotateDeg = 0;
+
    $('.about__mission__slider__item__btn-next').click(function(e) {
     e.preventDefault();
+    rotateDeg += 360;
+    $('.about__mission__pic').css({
+      'transform' : 'rotate(' + rotateDeg + 'deg)'
+    });
     aboutMissionSlider.trigger('next.owl.carousel');
   });
 
