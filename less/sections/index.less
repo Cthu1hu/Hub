@@ -101,9 +101,8 @@
 	background-color: #fff;
 	width: 168px;
 	height: 70px;
-	border-top-right-radius: 35px;
-	border-bottom-right-radius: 35px;
-
+	// border-top-right-radius: 35px;
+	// border-bottom-right-radius: 35px;
 
 }
 
@@ -115,7 +114,7 @@
 .navigation {
 
 
-	font-family: @G;
+	font-family: @GB;
 	width: calc(~"95% - 168px");
 	padding-right: 5%;
 	height: 70px;
@@ -140,6 +139,55 @@
 		margin-right: 25px;
 		font-size: 18px;
 		justify-content: space-between;
+		transition: 0.3s ease-out;
+
+
+		&:nth-of-type(1),
+		&:nth-of-type(5)  {
+			&:hover {
+				.navigation__link {
+					color: @yellow;
+					&:after {
+						background-color: @yellow;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(2),
+		&:nth-of-type(3),
+		&:nth-of-type(4)  {
+			&:hover {
+				.navigation__link {
+					color: @Dgreen;
+					&:after {
+						background-color: @Dgreen;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(6)  {
+			&:hover {
+				.navigation__link {
+					color: @blue;
+					&:after {
+						background-color: @blue;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(7)  {
+			&:hover {
+				.navigation__link {
+					color: @orange;
+					&:after {
+						background-color: @orange;
+					}
+				}
+			}
+		}
 
 		&.active {
 			.navigation__link {
@@ -240,7 +288,7 @@
 .title__top {
 
 	font-size: 15px;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	font-family: @GL;
 	margin-bottom: 15px;
 	margin-left: 8px;
@@ -265,7 +313,7 @@
 			.conference__item__wrap {
 
 				&:after {
-					content: "27.03";
+					content: attr(data-date);
 				}
 
 			}
@@ -277,7 +325,7 @@
 			}
 
 			.conference__powered {
-				transform: scale(0);
+				transform: scale(1);
 			}
 			.conference__info_name {
 				color: @orange;
@@ -295,7 +343,7 @@
 			.conference__item__wrap {
 
 				&:after {
-					content: "15.04";
+					content: attr(data-date);
 				}
 
 			}
@@ -408,6 +456,9 @@
 		line-height: 1;
 		margin-bottom: 10px;
 		font-family: @GBl;
+		height: 75px;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 
 	&_name {
@@ -426,7 +477,7 @@
 .more__link {
 	text-transform: uppercase;
 	font-size: 14px;
-	padding: 6px 12px;
+	padding: 3px 12px;
 	border-radius: 15px;
 	font-family: @GB;
 }
@@ -443,15 +494,14 @@
 	// left: 50%;
 	// transform: translateX(-50%);
 	background-color: @blue;
-	height: 36px;
+	// height: 36px;
 	// line-height: 36px;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-family: @GB;
-	padding-left: 35px;
-	padding-right: 35px;
-	padding-top: 3px;
-	border-radius: 15px;
+	padding: 5px 35px;
+	// padding-top: 3px;
+	border-radius: 20px;
 
 }
 
@@ -539,6 +589,10 @@
 		display: inline-block;
 		transition: 0.3s ease-out;
 
+		&-conference-zone {
+			line-height: 0.7;
+		}
+
 		&:hover {
 			font-size: 70px;
 		}
@@ -573,7 +627,7 @@
 
  &__more__link {
 
- 	background-color: @Lgreen;
+ 	background-color: @Dgreen;
  }
 
 
@@ -637,8 +691,6 @@
 	&__info {
 
 		margin-left: 90px;
-		margin-right: 125px;
-		margin-top: 90px;
 	}
 
 	&__title {
@@ -706,12 +758,12 @@
 
    // padding-right: 140px;
 
-    &:before {
+   &:before {
 
-    	content:"";
-    	position: absolute;
-    	display: block;
-    	top: 50%;
+   	content:"";
+   	position: absolute;
+   	display: block;
+   	top: 50%;
     	//left: 50%;
     	left: calc(~"50% - 70px");
     	transform: translate(-50%, -50%);
@@ -857,9 +909,10 @@
 	margin-bottom: 50px;
 
 	&__left,
-	&__right {
+	&__right,
+	&__form__wrap{
 
-		width: 50%;
+		width: 33.33%;
 
 	}
 
@@ -872,6 +925,54 @@
 			color: @gray;
 		}
 	}
+
+	&__form__wrap {
+
+		float: left;
+	}
+
+	&__form {
+
+		width: 271px;
+		text-align: center;
+		margin: 0 auto;
+
+		&__title {
+
+			margin-bottom: 20px;
+		}
+
+		&__input__mail{
+			width: 125px;
+			height: 30px;
+			outline: none;
+			border: 1px solid @gray;
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 12px;
+			font-family: @G;
+			padding-left: 10px;
+		}
+		&__btn {
+			width: 125px;
+			font-size: 12px;
+			font-family: @GB;
+			height: 30px;
+			padding: 0;
+			margin: 0;
+			margin-left: -5px;
+			background-color: @Dgreen;
+			color: #fff;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+
+		}
+
+	}
+
+
 	&__right {
 
 		float: right;
@@ -948,7 +1049,8 @@
 	position: static;
 	margin-left: 70px;
 	margin-bottom: 20px;
-  margin-top: -55px;
+	margin-top: -55px;
+	font-family: @GB;
 	
 
 	&-index {
@@ -1270,14 +1372,14 @@
 	}
 	.coworking {
 
-	padding-left: 45px;
+		padding-left: 45px;
 		width: calc(~"100% - 415px");
-}
+	}
 	.coworking__info__wrapper {
-	width: 350px;
-	padding-right: 50px;
+		width: 350px;
+		padding-right: 50px;
 
-}
+	}
 
 	.coworking__item.active .coworking__item__title {
 		font-size: 55px;
@@ -1291,9 +1393,9 @@
 	}
 
 
-	.footer__container {
-		width: 600px;
-	}
+	// .footer__container {
+	// 	width: 600px;
+	// }
 }
 
 @media (max-width:992px) {
@@ -1301,7 +1403,21 @@
 	.coworking {
 
 		width: calc(~"100% - 360px");
-}
+	}
+
+	.contacts__form__wrap,
+	 .contacts__left,
+	  .contacts__right {
+	  	float: none;
+	  	width: 100%;
+	  	text-align: center;
+	  }
+
+	 .contacts__form__wrap {
+			margin-top: 30px;
+			margin-bottom: 30px;
+	 }
+
 }
 
 @media (min-width:1023px) and (max-height: 600px){
@@ -1309,6 +1425,14 @@
 	.section {
 
 		padding: 50px 0;
+	}
+}
+
+@media (min-width:1023px) and (max-height: 750px){
+
+	.conference__item__wrap,
+	.more__link look__all {
+		transform: scale(0.8);
 	}
 }
 
@@ -1339,12 +1463,12 @@
 
 
 	.first-info {
-		margin-left: 25px;
+		margin-left: 15px;
 	}
 
 	.first-info__title {
-		font-size: 100px;
-		line-height: 80px;
+		font-size: 80px;
+		line-height: 1;
 	}
 	.circle{
 
@@ -1415,7 +1539,7 @@
 
 			text-align: center;
 			margin: 0;
-			padding-right: 29px;
+			padding-right: 0;
 		}
 
 		&__title__list{
@@ -1481,18 +1605,18 @@
 		.innovationGallery__btn-prev ,
 		.innovationGallery__btn-next {
 
-				bottom: -4px;
-				img {
-						width: 50px;
-				}
-			
+			bottom: -4px;
+			img {
+				width: 50px;
 			}
 			
 		}
+
+	}
 	
 
 	.more__link {
-		padding: 6px 10px;
+		padding: 3px 10px;
 	}
 
 	.section-5 {

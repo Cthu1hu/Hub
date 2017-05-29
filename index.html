@@ -17,6 +17,8 @@
 				<img class="logo__img" src="img/logo.png" alt="logo">
 			</div>
 
+
+
 			<nav class="navigation">
 				<ul class="navigation__list">
 					<li class="navigation__item"><a href="#" class="navigation__link"> О нас </a></li>
@@ -52,7 +54,7 @@
 
 			<div class="first-info">
 				<h3 class="title__top">WELCOME TO HUB 4.0</h3>
-				<h2 class="first-info__title"><span class="circle circle-green">I</span>n co <br> we  trust </h2>
+				<h2 class="first-info__title"><span class="circle circle-green">I</span>n co -<br> we  trust </h2>
 			</div>
 
 		</section>
@@ -62,7 +64,7 @@
 
 				<!-- conference__item -->
 				<div class="conference__item conference__item-o">
-					<div class="conference__item__wrap">
+					<div class="conference__item__wrap"  data-date="15.05">
 
 						<div class="conference__pic">
 							<div class="conference__circle">
@@ -82,7 +84,7 @@
 
 				<!-- conference__item -->
 				<div class="conference__item conference__item-g">
-					<div class="conference__item__wrap">
+					<div class="conference__item__wrap"  data-date="15.05">
 
 						<div class="conference__pic">
 							<div class="conference__circle">
@@ -118,19 +120,19 @@
 		<p class="title__top">Our co-services</p>
 		<ul class="coworking__title__list">
 	
-			<li class="coworking__item active">
-				<h3 class="coworking__item__title" data-cow-id="cow-info-1">Conference zone</h3>
+			<li class="coworking__item active" data-item-name="conferenceZone">
+				<h3 class="coworking__item__title coworking__item__title-conference-zone" data-cow-id="cow-info-1">Conference zone</h3>
 			</li>
 	
-			<li class="coworking__item">
+			<li class="coworking__item" data-item-name="coworking">
 				<h3 class="coworking__item__title" data-cow-id="cow-info-2">Coworking </h3>
 			</li>
 	
-			<li class="coworking__item">
+			<li class="coworking__item" data-item-name="cospace">
 				<h3 class="coworking__item__title coworking__item__title-long" data-cow-id="cow-info-3"> Cospace</h3>
 			</li>
 	
-			<li class="coworking__item">
+			<li class="coworking__item" data-item-name="community">
 				<h3 class="coworking__item__title" data-cow-id="cow-info-4">Community </h3>
 			</li>
 	
@@ -259,6 +261,14 @@
 						</ul>
 					</div>
 
+					<div class="contacts__form__wrap">
+						<form class="contacts__form">
+								<h3 class="contacts__form__title">Хочу быть в курсе событий!</h3>
+							 <input class="contacts__form__input__mail" type="email" id="user-email" name="user-email" placeholder="email">
+							 <button class="btn contacts__form__btn" type="submit">Подписаться</button>
+						</form>
+					</div>	
+
 					<div class="contacts__right">
 						<ul class="contact__list">
 							<li class="contact__item">	пер.Ярославский 1/3</li>
@@ -272,6 +282,7 @@
 
 				<div class="footer__bottom">
 					<div class="footer__bottom__left">
+						<a class="btn btn-offer" href="#">Договоры оферты</a>
 						<p class="footer__bottom__text">К оплате принимаются международные <br>
 							платежные карты систем Visa и MasterСard, любого банка</p>
 							<div class="footer__bottom__pic">
@@ -329,6 +340,8 @@
 		<script src="js/libs/jquery.easings.min.js"></script>
 		<script src="js/libs/jquery.fullpage.min.js"></script>
 		<script src="js/libs/TweenMax.js"></script>
+		<script src="js/libs/imagesLoaded.js"></script>
+		<script src="js/libs/jquery-imagefill.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 	</html>

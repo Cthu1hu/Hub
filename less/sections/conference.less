@@ -265,6 +265,19 @@
 				font-size: 48px;
 				top: 24px;
 				margin-left: -16px;
+				display: inline-block;
+
+				&:after {
+					content: attr(data-human-count);
+					font-family: @GL;
+					font-size: 14px;
+					line-height: 1;
+					position: absolute;
+					top: -13px;
+					right: 0;
+					color: @Dgreen;
+					text-transform: initial;
+				}
 			}
 
 			.freespace__slider__item {
@@ -474,7 +487,7 @@
 
 		.freespace__slider__wrap {
 			width: 500px;
-			float: left;
+			// float: left;
 		}
 	}
 
@@ -483,10 +496,19 @@
 		width: 800px;
 	}
 
+}
+
+@media (max-width:1280px){
 
 
+	.coworking__main__slider__item {
+
+		width: 860px;
+	}
 
 }
+
+
 
 @media (max-width:1199px){
 
@@ -643,58 +665,58 @@
 					}
 				}
 
-		.coworking__main__slider  {
+				.coworking__main__slider  {
 
-			float: none;
-			width: 100%;
-
-			&__item {
-
-				&__details {
+					float: none;
+					width: 100%;
 
 					&__item {
-						width: 50%;
-						margin-right: -3px;
+
+						&__details {
+
+							&__item {
+								width: 50%;
+								margin-right: -3px;
+							}
+							.more-conference-btn.btn-green {
+								margin-right: 0;
+							}
+							.more-conference-btn.btn-red {
+								margin-right: 0;
+							}
+						}
+
+						&__bottom {
+							padding: 0;
+
+							&__title {
+
+								font-size: 25px;
+							}
+
+							&__slider__wrap {
+								width: 260px;
+							}
+							&__slider__item {
+
+								width: 260px;
+							}
+
+							&__slider__pic {
+								width: 260px;
+								height: 190px;
+							}
+
+							.more-conference-btn.btn-red {
+								margin: 0;
+							}
+						}
+
 					}
-					.more-conference-btn.btn-green {
-						margin-right: 0;
-					}
-					.more-conference-btn.btn-red {
-						margin-right: 0;
-					}
+
+
+
 				}
-
-				&__bottom {
-					padding: 0;
-
-					&__title {
-
-						font-size: 25px;
-					}
-
-					&__slider__wrap {
-						width: 260px;
-					}
-					&__slider__item {
-
-						width: 260px;
-					}
-
-					&__slider__pic {
-						width: 260px;
-    				height: 190px;
-					}
-
-					.more-conference-btn.btn-red {
-						margin: 0;
-					}
-				}
-
-			}
-
-
-
-		}
 
 
 			}
