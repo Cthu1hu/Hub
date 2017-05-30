@@ -71,7 +71,7 @@
 
 						<div class="conference__pic">
 							<div class="conference__circle">
-								<img class="conference__img" src="img/content/persons/yurchak.png" alt="conf-2">
+								<img class="conference__img" src="img/content/persons/Юрчак.png" alt="conf-2">
 								<p class="conference__powered">powered by <span class="bolder">hub 4.0</span></p>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
 
 						<div class="conference__pic">
 							<div class="conference__circle">
-								<img class="conference__img" src="img/content/persons/pilec.png" alt="conf-2">
+								<img class="conference__img" src="img/content/persons/Пилецкий.png" alt="conf-2">
 								<!--<p class="conference__powered">powered by <span class="bolder">hub 4.0</span></p> -->
 							</div>
 						</div>
@@ -117,14 +117,6 @@
 
 		<section class="section section-3">
 
-<<<<<<< HEAD
-			<ul class="index__slide-3-background-slider owl-carousel">
-				<li style="background-image: url('img/content/main/conference_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-				<li style="background-image: url('img/content/main/coworking_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-				<li style="background-image: url('img/content/main/cospace2_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-				<li style="background-image: url('img/content/main/community_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-			</ul>
-=======
 		<ul class="index__slide-3-background-slider owl-carousel">
 			<li style="background-image: url('img/content/main/conference_dark.png')" alt="" class="index__slide-3-background-slide"></li>
 			<li style="background-image: url('img/content/main/coworking_dark.png')" alt="" class="index__slide-3-background-slide"></li>
@@ -179,79 +171,31 @@
 			<a href="#" class="more__link coworking__more__link">Детальнее</a>
 		</div>
 	</li>
->>>>>>> f1d381a1511222048b4b47f86cc72576e7eccccb
-
-			<div class="fixed__container">
-				<div class="coworking">
-
-					<p class="title__top">Our co-services</p>
-					<ul class="coworking__title__list">
-
-						<li class="coworking__item active" data-bgpos="0% 50%, 0% -1000%, 0% -1000%, 0% 1000%">
-							<h3 class="coworking__item__title coworking__item__title-conference-zone" data-cow-id="cow-info-1">Conference zone</h3>
-						</li>
-
-						<li class="coworking__item" data-bgpos="1000%, 50%, -1000%, -1000%">
-							<h3 class="coworking__item__title" data-cow-id="cow-info-2">Coworking </h3>
-						</li>
-
-						<li class="coworking__item" data-bgpos="-1000%, 1000%, 50%, -1000%">
-							<h3 class="coworking__item__title coworking__item__title-long" data-cow-id="cow-info-3"> Cospace</h3>
-						</li>
-
-						<li class="coworking__item" data-bgpos="-1000%, -1000%, 1000%, 50%">
-							<h3 class="coworking__item__title" data-cow-id="cow-info-4">Community </h3>
-						</li>
-
-					</ul>
-
-				</div>
-
-				<div class="coworking__info__wrapper">
-					<!-- coworking__ info index  -->
-					<ul class="coworking__info__list">
-						<li class="coworking__info__item active" style="display:block" id="cow-info-1" >
-							<div class="coworking__info">
-								<p class="coworking__text">
-									Аренда конференц-залов, полный комплект презентационного оборудования и первоклассный сервис. В теплое время открыта летняя терраса. Берем на себя организационные хлопоты и сопровождаем мероприятия от первого звонка до готовых фотографий в вашей почте. Бронируйте, а мы сделаем все остальное!
-								</p>
-								<a href="#" class="more__link coworking__more__link">Детальнее</a>
-							</div>
-						</li>
-
-						<li class="coworking__info__item" id="cow-info-2">
-							<div class="coworking__info">
-								<p class="coworking__text">
-									Этот офис будет расти вместе с вашей командой. Закрытое пространство, в котором всё работает на вас. Круглосуточный доступ, sports and foods zones, переговорные и skype rooms — for free. Аренда трех и более мест по специальной цене!
-								</p>
-								<a href="#" class="more__link coworking__more__link">Детальнее</a>
-							</div>
-						</li>
 
 
-						<li class="coworking__info__item" id="cow-info-3">
-							<div class="coworking__info">
-								<p class="coworking__text">
-									Динамичная локация для работы и нетворка. Создана для тех, кто ценит комфорт и свободу в рабочей обстановке. Вдохновляющая атмосфера и десятки единомышленников в пределах одной локации. Два этажа. Кофе, чай и снеки. Вы можете арендовать рабочее место на час или весь день.
-								</p>
-								<a href="#" class="more__link coworking__more__link">Детальнее</a>
-							</div>
-						</li>
+	<li class="coworking__info__item" id="cow-info-3">
+		<div class="coworking__info">
+			<p class="coworking__text">
+				Динамичная локация для работы и нетворка. Создана для тех, кто ценит комфорт и свободу в рабочей обстановке. Вдохновляющая атмосфера и десятки единомышленников в пределах одной локации. Два этажа. Кофе, чай и снеки. Вы можете арендовать рабочее место на час или весь день.
+			</p>
+			<a href="#" class="more__link coworking__more__link">Детальнее</a>
+		</div>
+	</li>
 
-						<li class="coworking__info__item" id="cow-info-4">
-							<div class="coworking__info">
-								<p class="coworking__text">
-									HUB 4.0 формирует сообщество визионеров и инноваторов. Наша миссия — содействовать развитию инновационной экономики в Украине. Мы популяризируем достижения IT сектора и ценности европейской концепции будущего «Industrie 4.0».
-								</p>
-								<a href="#" class="more__link coworking__more__link">Детальнее</a>
-							</div>
-						</li>
+	<li class="coworking__info__item" id="cow-info-4">
+		<div class="coworking__info">
+			<p class="coworking__text">
+				HUB 4.0 формирует сообщество визионеров и инноваторов. Наша миссия — содействовать развитию инновационной экономики в Украине. Мы популяризируем достижения IT сектора и ценности европейской концепции будущего «Industrie 4.0».
+			</p>
+			<a href="#" class="more__link coworking__more__link">Детальнее</a>
+		</div>
+	</li>
 
 
 
-					</ul>
-				</div>
-			</div>
+			</ul>
+		</div>
+</div>
 
 
 
