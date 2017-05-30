@@ -3,6 +3,15 @@
 
 $(function(){
 
+  var indexSection3b1Slider = $('.index__slide-3-background-slider').owlCarousel({
+    items : 1,
+    nav : false
+  });
+
+  $('.index-wrapper .coworking__item').on('click', function (e) {
+    indexSection3b1Slider.trigger('to.owl.carousel', $(this).index());
+  });
+
   // conference slider
   var conferenceSlider = $('#index__conference__slider').owlCarousel({
     items : 2,
@@ -65,14 +74,12 @@ $(function(){
       $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
     }
 
-
-
     else {
       $('.header').removeClass('dark-nav');
       $(' #fp-nav ').removeClass('dark-nav');
       $('.prevFullSlide, .nextFullSlide').removeClass('dark-nav');
 
-           
+
     }
 
 
@@ -233,38 +240,6 @@ $(function () {
     }
 
   });
-
-
-  var  indexCoworkItem = $('.index-wrapper .coworking__item')
-  var sectionIndexCoworkItem = $('.index-wrapper .section-3');
-
-  indexCoworkItem.on('click', function (e) {
-   if ($(this).attr('data-item-name') == 'conferenceZone') {
-    sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/conference_dark.png")'
-    })
-  } else  if ($(this).attr('data-item-name') == 'coworking') {
-    sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/coworking_dark.png")'
-    })
-  }  else  if ($(this).attr('data-item-name') == 'cospace') {
-    sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/cospace2_dark.png")'
-    })
-  } else  if ($(this).attr('data-item-name') == 'community') {
-    sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/community_dark.png")'
-    })
-  }
-
-
-});
-
-
-
-
-
-
 
 });
 
@@ -756,12 +731,10 @@ $(function () {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
-          $target.focus();
           if ($target.is(":focus")) { // Checking if the target was focused
             return false;
           } else {
             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
           };
         });
       }

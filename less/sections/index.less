@@ -2,8 +2,37 @@
 .index-wrapper {
 
 	overflow: visible;
+
+	.section-3 {
+		position: relative;
+		// background-image: url("../img/content/main/conference_dark.png"),
+		// url("../img/content/main/coworking_dark.png"),
+		// url("../img/content/main/cospace2_dark.png"),
+		// url("../img/content/main/community_dark.png");
+		transition: all 1s ease-out;
+		background-position: 50%, -200%, -200%, 200%;
+		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
 }
 
+.index__slide-3-background-slider {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+
+.index__slide-3-background-slide {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+}
 
 
 .section {
@@ -1151,7 +1180,7 @@
 	}
 }
 #fp-nav ul li:nth-child(1) a.active span{
-	
+
 	background-color: @Dgreen;
 }
 #fp-nav ul li:hover:nth-child(1) a span {
@@ -1160,7 +1189,7 @@
 }
 
 #fp-nav ul li:nth-child(2) a.active span{
-	
+
 	background-color: @blue;
 }
 #fp-nav ul li:hover:nth-child(2) a span {
@@ -1169,7 +1198,7 @@
 }
 
 #fp-nav ul li:nth-child(3) a.active span{
-	
+
 	background-color: @Dgreen;
 }
 #fp-nav ul li:hover:nth-child(3) a span {
@@ -1177,7 +1206,7 @@
 	background-color: @Dgreen;
 }
 #fp-nav ul li:nth-child(4) a.active span{
-	
+
 	background-color: @orange;
 }
 #fp-nav ul li:hover:nth-child(4) a span {
@@ -1185,7 +1214,7 @@
 	background-color: @orange;
 }
 #fp-nav ul li:nth-child(5) a.active span{
-	
+
 	background-color: @yellow;
 }
 #fp-nav ul li:hover:nth-child(5) a span {
