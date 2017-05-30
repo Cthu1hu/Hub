@@ -63,7 +63,10 @@ $(function(){
       $('.header').addClass('dark-nav');
       $(' #fp-nav ').addClass('dark-nav');
       $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
-    } 
+    }
+
+
+
     else {
       $('.header').removeClass('dark-nav');
       $(' c ').removeClass('dark-nav');
@@ -256,7 +259,7 @@ $(function () {
 
 
 });
-  
+
 
 
 
@@ -300,7 +303,7 @@ $(function () {
   var newInnovationGallerySlider = $('#new__innovation__slider').owlCarousel({
     items : 3,
     nav : true,
-    navText: ['', ''],
+    navText: ['<', '>'],
     loop: true,
     responsive : {
       0 : {
@@ -481,7 +484,8 @@ $(function () {
   touchDrag: false,
   center: true,
   animateIn: "fadeInUp",
-  animateOut: "fadeOutDown"
+  animateOut: "fadeOutDown",
+  autoHeight: true
 
 });
 
@@ -492,6 +496,10 @@ $(function () {
     $('.main__nav__coworking__container__item.active').removeClass('active');
     $(e.target).addClass('active');
     conferenceMainSlider.trigger('to.owl.carousel', curNumNav);
+
+    $('body').animate({
+      scrollTop : $('.coworking__main__content').parent().offset().top
+    });
 
   }
 
@@ -654,7 +662,7 @@ $(function () {
     onTranslate: sliderCurrentCounter4
   });
 
-  //1 
+  //1
 
   function allSlidesCountOnInit1 (e) {
     $('.coworking1__top__slider .coworking__slide__nav__total').html(e.item.count);
