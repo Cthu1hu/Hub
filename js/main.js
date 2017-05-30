@@ -63,14 +63,22 @@ $(function(){
       $('.header').addClass('dark-nav');
       $(' #fp-nav ').addClass('dark-nav');
       $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
+<<<<<<< HEAD
     }
 
 
+=======
+    } 
+>>>>>>> refs/remotes/PIMJl9HIH/master
     else {
       $('.header').removeClass('dark-nav');
-      $(' #fp-nav ').removeClass('dark-nav');
+      $(' c ').removeClass('dark-nav');
       $('.prevFullSlide, .nextFullSlide').removeClass('dark-nav');
+
+           
     }
+
+
   },
 
 
@@ -236,19 +244,19 @@ $(function () {
   indexCoworkItem.on('click', function (e) {
    if ($(this).attr('data-item-name') == 'conferenceZone') {
     sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/confrence.png")'
+      'background-image' : 'url("img/content/main/conference_dark.png")'
     })
   } else  if ($(this).attr('data-item-name') == 'coworking') {
     sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/coworking.png")'
+      'background-image' : 'url("img/content/main/coworking_dark.png")'
     })
   }  else  if ($(this).attr('data-item-name') == 'cospace') {
     sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/cospace2.png")'
+      'background-image' : 'url("img/content/main/cospace2_dark.png")'
     })
   } else  if ($(this).attr('data-item-name') == 'community') {
     sectionIndexCoworkItem.css({
-      'background-image' : 'url("img/content/main/community.png")'
+      'background-image' : 'url("img/content/main/community_dark.png")'
     })
   }
 
@@ -839,6 +847,9 @@ $(function() {
     navText: ['', ''],
     loop: true,
     autoWidth:true,
+    autoplay:true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause:true,
     margin: 70,
     responsive : {
       0 : {
