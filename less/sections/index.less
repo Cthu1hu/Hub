@@ -130,8 +130,8 @@
 	background-color: #fff;
 	width: 168px;
 	height: 70px;
-	// border-top-right-radius: 35px;
-	// border-bottom-right-radius: 35px;
+	border-top-right-radius: 35px;
+	border-bottom-right-radius: 35px;
 
 }
 
@@ -140,7 +140,7 @@
 }
 
 .logo__img {
-	padding-left: 34px;
+	padding-left: 30px;
 	padding-top: 12px;
 }
 
@@ -1273,10 +1273,7 @@
 	&.dark-nav {
 		background: url('../img/icons/dark-nav-arrow.png') no-repeat;
 	}
-
 }
-
-
 .burger {
 	display: none;
 	z-index: 102;
@@ -1289,7 +1286,7 @@
 	border: none;
 	outline: none;
 	background-color: white;
-	// border-radius: 65px 0 0 65px;
+	border-radius: 65px 0 0 65px;
 	overflow: hidden;
 	&:hover {
 		cursor: pointer;
@@ -1298,6 +1295,7 @@
 	svg {
 		overflow: hidden;
 		height: 70px;
+		padding-left: 10px;
 	}
 }
 .burger-svg__base {
@@ -1559,24 +1557,26 @@
 
 	// header on mobile
 	.logo__container {
-		width: 130px;
-		height: 59px;
+		width: 100px;
+    height: 50px;
 	}
 
 	.logo__img {
-		padding-left: 19px;
-		padding-top: 12px;
-		width: 85px;
+		padding-left: 15px;
+    padding-top: 12px;
+    width: 85px;
 	}
 
 	.burger {
 
-		height: 59px;
+		height: 50px;
+    width: 56px;
 
 		svg {
-			height: 67px;
-			margin-left: 20px;
-			margin-top: -3px;
+			height: 60px;
+   		 margin-left: 0;
+    	margin-top: -3px;
+    	padding-left: 3px;
 		}
 	}
 
@@ -1837,6 +1837,11 @@
 		&__text {
 			padding-right: 45px;
 		}
+	}
+
+	.first-info__title {
+    font-size: 65px;
+    line-height: 0.9;
 	}
 
 }
