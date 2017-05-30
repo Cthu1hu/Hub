@@ -63,19 +63,14 @@ $(function(){
       $('.header').addClass('dark-nav');
       $(' #fp-nav ').addClass('dark-nav');
       $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
-<<<<<<< HEAD
     }
 
-
-=======
-    } 
->>>>>>> refs/remotes/PIMJl9HIH/master
     else {
       $('.header').removeClass('dark-nav');
       $(' c ').removeClass('dark-nav');
       $('.prevFullSlide, .nextFullSlide').removeClass('dark-nav');
 
-           
+
     }
 
 
