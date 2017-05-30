@@ -2,6 +2,12 @@
 
 	color: @gray;
 
+	.navigation__item.active {
+		.navigation__link {
+			color: @blue;
+		}
+	}
+
 	.navigation__link {
 		color: @gray;
 
@@ -81,7 +87,7 @@
 
 		text-align: right;
 		margin-right: 40px;
-		margin-bottom: -7px;
+		margin-bottom: -12px;
 	}
 
 .main-event {
@@ -117,7 +123,7 @@
 		font-size: 12.5px;
 		font-family: @G;
 		margin-left: 20px;
-		margin-top: 30px;
+		// margin-top: 30px;
 
 	}
 
@@ -128,8 +134,18 @@
 		margin-left: 15px;
 	}
 }
+.poster__title {
+		display: inline-block;
+    vertical-align: middle;
+    font-family: @GBl;
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 
-.free-event .main-event__buy {
+
+.free-event .main-event__foc{
 	display: none;
 }
 
@@ -256,6 +272,10 @@
 
 		border: 2px solid white;
 		border-radius: 30px;
+
+		&:first-of-type {
+			margin-left: 0;
+		}
 		&:hover {
 			background-color: transparent;
 			color: white;
@@ -300,7 +320,7 @@
 			font-size: 28px;
 			margin-bottom: 00px;
 			text-transform: uppercase;
-			max-height: 92px;
+			max-height: 82px;
 			text-overflow: ellipsis;
 			overflow: hidden;
 

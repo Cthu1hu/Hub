@@ -76,7 +76,7 @@ $(function(){
 
     else {
       $('.header').removeClass('dark-nav');
-      $(' c ').removeClass('dark-nav');
+      $(' #fp-nav ').removeClass('dark-nav');
       $('.prevFullSlide, .nextFullSlide').removeClass('dark-nav');
 
 
