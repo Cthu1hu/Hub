@@ -57,6 +57,24 @@
 
 .newInnovationGallery__slider {
 
+	&.owl-carousel .owl-nav.disabled, &.owl-carousel .owl-dots.disabled {
+		display: block !important;
+
+		.owl-prev, .owl-next {
+			position: absolute;
+			height: 100%;
+			width: 25%;
+			top: 0;
+		}
+
+		.owl-prev {
+			left: 0;
+		}
+
+		.owl-next {
+			right: 0;
+		}
+	}
 
 	&__item {
 
@@ -88,10 +106,27 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-
-			background: url('../img/icons/demonstrate.svg') no-repeat;
+			background-size: 100%;
+			background-repeat: no-repeat;
 
 		}
+
+		&.icon-1:after {
+			background-image: url('../img/icons/innovation/1.svg');
+		}
+		&.icon-2:after {
+			background-image: url('../img/icons/innovation/2.svg');
+		}
+		&.icon-3:after {
+			background-image: url('../img/icons/innovation/3.svg');
+		}
+		&.icon-4:after {
+			background-image: url('../img/icons/innovation/4.svg');
+		}
+		&.icon-5:after {
+			background-image: url('../img/icons/innovation/5.svg');
+		}
+
 
 	}
 
@@ -109,12 +144,12 @@
 		line-height: 1;
 		text-transform: uppercase;
 		margin-top: 40px;
-		margin-bottom: 35px;
+		margin-bottom: 25px;
 		position: relative;
-		display: inline-block;
+		display: block;
 
 		&:after {
-			content: "Rotorvox";
+			content: attr(data-underline-text);
 			position: absolute;
 			top: -15px;
 			right: 0;
@@ -407,6 +442,7 @@
 		img {
 			padding-left: 15px;
 			padding-bottom: 3px;
+			padding-top: 3px;
 		}
 	}
 
@@ -416,7 +452,8 @@
 
 		img {
 			padding-left: 15px;
-			padding-bottom: 2px;
+			padding-bottom: 3px;
+			padding-top: 3px;
 		}
 	}
 
