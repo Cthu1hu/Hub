@@ -767,7 +767,6 @@ $(function () {
   });
 
 
-
 });
 
 
@@ -819,7 +818,7 @@ $(function() {
     autoWidth:true,
     autoplay:true,
     autoplayTimeout: 2000,
-    autoplayHoverPause:true,
+    smartSpeed:2000,
     margin: 70,
     responsive : {
       0 : {
