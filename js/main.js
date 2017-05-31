@@ -3,15 +3,6 @@
 
 $(function(){
 
-  var indexSection3b1Slider = $('.index__slide-3-background-slider').owlCarousel({
-    items : 1,
-    nav : false
-  });
-
-  $('.index-wrapper .coworking__item').on('click', function (e) {
-    indexSection3b1Slider.trigger('to.owl.carousel', $(this).index());
-  });
-
   // conference slider
   var conferenceSlider = $('#index__conference__slider').owlCarousel({
     items : 2,
@@ -58,7 +49,7 @@ $(function(){
 // full page
 $(function(){
 
- $('#fullpage').fullpage({
+  var fullPage = $('#fullpage').fullpage({
   //Navigation
   menu: '.header',
   navigation: true,
@@ -85,6 +76,10 @@ $(function(){
 
   },
 
+  afterResize: function() {
+     $.fn.fullpage.reBuild();
+  }
+
 
 });
 
@@ -94,6 +89,15 @@ $(function(){
 
  $('.nextFullSlide').on('click', function () {
   $.fn.fullpage.moveSectionDown();
+});
+
+var indexSection3b1Slider = $('.index__slide-3-background-slider').owlCarousel({
+  items : 1,
+  nav : false
+});
+
+$('.index-wrapper .coworking__item').on('click', function (e) {
+  indexSection3b1Slider.trigger('to.owl.carousel', $(this).index());
 });
 
 
