@@ -49,7 +49,7 @@ $(function(){
 // full page
 $(function(){
 
- $('#fullpage').fullpage({
+  var fullPage = $('#fullpage').fullpage({
   //Navigation
   menu: '.header',
   navigation: true,
@@ -75,6 +75,10 @@ $(function(){
 
 
   },
+
+  afterResize: function() {
+     $.fn.fullpage.reBuild();
+  }
 
 
 });
