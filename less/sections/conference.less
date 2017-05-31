@@ -30,6 +30,7 @@
 		transition: 0.5s ease-out;
 
 
+
 		// icon
 		.nav__icon {
 
@@ -68,8 +69,12 @@
 
 		&.active {
 
-			left: 0;
+			top: 50px;
 			width: 100%;
+
+			.main__nav__coworking__container__title {
+				display: none;
+			}
 
 			.nav__icon {
 
@@ -185,6 +190,14 @@
 		}
 	}
 
+}
+
+.need__location {
+	text-transform: uppercase;
+	display: inline-block;
+	background-color: @Dgreen;
+	color: #fff;
+	display: none;
 }
 
 
@@ -544,7 +557,7 @@
 		}
 
 		.coworking__main__slider__item__top {
-			margin-bottom: 100px;
+			margin-bottom: 50px;
 
 			.freespace__icon,
 			.freespace__slider__wrap {
@@ -580,6 +593,7 @@
 			&__price {
 
 				font-size: 22px;
+				margin-bottom: 20px;
 			}
 		}
 
@@ -629,15 +643,23 @@
 		.coworking__main__slider__wrap {
 
 			margin-top: 30px;
+
+		}
+
+		.need__location {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 30px;
 		}
 
 		.main__nav__coworking__container {
 
-			left: -265px;
+			top: -200%;
 			width: 265px;
 			position: absolute;
 			float: none;
 			background-color: #fff;
+			transition: 0.8s ease-out;
 
 					// icon
 					.nav__icon {
@@ -662,6 +684,8 @@
 
 						margin-top: 30px;
 						margin-bottom: 30px;
+						margin-left: 0;
+						display: inline-block;
 					}
 				}
 

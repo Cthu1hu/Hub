@@ -7,51 +7,87 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body >
+	<button class="burger">
+		<svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+			<title>Show / Hide Navigation</title>
+			<rect class="burger-svg__base" width="50" height="50" fill="#1f201c"/>
+			<g class="burger-svg__bars" fill="#fff">
+				<rect class="burger-svg__bar burger-svg__bar-1" x="14" y="18" width="22" height="2"/>
+				<rect class="burger-svg__bar burger-svg__bar-2" x="14" y="24" width="22" height="2"/>
+				<rect class="burger-svg__bar burger-svg__bar-3" x="14" y="30" width="22" height="2"/>
+			</g>
+		</svg>
+	</button>
+
+
+	<header class="header header-index header_fixed">
+		<div class="logo__container logo__container_index">
+			<a class="logo__link" href="index.html" >
+				<img class="logo__img" src="img/logo.png" alt="logo">
+			</a>
+		</div>
+
+		<nav class="navigation">
+			<ul class="navigation__list">
+
+				<li class="navigation__item navigation__item_main"><a href="index.html" class="navigation__link"> Главная </a></li>
+				<li class="navigation__item "><a href="about.html" class="navigation__link"> О нас </a></li>
+				<li class="navigation__item"><a href="conference.html" class="navigation__link"> Conference zone</a></li>
+				<li class="navigation__item "><a href="coworking.html" class="navigation__link"> Coworking  </a></li>
+				<li class="navigation__item "><a href="freespace.html" class="navigation__link"> Cospace</a></li>
+				<li class="navigation__item"><a href="opened-news.html" class="navigation__link"> Community</a></li>
+				<li class="navigation__item "><a href="all-poster.html" class="navigation__link"> Мероприятия </a></li>
+				<li class="navigation__item"><a href="innovations.html" class="navigation__link"> Галерея Инноваций</a></li>
+
+			</ul>
+
+			<div class="language language_mobile">
+				<ul class="language__list">
+					<li class="language__item active"><a href="#" class="language__link">eng</a></li>
+					<li class="language__item"><a href="#" class="language__link">ukr</a></li>
+					<li class="language__item"><a href="#" class="language__link">rus</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
 	<div class="wrapper index-wrapper" id="fullpage">
-
-
-		<header class="header header_fixed">
-			<div class="logo__container">
-				<a class="logo__link" href="index.html" >
-					<img class="logo__img" src="img/logo.png" alt="logo">
-				</a>
-			</div>
-
-
-
-			<nav class="navigation">
-				<ul class="navigation__list">
-
-					<li class="navigation__item "><a href="about.html" class="navigation__link"> О нас </a></li>
-					<li class="navigation__item"><a href="conference.html" class="navigation__link"> Conference zone</a></li>
-					<li class="navigation__item "><a href="coworking.html" class="navigation__link"> Coworking  </a></li>
-					<li class="navigation__item "><a href="freespace.html" class="navigation__link"> Cospace</a></li>
-					<li class="navigation__item"><a href="opened-news.html" class="navigation__link"> Community</a></li>
-					<li class="navigation__item "><a href="all-poster.html" class="navigation__link"> Мероприятия </a></li>
-					<li class="navigation__item"><a href="innovations.html" class="navigation__link"> Галерея Инноваций</a></li>
-
-				</ul>
-			</nav>
-
-			<button class="burger">
-				<svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-					<title>Show / Hide Navigation</title>
-					<rect class="burger-svg__base" width="50" height="50" fill="#1f201c"/>
-					<g class="burger-svg__bars" fill="#fff">
-						<rect class="burger-svg__bar burger-svg__bar-1" x="14" y="18" width="22" height="2"/>
-						<rect class="burger-svg__bar burger-svg__bar-2" x="14" y="24" width="22" height="2"/>
-						<rect class="burger-svg__bar burger-svg__bar-3" x="14" y="30" width="22" height="2"/>
-					</g>
-				</svg>
-			</button>
-		</header>
 
 
 
 
 		<section class="section section-1" style="background-image: url(img/content/main_1920x1080/mainpage_dark.gif)">
+			<header class="header header-index ">
+				<div class="logo__container">
+					<a class="logo__link" href="index.html" >
+						<img class="logo__img" src="img/logo.png" alt="logo">
+					</a>
+				</div>
+
+				<nav class="navigation">
+					<ul class="navigation__list">
+
+						<li class="navigation__item navigation__item_main"><a href="index.html" class="navigation__link"> Главная </a></li>
+						<li class="navigation__item "><a href="about.html" class="navigation__link"> О нас </a></li>
+						<li class="navigation__item"><a href="conference.html" class="navigation__link"> Conference zone</a></li>
+						<li class="navigation__item "><a href="coworking.html" class="navigation__link"> Coworking  </a></li>
+						<li class="navigation__item "><a href="freespace.html" class="navigation__link"> Cospace</a></li>
+						<li class="navigation__item"><a href="opened-news.html" class="navigation__link"> Community</a></li>
+						<li class="navigation__item "><a href="all-poster.html" class="navigation__link"> Мероприятия </a></li>
+						<li class="navigation__item"><a href="innovations.html" class="navigation__link"> Галерея Инноваций</a></li>
+
+					</ul>
+
+					<div class="language language_mobile">
+						<ul class="language__list">
+							<li class="language__item active"><a href="#" class="language__link">eng</a></li>
+							<li class="language__item"><a href="#" class="language__link">ukr</a></li>
+							<li class="language__item"><a href="#" class="language__link">rus</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
 
 
 
@@ -117,69 +153,13 @@
 
 		<section class="section section-3">
 
-<<<<<<< HEAD
 			<ul class="index__slide-3-background-slider owl-carousel">
 				<li style="background-image: url('img/content/main/conference_dark.png')" alt="" class="index__slide-3-background-slide"></li>
 				<li style="background-image: url('img/content/main/coworking_dark.png')" alt="" class="index__slide-3-background-slide"></li>
 				<li style="background-image: url('img/content/main/cospace2_dark.png')" alt="" class="index__slide-3-background-slide"></li>
 				<li style="background-image: url('img/content/main/community_dark.png')" alt="" class="index__slide-3-background-slide"></li>
 			</ul>
-=======
-		<ul class="index__slide-3-background-slider owl-carousel">
-			<li style="background-image: url('img/content/main/conference_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-			<li style="background-image: url('img/content/main/coworking_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-			<li style="background-image: url('img/content/main/cospace2_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-			<li style="background-image: url('img/content/main/community_dark.png')" alt="" class="index__slide-3-background-slide"></li>
-		</ul>
 
-
-<div class="fixed__container">
-	<div class="coworking">
-
-		<p class="title__top">Our co-services</p>
-		<ul class="coworking__title__list">
-
-			<li class="coworking__item active" data-bgpos="0% 50%, 0% -1000%, 0% -1000%, 0% 1000%">
-				<h3 class="coworking__item__title coworking__item__title-conference-zone" data-cow-id="cow-info-1">Conference zone</h3>
-			</li>
-
-			<li class="coworking__item" data-bgpos="1000%, 50%, -1000%, -1000%">
-				<h3 class="coworking__item__title" data-cow-id="cow-info-2">Coworking </h3>
-			</li>
-
-			<li class="coworking__item" data-bgpos="-1000%, 1000%, 50%, -1000%">
-				<h3 class="coworking__item__title coworking__item__title-long" data-cow-id="cow-info-3"> Cospace</h3>
-			</li>
-
-			<li class="coworking__item" data-bgpos="-1000%, -1000%, 1000%, 50%">
-				<h3 class="coworking__item__title" data-cow-id="cow-info-4">Community </h3>
-			</li>
-
-		</ul>
-
-	</div>
-
-		<div class="coworking__info__wrapper">
-		<!-- coworking__ info index  -->
-			<ul class="coworking__info__list">
-	<li class="coworking__info__item active" style="display:block" id="cow-info-1" >
-		<div class="coworking__info">
-			<p class="coworking__text">
-				Аренда конференц-залов, полный комплект презентационного оборудования и первоклассный сервис. В теплое время открыта летняя терраса. Берем на себя организационные хлопоты и сопровождаем мероприятия от первого звонка до готовых фотографий в вашей почте. Бронируйте, а мы сделаем все остальное!
-			</p>
-			<a href="#" class="more__link coworking__more__link">Детальнее</a>
-		</div>
-	</li>
-
-	<li class="coworking__info__item" id="cow-info-2">
-		<div class="coworking__info">
-			<p class="coworking__text">
-				Этот офис будет расти вместе с вашей командой. Закрытое пространство, в котором всё работает на вас. Круглосуточный доступ, sports and foods zones, переговорные и skype rooms — for free. Аренда трех и более мест по специальной цене!
-			</p>
-			<a href="#" class="more__link coworking__more__link">Детальнее</a>
-		</div>
-	</li>
->>>>>>> f1d381a1511222048b4b47f86cc72576e7eccccb
 
 			<div class="fixed__container">
 				<div class="coworking">
@@ -263,17 +243,6 @@
 			<div class="fixed__container">
 				<div class="innovationGallery">
 
-					<div class="innovationGallery__left">
-						<div class="innovationGallery__info">
-							<div class="title__top">Галерея инноваций</div>
-							<h2 class="innovationGallery__title">Our mission is to <br> create <span class="orange">co</span>-technology</h2>
-							<div class="innovationGallery__text">
-								Единственная в Киеве постоянно действующая экспозиция украинских инноваций. Это открытая площадка для популяризации достижений инноваторов нашей страны. В Галерее презентовали решения в сфере IoT, робототехники, 3D-печати, здравоохранения, образования и логистики. Мы бесплатно организуем участие лучших проектов в крупнейших технологических выставках Украины.
-							</div>
-							<a href="innovations.html" class="innovationGallery__link">Все инновации</a>
-
-						</div>
-					</div>
 					<div class="innovationGallery__right">
 						<div class="innovationGallery__wrap">
 
@@ -284,17 +253,12 @@
 									</div>
 									<div class="innovationGallery__item__headline"><a href="opened-innovations.html">Titanovo</a></div>
 								</li>
-
-
 								<li class="innovationGallery__item">
 									<div class="innovationGallery__pic">
 										<a href="opened-innovations.html"><img src="img/content/innovations/Innovations_cut_slider/ugears_slider.png"></a>
 									</div>
 									<div class="innovationGallery__item__headline"><a href="opened-innovations.html">UGEARS</a></div>
 								</li>
-
-
-
 							</ul>
 
 							<div class="innovationGallery__slider__controls">
@@ -307,6 +271,19 @@
 
 
 					</div>
+
+					<div class="innovationGallery__left">
+						<div class="innovationGallery__info">
+							<div class="title__top">Галерея инноваций</div>
+							<h2 class="innovationGallery__title">Our mission is to <br> create <span class="orange">co</span>-technology</h2>
+							<div class="innovationGallery__text">
+								Единственная в Киеве постоянно действующая экспозиция украинских инноваций. Это открытая площадка для популяризации достижений инноваторов нашей страны. В Галерее презентовали решения в сфере IoT, робототехники, 3D-печати, здравоохранения, образования и логистики. Мы бесплатно организуем участие лучших проектов в крупнейших технологических выставках Украины.
+							</div>
+							<a href="innovations.html" class="innovationGallery__link">Все инновации</a>
+
+						</div>
+					</div>
+
 				</div>
 			</div>
 
