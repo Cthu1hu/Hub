@@ -52,12 +52,16 @@
 	width: 150%;
 	margin-right:-25%;
 	margin-left: -25%;
-
+	
+	.new__innovation__slider__controls {
+		display: none;
+	}
 }
 
 .newInnovationGallery__slider {
 
-	&.owl-carousel .owl-nav.disabled, &.owl-carousel .owl-dots.disabled {
+	&.owl-carousel .owl-nav.disabled,
+	&.owl-carousel .owl-dots.disabled {
 		display: block !important;
 
 		.owl-prev, .owl-next {
@@ -112,7 +116,7 @@
 		}
 
 		&.icon-1:after {
-			background-image: url('../img/icons/innovation/1.svg');
+			background-image: url('../img/icons/innovation/5.svg');
 		}
 		&.icon-2:after {
 			background-image: url('../img/icons/innovation/2.svg');
@@ -133,7 +137,7 @@
 	&__img {
 
 		border-radius: 50%;
-    overflow: hidden;
+		overflow: hidden;
 	}
 
 
@@ -163,11 +167,11 @@
 
 	&__info {
 
-    &__text {
+		&__text {
 			height: 90px;
 			text-overflow: ellipsis;
-	    overflow: hidden;
-    }
+			overflow: hidden;
+		}
 		.more__link {
 
 			margin-top: 50px;
@@ -477,7 +481,7 @@
 			background-color: @gray;
 			position: absolute;
 			top: 10px;
-    	right: 35px;
+			right: 35px;
 			transform: rotate(45deg);
 			box-shadow: 0 0 4px rgba(0,0,0,0.5);
 		}
@@ -520,10 +524,10 @@
 
 @media (max-width:1199px){
 
-.fixed-innovation-container .section-4 {
+	.fixed-innovation-container .section-4 {
 
-	margin-top: 30px;
-}
+		margin-top: 30px;
+	}
 
 }
 
@@ -562,12 +566,12 @@
 		}
 	}
 	.newInnovationGalleryContainer {
-	margin-bottom: 120px;
-	width: 170%;
-	margin-right:-35%;
-	margin-left: -35%;
+		margin-bottom: 120px;
+		width: 170%;
+		margin-right:-35%;
+		margin-left: -35%;
 
-}
+	}
 
 	// popup
 	.all-innovations__author {
@@ -597,6 +601,11 @@
 	}
 
 	.all-poster {
+
+		.innovationGallery__info {
+
+			margin-bottom: 50px;
+		}
 
 		.innovations__form__section {
 
@@ -631,12 +640,22 @@
 		.newInnovationGalleryContainer {
 
 			margin-bottom: 50px;
+
+			.new__innovation__slider__controls {
+				display: block;
+				height: 30px;
+				width: 50%;
+				margin: 0 auto;
+				position: relative;
+
+				.control__btn {
+					bottom: 0;
+					background-color: transparent;
+				}
+			}
 		}
-
-
-
-
 	}
+
 
 	//popup
 
@@ -687,7 +706,7 @@
 	.close-popup:after, .close-popup:before {
 
 		top: 20px;
-    right: 35px
+		right: 35px
 	}
 
 	.newInnovationGallery__slider__info .more__link {

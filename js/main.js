@@ -294,6 +294,16 @@ $(function () {
       }
     }
   });
+    $('.new__innovation__slider__controls-prev').click(function(e) {
+    e.preventDefault();
+    newInnovationGallerySlider.trigger('prev.owl.carousel');
+  });
+
+
+  $('.new__innovation__slider__controls-next').click(function(e) {
+    e.preventDefault();
+    newInnovationGallerySlider.trigger('next.owl.carousel');
+  });
 
 
 
