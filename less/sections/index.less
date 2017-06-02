@@ -793,6 +793,13 @@
 		display: inline-block;
 		text-align: center;
 		line-height: 30px;
+
+		&__index {
+
+			display: none;
+			margin-top: 20px;
+			
+		}
 	}
 
 	// ----------   slider
@@ -1481,9 +1488,9 @@
 	padding-right: 20px;
 	width: auto;
 }
-	.language_mobile {
-		display: block;
-	}
+.language_mobile {
+	display: block;
+}
 
 }
 
@@ -1752,6 +1759,13 @@
 
 		.innovationGallery__right {
 			margin-bottom: 0;
+			display: block;
+
+			.innovationGallery__link__index {
+
+				display: inline-block;
+
+			}
 		}
 
 	}
@@ -1813,6 +1827,19 @@
 	.section-5 {
 
 		height: auto;
+	}
+	.index-wrapper {
+
+		.section-1 {
+
+			min-height: 300px;
+		}
+
+		.section-5 {
+
+			overflow: hidden;
+
+		}
 	}
 
 	.footer__container {
@@ -1931,6 +1958,16 @@
 	#fp-nav {
 		display: none;
 	}
+
+	// full page on mobile 
+
+	.fp-section,
+	.fp-slide,
+	.fp-tableCell,
+	.fp-scrollable{
+		height: auto !important;
+	}
+
 }
 
 @media (max-width:767px) and (orientation: landscape){
