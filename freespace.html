@@ -21,6 +21,7 @@
 
 			<nav class="navigation">
 				<ul class="navigation__list">
+					<li class="navigation__item navigation__item_main"><a href="index.html" class="navigation__link"> Главная </a></li>
 					<li class="navigation__item "><a href="about.html" class="navigation__link"> О нас </a></li>
 					<li class="navigation__item"><a href="conference.html" class="navigation__link"> Conference zone</a></li>
 					<li class="navigation__item "><a href="coworking.html" class="navigation__link"> Coworking  </a></li>
@@ -29,7 +30,18 @@
 					<li class="navigation__item "><a href="all-poster.html" class="navigation__link"> Мероприятия </a></li>
 					<li class="navigation__item"><a href="innovations.html" class="navigation__link"> Галерея Инноваций</a></li>
 				</ul>
+				
+				
+				<div class="language language_mobile">
+					<ul class="language__list">
+						<li class="language__item active"><a href="#" class="language__link">eng</a></li>
+						<li class="language__item"><a href="#" class="language__link">ukr</a></li>
+						<li class="language__item"><a href="#" class="language__link">rus</a></li>
+					</ul>
+				</div>
+
 			</nav>
+
 
 			<button class="burger">
 				<svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -66,60 +78,7 @@
 		<div class="fixed__container">
 			
 			<div class="section section-2" id='section2'>
-				<div class="freespace__icon">
-					<div class="freespace__icon__row">
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/wifi.svg" alt="wifi"></div>
-							<div class="freespace__icon__title"> Wi-Fi / LAN</div>
-						</div>
-						
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/print.svg" alt="print"></div>
-							<div class="freespace__icon__title"> принтер</div>
-						</div>
-						
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/individual.svg" alt="individual"></div>
-							<div class="freespace__icon__title"> индивидуальный шкаф</div>
-						</div>
-					</div>
-					
-					<div class="freespace__icon__row">
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/eat.svg" alt="eat"></div>
-							<div class="freespace__icon__title"> eat zone</div>
-						</div>
-						
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/rest.svg" alt="rest"></div>
-							<div class="freespace__icon__title"> зона отдыха</div>
-						</div>
-						
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/comfort.svg" alt="icomfort"></div>
-							<div class="freespace__icon__title"> комфортный климат</div>
-						</div>
-					</div>
-					
-					<div class="freespace__icon__row">
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__price">50 грн</div>
-							<div class="freespace__icon__title"> час</div>
-						</div>
-						
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__price">35 грн</div>
-							<div class="freespace__icon__title"> последущие</div>
-						</div>
-						
-						<div class="freespace__icon__item">
-							<div class="freespace__icon__price">200 грн</div>
-							<div class="freespace__icon__title"> день</div>
-						</div>
-						
-						
-					</div>
-				</div>
+
 				
 				<div class="freespace__slider__wrap">
 					<div class="freespace__slider__title">Cospace</div>		
@@ -166,12 +125,69 @@
 					
 					
 				</div>
+
+
+				<div class="freespace__icon">
+					<div class="freespace__icon__row">
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/wifi.svg" alt="wifi"></div>
+							<div class="freespace__icon__title"> Wi-Fi / LAN</div>
+						</div>
+						
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/print.svg" alt="print"></div>
+							<div class="freespace__icon__title"> принтер</div>
+						</div>
+						
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/individual.svg" alt="individual"></div>
+							<div class="freespace__icon__title"> индивидуальный шкаф</div>
+						</div>
+					</div>
+					
+					<div class="freespace__icon__row">
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/eat.svg" alt="eat"></div>
+							<div class="freespace__icon__title"> eat zone</div>
+						</div>
+						
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/rest.svg" alt="rest"></div>
+							<div class="freespace__icon__title"> зона отдыха</div>
+						</div>
+						
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/comfort.svg" alt="icomfort"></div>
+							<div class="freespace__icon__title"> комфортный климат</div>
+						</div>
+					</div>
+					
+					<div class="freespace__icon__row freespace__icon__row__price">
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__price">50 грн</div>
+							<div class="freespace__icon__title"> час</div>
+						</div>
+						
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__price">35 грн</div>
+							<div class="freespace__icon__title"> последущие</div>
+						</div>
+						
+						<div class="freespace__icon__item">
+							<div class="freespace__icon__price">200 грн</div>
+							<div class="freespace__icon__title"> день</div>
+						</div>
+						
+						
+					</div>
+				</div>
+				
 			</div>
 			
 			
 			
-			
 			<section class="section section-5" >
+
 
 				<div class="footer__container">
 
@@ -189,6 +205,19 @@
 							</ul>
 						</div>
 
+						<div class="contacts__right contacts__right__mobile">
+							<ul class="contact__list">
+								<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
+								<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
+								<li class="contact__item">04071 </li>
+								<li class="contact__item">с 09:00 до 22:00</li>
+								<li class="contact__item">работа коворкинга 24/7</li>
+							</ul>
+						</div>
+
+
+
+
 						<div class="contacts__form__wrap">
 							<form class="contacts__form">
 								<h3 class="contacts__form__title">Хочу быть в курсе событий!</h3>
@@ -199,8 +228,8 @@
 
 						<div class="contacts__right">
 							<ul class="contact__list">
-								<li class="contact__item">	пер.Ярославский 1/3</li>
-								<li class="contact__item">			Киев, Украина</li>
+								<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
+								<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
 								<li class="contact__item">04071 </li>
 								<li class="contact__item">с 09:00 до 22:00</li>
 								<li class="contact__item">работа коворкинга 24/7</li>
@@ -213,9 +242,11 @@
 							<a class="btn btn-offer" href="#">Договоры оферты</a>
 							<p class="footer__bottom__text">К оплате принимаются международные <br>
 								платежные карты систем Visa и MasterСard, любого банка</p>
+
 								<div class="footer__bottom__pic">
 									<img src="img/content/pay.jpg" alt="pay">
 								</div>
+
 							</div>
 							<div class="footer__bottom__right">
 								<p class="footer__bottom__copyright">
