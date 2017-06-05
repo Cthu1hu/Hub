@@ -77,6 +77,9 @@
 	.section-2 {
 
 		height: auto;
+		.clearfix;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 
 	.freespace__icon,
@@ -86,9 +89,15 @@
 		display: inline-block;
 		vertical-align: middle;
 	}
+	.freespace__slider__wrap {
+
+		float: right;
+	}
 
 
 	.freespace__icon {
+		float: left;
+		margin-top: 150px;
 
 		&__row {
 
@@ -101,6 +110,14 @@
 
 				margin-top: 60px;
 				margin-bottom: 0;
+			}
+
+			&__price {
+
+				.freespace__icon__title {
+					opacity: 1;
+					margin-top: 7px;
+				}
 			}
 
 		}
@@ -138,6 +155,9 @@
 			font-family: @GB;
 			opacity: 0;
 			transition: 0.3s ease-out;
+
+			// height: 0;
+   //  	overflow: hidden;
 		}
 
 		&__price {
@@ -253,6 +273,7 @@
 			width: 525px;
 			display: block;
 			margin: 0 auto;
+			float: none;
 		}
 
 		.freespace__icon {
@@ -294,10 +315,16 @@
 			}
 
 		}
+
+		 .section-2 {
+		 	margin-left: 10px;
+		 	margin-right: 10px;
+		 }
 	 .freespace__icon {
 
 	 	width: 100%;
 	 }
+
 
 		.freespace__more__container {
 

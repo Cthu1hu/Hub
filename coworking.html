@@ -19,6 +19,7 @@
 
 			<nav class="navigation">
 				<ul class="navigation__list">
+					<li class="navigation__item navigation__item_main"><a href="index.html" class="navigation__link"> Главная </a></li>
 					<li class="navigation__item "><a href="about.html" class="navigation__link"> О нас </a></li>
 					<li class="navigation__item"><a href="conference.html" class="navigation__link"> Conference zone</a></li>
 					<li class="navigation__item active"><a href="coworking.html" class="navigation__link"> Coworking  </a></li>
@@ -27,7 +28,17 @@
 					<li class="navigation__item "><a href="all-poster.html" class="navigation__link"> Мероприятия </a></li>
 					<li class="navigation__item"><a href="innovations.html" class="navigation__link"> Галерея Инноваций</a></li>
 				</ul>
+
+				
+				<div class="language language_mobile">
+					<ul class="language__list">
+						<li class="language__item active"><a href="#" class="language__link">eng</a></li>
+						<li class="language__item"><a href="#" class="language__link">ukr</a></li>
+						<li class="language__item"><a href="#" class="language__link">rus</a></li>
+					</ul>
+				</div>
 			</nav>
+
 
 			<button class="burger">
 				<svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -65,12 +76,15 @@
 
 				<section class="section section-2 coworking__main__content coworking-1__main__content"  id='section2'>
 					<div class="coworking__main__slider__wrap">
+
+						<button class="more__link need__location">выберите нужную локацию</button>
+
 						<!-- main__nav__container -->
 						<div class="main__nav__coworking__container">
-							<button class="btn nav__icon">
+					<!-- 		<button class="btn nav__icon">
 								<div class="conference__icon"></div>
 								<div class="close__icon"></div>
-							</button>
+							</button> -->
 							<div class="main__nav__coworking__container__title">Выберите нужный коворкинг</div>
 							<ul class="main__nav__coworking__container__list">
 								<li class="main__nav__coworking__container__item active" data-num="1" data-square="- 100 м.кв">Коворкинг #1</li>
@@ -83,75 +97,10 @@
 						<ul class="coworking__main__slider owl-carousel" id="coworking__main__slider">
 
 							<!-- coworking-1 item -->
-							<li class="coworking__main__slider__item">
+							<li class="coworking__main__slider__item coworking__main__slider__item-cow">
 
 								<!--  item top -->
 								<div class="coworking__main__slider__item__top">
-
-									<div class="freespace__icon">
-
-										<h3 class="coworking__icon__title">Основные характеристики:</h3>
-
-										<div class="freespace__icon__row">
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">25</span></div>
-												<div class="freespace__icon__title"> рабочих мест</div>
-											</div>
-
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/wifi.svg" alt="wifi"></div>
-												<div class="freespace__icon__title"> Wi-Fi / LAN</div>
-											</div>
-
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/print.svg" alt="print"></div>
-												<div class="freespace__icon__title"> оргтехника</div>
-											</div>
-										</div>
-
-
-										<div class="freespace__icon__row">
-
-
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><img src="img/icons/coworking-icons/coffee-point.svg" alt="coffee"></div>
-												<div class="freespace__icon__title">  coffee point</div>
-											</div>
-
-
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">24/7</span></div>
-												<div class="freespace__icon__title"> </div>
-											</div>
-
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/eat.svg" alt="eat"></div>
-												<div class="freespace__icon__title"> eat zone</div>
-											</div>
-										</div>
-
-
-
-										<div class="freespace__icon__row">
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/cupboard.svg" alt="cupboard"></div>
-												<div class="freespace__icon__title"> велопарковка</div>
-											</div>
-
-											
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/shower.svg" class="shower" alt="shower"></div>
-												<div class="freespace__icon__title"> душ</div>
-											</div>
-											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">55</span></div>
-												<div class="freespace__icon__title">м. кв площадь</div>
-											</div>
-										</div>
-
-
-									</div>
-
 
 									<div class="freespace__slider__wrap coworking1__top__slider">
 										<div class="freespace__slider__title">Коворкинг #1</div>
@@ -188,44 +137,18 @@
 
 									</div>
 
-								</div>
-
-								<!-- item middle -->
-								<div class="coworking__main__slider__item__details">
-									<ul class="coworking__main__slider__item__details__list">
-										<li class="coworking__main__slider__item__details__item">
-											<div class="coworking__main__slider__item__details__price">3600 грн</div>
-											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
-										</li>
-
-									</ul>
-
-
-									<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
-									<div class="enter__your__question">Готовы ответить на ваши вопросы: <span class="bolder">050 000 00 00</span></div>
-
-								</div>
-								
-								
-								
-
-							</li>
-
-							<!-- coworking-2 item -->
-							<li class="coworking__main__slider__item">
-
-								<!--  item top -->
-								<div class="coworking__main__slider__item__top">
-
 									<div class="freespace__icon">
 
 										<h3 class="coworking__icon__title">Основные характеристики:</h3>
 
 										<div class="freespace__icon__row">
+											
+											
 											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">30</span></div>
-												<div class="freespace__icon__title"> рабочих мест</div>
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">55</span></div>
+												<div class="freespace__icon__title">м. кв площадь</div>
 											</div>
+
 
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/wifi.svg" alt="wifi"></div>
@@ -250,7 +173,7 @@
 
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">24/7</span></div>
-												<div class="freespace__icon__title"> </div>
+												<div class="freespace__icon__title"> режим работы</div>
 											</div>
 
 											<div class="freespace__icon__item">
@@ -264,22 +187,57 @@
 										<div class="freespace__icon__row">
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/cupboard.svg" alt="cupboard"></div>
-												<div class="freespace__icon__title"> велопарковка</div>
+												<div class="freespace__icon__title"> шкафчики</div>
 											</div>
 
+											
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/shower.svg" class="shower" alt="shower"></div>
 												<div class="freespace__icon__title"> душ</div>
 											</div>
+
 											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">75</span></div>
-												<div class="freespace__icon__title">м. кв площадь</div>
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">25</span></div>
+												<div class="freespace__icon__title"> рабочих мест</div>
 											</div>
+
 										</div>
 
 
 									</div>
 
+
+
+
+								</div>
+
+								<!-- item middle -->
+								<div class="coworking__main__slider__item__details">
+									<ul class="coworking__main__slider__item__details__list">
+										<li class="coworking__main__slider__item__details__item">
+											<div class="coworking__main__slider__item__details__price">3600 грн</div>
+											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
+
+											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
+										</li>
+
+									</ul>
+
+
+									
+
+								</div>
+								
+								
+								
+
+							</li>
+
+							<!-- coworking-2 item -->
+							<li class="coworking__main__slider__item coworking__main__slider__item-cow">
+
+								<!--  item top -->
+								<div class="coworking__main__slider__item__top">
 
 									<div class="freespace__slider__wrap coworking2__top__slider">
 										<div class="freespace__slider__title">Коворкинг #2</div>
@@ -301,42 +259,18 @@
 
 									</div>
 
-								</div>
-
-								<!-- item middle -->
-								<div class="coworking__main__slider__item__details">
-									
-									<ul class="coworking__main__slider__item__details__list">
-										<li class="coworking__main__slider__item__details__item">
-											<div class="coworking__main__slider__item__details__price">3600 грн</div>
-											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
-										</li>
-
-									</ul>
-
-
-									<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
-									<div class="enter__your__question">Готовы ответить на ваши вопросы: <span class="bolder">050 000 00 00</span></div>
-
-								</div>
-
-							</li>
-
-							<!-- coworking-3 item -->
-							<li class="coworking__main__slider__item">
-
-								<!--  item top -->
-								<div class="coworking__main__slider__item__top">
-
 									<div class="freespace__icon">
 
 										<h3 class="coworking__icon__title">Основные характеристики:</h3>
 
 										<div class="freespace__icon__row">
+											
+											
 											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">20</span></div>
-												<div class="freespace__icon__title"> рабочих мест</div>
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">75</span></div>
+												<div class="freespace__icon__title">м. кв площадь</div>
 											</div>
+
 
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/wifi.svg" alt="wifi"></div>
@@ -361,7 +295,7 @@
 
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">24/7</span></div>
-												<div class="freespace__icon__title"> </div>
+												<div class="freespace__icon__title"> режим работы</div>
 											</div>
 
 											<div class="freespace__icon__item">
@@ -375,22 +309,56 @@
 										<div class="freespace__icon__row">
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/cupboard.svg" alt="cupboard"></div>
-												<div class="freespace__icon__title"> велопарковка</div>
+												<div class="freespace__icon__title"> шкафчики</div>
 											</div>
 
+											
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/shower.svg" class="shower" alt="shower"></div>
 												<div class="freespace__icon__title"> душ</div>
 											</div>
+
 											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">55</span></div>
-												<div class="freespace__icon__title">м. кв площадь</div>
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">30</span></div>
+												<div class="freespace__icon__title"> рабочих мест</div>
 											</div>
+
 										</div>
 
 
 									</div>
 
+
+
+									
+
+								</div>
+
+								<!-- item middle -->
+								<div class="coworking__main__slider__item__details">
+									
+									<ul class="coworking__main__slider__item__details__list">
+										<li class="coworking__main__slider__item__details__item">
+											<div class="coworking__main__slider__item__details__price">3600 грн</div>
+											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
+											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
+										</li>
+
+									</ul>
+
+
+									
+									
+
+								</div>
+
+							</li>
+
+							<!-- coworking-3 item -->
+							<li class="coworking__main__slider__item coworking__main__slider__item-cow">
+
+								<!--  item top -->
+								<div class="coworking__main__slider__item__top">
 
 									<div class="freespace__slider__wrap coworking3__top__slider">
 										<div class="freespace__slider__title">Коворкинг #3</div>
@@ -412,41 +380,18 @@
 
 									</div>
 
-								</div>
-
-								<!-- item middle -->
-								<div class="coworking__main__slider__item__details">
-									<ul class="coworking__main__slider__item__details__list">
-										<li class="coworking__main__slider__item__details__item">
-											<div class="coworking__main__slider__item__details__price">3600 грн</div>
-											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
-										</li>
-
-									</ul>
-
-
-									<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
-									<div class="enter__your__question">Готовы ответить на ваши вопросы: <span class="bolder">050 000 00 00</span></div>
-
-								</div>
-
-							</li>
-
-							<!-- coworking-4 item -->
-							<li class="coworking__main__slider__item">
-
-								<!--  item top -->
-								<div class="coworking__main__slider__item__top">
-
 									<div class="freespace__icon">
 
 										<h3 class="coworking__icon__title">Основные характеристики:</h3>
 
 										<div class="freespace__icon__row">
+											
+											
 											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">25</span></div>
-												<div class="freespace__icon__title"> рабочих мест</div>
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">55</span></div>
+												<div class="freespace__icon__title">м. кв площадь</div>
 											</div>
+
 
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/wifi.svg" alt="wifi"></div>
@@ -471,7 +416,7 @@
 
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">24/7</span></div>
-												<div class="freespace__icon__title"> </div>
+												<div class="freespace__icon__title"> режим работы</div>
 											</div>
 
 											<div class="freespace__icon__item">
@@ -485,23 +430,57 @@
 										<div class="freespace__icon__row">
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/cupboard.svg" alt="cupboard"></div>
-												<div class="freespace__icon__title"> велопарковка</div>
+												<div class="freespace__icon__title"> шкафчики</div>
 											</div>
 
+											
 											<div class="freespace__icon__item">
 												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/shower.svg" class="shower" alt="shower"></div>
 												<div class="freespace__icon__title"> душ</div>
 											</div>
+
 											<div class="freespace__icon__item">
-												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">64</span></div>
-												<div class="freespace__icon__title">м. кв площадь</div>
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">20</span></div>
+												<div class="freespace__icon__title"> рабочих мест</div>
 											</div>
+
 										</div>
 
 
 									</div>
 
 
+
+									
+
+								</div>
+
+								<!-- item middle -->
+								<div class="coworking__main__slider__item__details">
+									<ul class="coworking__main__slider__item__details__list">
+										<li class="coworking__main__slider__item__details__item">
+											<div class="coworking__main__slider__item__details__price">3600 грн</div>
+											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
+											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
+										</li>
+
+									</ul>
+
+
+									
+									
+
+								</div>
+
+							</li>
+
+							<!-- coworking-4 item -->
+							<li class="coworking__main__slider__item coworking__main__slider__item-cow">
+
+								<!--  item top -->
+								<div class="coworking__main__slider__item__top">
+
+									
 									<div class="freespace__slider__wrap coworking4__top__slider">
 										<div class="freespace__slider__title">Коворкинг #4</div>
 										<ul class="freespace__slider owl-carousel" id="coworking4__top__slider">
@@ -522,6 +501,78 @@
 
 									</div>
 
+									<div class="freespace__icon">
+
+										<h3 class="coworking__icon__title">Основные характеристики:</h3>
+
+										<div class="freespace__icon__row">
+											
+											
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">64</span></div>
+												<div class="freespace__icon__title">м. кв площадь</div>
+											</div>
+
+
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/wifi.svg" alt="wifi"></div>
+												<div class="freespace__icon__title"> Wi-Fi / LAN</div>
+											</div>
+
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><img src="img/icons/freespace-icons/print.svg" alt="print"></div>
+												<div class="freespace__icon__title"> оргтехника</div>
+											</div>
+										</div>
+
+
+										<div class="freespace__icon__row">
+
+
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><img src="img/icons/coworking-icons/coffee-point.svg" alt="coffee"></div>
+												<div class="freespace__icon__title">  coffee point</div>
+											</div>
+
+
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">24/7</span></div>
+												<div class="freespace__icon__title"> режим работы</div>
+											</div>
+
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/eat.svg" alt="eat"></div>
+												<div class="freespace__icon__title"> eat zone</div>
+											</div>
+										</div>
+
+
+
+										<div class="freespace__icon__row">
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/cupboard.svg" alt="cupboard"></div>
+												<div class="freespace__icon__title"> шкафчики</div>
+											</div>
+
+											
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><img src="img/icons/coworking-1/shower.svg" class="shower" alt="shower"></div>
+												<div class="freespace__icon__title"> душ</div>
+											</div>
+
+											<div class="freespace__icon__item">
+												<div class="freespace__icon__pic"><span class="freespace__icon__pic__number ">25</span></div>
+												<div class="freespace__icon__title"> рабочих мест</div>
+											</div>
+
+										</div>
+
+
+									</div>
+
+
+
+
 								</div>
 
 								<!-- item middle -->
@@ -530,13 +581,14 @@
 										<li class="coworking__main__slider__item__details__item">
 											<div class="coworking__main__slider__item__details__price">3600 грн</div>
 											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
+											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
 										</li>
 
 									</ul>
 
 
-									<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
-									<div class="enter__your__question">Готовы ответить на ваши вопросы: <span class="bolder">050 000 00 00</span></div>
+									
+									
 
 								</div>
 
@@ -552,8 +604,8 @@
 
 
 
-
 				<section class="section section-5" >
+
 
 					<div class="footer__container">
 
@@ -571,6 +623,19 @@
 								</ul>
 							</div>
 
+							<div class="contacts__right contacts__right__mobile">
+								<ul class="contact__list">
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
+									<li class="contact__item">04071 </li>
+									<li class="contact__item">с 09:00 до 22:00</li>
+									<li class="contact__item">работа коворкинга 24/7</li>
+								</ul>
+							</div>
+
+
+
+
 							<div class="contacts__form__wrap">
 								<form class="contacts__form">
 									<h3 class="contacts__form__title">Хочу быть в курсе событий!</h3>
@@ -581,8 +646,8 @@
 
 							<div class="contacts__right">
 								<ul class="contact__list">
-									<li class="contact__item">	пер.Ярославский 1/3</li>
-									<li class="contact__item">			Киев, Украина</li>
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
 									<li class="contact__item">04071 </li>
 									<li class="contact__item">с 09:00 до 22:00</li>
 									<li class="contact__item">работа коворкинга 24/7</li>
@@ -595,9 +660,11 @@
 								<a class="btn btn-offer" href="#">Договоры оферты</a>
 								<p class="footer__bottom__text">К оплате принимаются международные <br>
 									платежные карты систем Visa и MasterСard, любого банка</p>
+
 									<div class="footer__bottom__pic">
 										<img src="img/content/pay.jpg" alt="pay">
 									</div>
+
 								</div>
 								<div class="footer__bottom__right">
 									<p class="footer__bottom__copyright">
