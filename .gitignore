@@ -51,3 +51,9 @@ css/main.css
 .idea/modules.xml
 .idea/workspace.xml
 prepros-6.config
+.idea/Hub.iml
+.idea/vcs.xml
+css/main.css
+*.map
+css/main.css.map
+prepros-6.config
