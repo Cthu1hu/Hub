@@ -103,6 +103,7 @@
 	border: 32px solid @orange;
 	box-sizing: border-box;
 	overflow: hidden;
+	position: relative;
 
 	&__date {
 
@@ -179,7 +180,7 @@
 
 .main-event__info {
 
-	text-align: right;
+	text-align: center;
 	margin-right: 45px;
 
 	&__list {
@@ -191,7 +192,8 @@
 	&__item {
 
 		float: left;
-		margin-left: 50px;
+		margin-right: 25px;
+		margin-left: 25px;
 		text-align: left;
 
 		font-size: 15px;
@@ -554,6 +556,12 @@
 	}
 	.main-event__info__item {
 		min-height: 60px;
+		width: 50%;
+		margin-bottom: 10px;
+		margin-right: 0;
+		margin-left: 0;
+		padding:0 10%;
+		box-sizing: border-box;
 	}
 
 	.ask-question {
@@ -643,5 +651,11 @@
 			width: 100% !important;
 		}
 	}
+
+	// .main-event__info__item {
+	// 	float: none;
+	// 	width: 100%;
+	// 	display: block;
+	// }
 
 }
