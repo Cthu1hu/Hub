@@ -131,7 +131,6 @@ $(function(){
 
  if( ($('body').hasClass('index__body')) &&  ($(document).width() <= 767)){
   $.fn.fullpage.destroy();
-  console.log('test');
 
 } else if( $(document).width() > 767){
  //$.fn.fullpage.reBuild();
