@@ -5,31 +5,381 @@
 	<title>all-poster-page</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/preloader.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<div id="barba-wrapper">
+		<div class="transition-container active">
+		  <div class="logo-wrap">
+		    <div class="logo">
+		      <img src="img/white-logo.png" alt="" />
+		    </div>
+		  </div>
+		</div>
+  	<div class="barba-container">
+			<div class="wrapper poster-wrap all-poster" >
+				<header class="header ">
+					<div class="logo__container">
+						<a class="logo__link" href="index.html" >
+							<img class="logo__img" src="img/logo.png" alt="logo">
+						</a>
+					</div>
 
-	<div class="wrapper poster-wrap all-poster" >
-		<header class="header ">
-			<div class="logo__container">
-				<a class="logo__link" href="index.html" >
-					<img class="logo__img" src="img/logo.png" alt="logo">
-				</a>
+					<nav class="navigation">
+						<ul class="navigation__list">
+							<li class="navigation__item navigation__item_main"><a href="index.html" class="navigation__link"> Главная </a></li>
+							<li class="navigation__item "><a href="about.html" class="navigation__link"> О нас </a></li>
+							<li class="navigation__item"><a href="conference.html" class="navigation__link"> Conference zone</a></li>
+							<li class="navigation__item"><a href="coworking.html" class="navigation__link"> Coworking  </a></li>
+							<li class="navigation__item"><a href="freespace.html" class="navigation__link"> Cospace</a></li>
+							<li class="navigation__item"><a href="opened-news.html" class="navigation__link"> Community</a></li>
+							<li class="navigation__item active"><a href="all-poster.html" class="navigation__link"> Мероприятия </a></li>
+							<li class="navigation__item"><a href="innovations.html" class="navigation__link"> Галерея Инноваций</a></li>
+						</ul>
+
+						<div class="language language_mobile">
+							<ul class="language__list">
+								<li class="language__item active"><a href="#" class="language__link">eng</a></li>
+								<li class="language__item"><a href="#" class="language__link">ukr</a></li>
+								<li class="language__item"><a href="#" class="language__link">rus</a></li>
+							</ul>
+						</div>
+
+					</nav>
+
+
+
+					<button class="burger">
+						<svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+							<title>Show / Hide Navigation</title>
+							<rect class="burger-svg__base" width="50" height="50" fill="#1f201c"/>
+							<g class="burger-svg__bars" fill="#fff">
+								<rect class="burger-svg__bar burger-svg__bar-1" x="14" y="18" width="22" height="2"/>
+								<rect class="burger-svg__bar burger-svg__bar-2" x="14" y="24" width="22" height="2"/>
+								<rect class="burger-svg__bar burger-svg__bar-3" x="14" y="30" width="22" height="2"/>
+							</g>
+						</svg>
+					</button>
+				</header>
+
+
+				<div class="fixed__container">
+
+					<!-- poster filter -->
+
+					<div class="poster__filter">
+						<ul class="poster__filter__list">
+							<li class="poster__filter__item">
+								<a href="#" class="poster__filter__link">— Технологии</a>
+							</li>
+							<li class="poster__filter__item">
+								<a href="#" class="poster__filter__link">— Soft Skills</a>
+							</li>
+							<li class="poster__filter__item">
+								<a href="#" class="poster__filter__link">— Бизнес</a>
+							</li>
+							<li class="poster__filter__item">
+								<a href="#" class="poster__filter__link">— Социальные</a>
+							</li>
+
+						</ul>
+					</div>
+
+					<!-- other events -->
+
+					<div class="other-events__wrap">
+
+						<!-- event item-->
+						<div class="other-events__item" style="background-color:#ff6800;">
+							<div class="main-event ">
+
+								<div class="main-event__date">
+									<div class="main-event__date_day">15 Мая 2017  </div>
+									<div class="main-event__date_hours">17:00 - 20:30 </div>
+									<p class="conference__powered conference__powered__visible conference__powered-static">powered by <span class="bolder">hub 4.0</span></p>
+								</div>
+
+								<div class="main-event__pic">
+									<div class="conference__item ">
+										<div class="conference__item__wrap">
+
+											<div class="conference__pic">
+												<div class="conference__circle">
+													<img class="conference__img" src="img/content/persons/yurchak.png" alt="conf-1">
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+
+								<div class="other-events__info">
+									<div class="title other-events__info__name">Александр Юрчак</div>
+									<div class="title other-events__info__title">Hannover Messe-2017</div>
+									<div class="main-event__text">
+										Доки в Україні сперечаються «4.0 — це маркетинг чи дійсно щось нове», в світі Industry 4.0 переходить в фазу зрілості. На Hannover Messe-2017 презентували 500 use cases — результат інтеграції еко-систем, справжнього альянсу ОТ та ІТ.
+
+									</div>
+									<div>
+										<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
+										<a class="more__link  main-event__buy " href="#">Купить билет</a>
+
+									</div>
+
+								</div>
+
+
+
+							</div>
+
+						</div>
+
+
+						<!-- event item-->
+						<div class="other-events__item" style="background-color:#61ac61;">
+							<div class="main-event ">
+
+								<div class="main-event__date">
+									<div class="main-event__date_day">15 Мая 2017  </div>
+									<div class="main-event__date_hours">19:00 - 21:00 </div>
+									<p class="conference__powered  conference__powered-static">powered by <span class="bolder">hub 4.0</span></p>
+								</div>
+
+								<div class="main-event__pic">
+									<div class="conference__item ">
+										<div class="conference__item__wrap">
+
+											<div class="conference__pic">
+												<div class="conference__circle">
+													<img class="conference__img" src="img/content/persons/pilec.png" alt="conf-1">
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+
+								<div class="other-events__info">
+									<div class="title other-events__info__name">Евгений Пилецкий</div>
+									<div class="title other-events__info__title">Сознание: грандиозный лабиринт внутри нас</div>
+									<div class="main-event__text">
+										Сознание — величайшая загадка человеческого существования. На лекции мы погрузимся в самое близкое нам переживание, которое вызывает самые сложные вопросы и не дает покоя ученым, философам и мистикам.
+
+									</div>
+									<div >
+										<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
+										<a class="more__link  main-event__buy" href="#">Купить билет</a>
+									</div>
+
+
+								</div>
+
+
+
+							</div>
+
+						</div>
+
+						<!-- event item-->
+						<div class="other-events__item" style="background-color:#52519a;">
+							<div class="main-event ">
+
+								<div class="main-event__date">
+									<div class="main-event__date_day">30 Мая 2017  </div>
+									<div class="main-event__date_hours">19:00 - 21:00 </div>
+								</div>
+
+								<div class="main-event__pic">
+									<div class="conference__item ">
+										<div class="conference__item__wrap">
+
+											<div class="conference__pic">
+												<div class="conference__circle">
+													<img class="conference__img" src="img/content/persons/bratusev.png" alt="conf-1">
+
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+
+								<div class="other-events__info">
+									<div class="title other-events__info__name">Сергей Братусев</div>
+									<div class="title other-events__info__title">Технологические тренды-2017</div>
+									<div class="main-event__text">
+
+										Искусственный интеллект, машинное обучение, роботизация и автоматизация, цифровизация и кибербезопасность. Как бизнесу подготовиться к новым вызовам технологической индустрии? Узнаем на примере Google.
+
+									</div>
+									<div class="free-event">
+										<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
+
+										<a class="more__link  main-event__buy main-event__foc" href="#">Купить билет</a>
+
+									</div>
+
+								</div>
+
+
+
+							</div>
+
+						</div>
+
+						<!-- event item-->
+						<div class="other-events__item" style="background-color: #ffd24d">
+							<div class="main-event ">
+
+								<div class="main-event__date">
+									<div class="main-event__date_day">13 Апреля 2017  </div>
+									<div class="main-event__date_hours">18:30 - 21:00 </div>
+								</div>
+
+								<div class="main-event__pic">
+									<div class="conference__item ">
+										<div class="conference__item__wrap">
+
+											<div class="conference__pic">
+												<div class="conference__circle">
+													<img class="conference__img" src="img/content/conference-1.png" alt="conf-1">
+													<p class="conference__powered">powered by <span class="bolder">hub 4.0</span></p>
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+
+								<div class="other-events__info">
+									<div class="title other-events__info__name">Александр Канцлер</div>
+									<div class="title other-events__info__title">Проблемы вэд в Украине</div>
+									<div class="main-event__text">
+										13 апреля собираем всех криптодрузей и блокчейн энтузиастов на регулярную встречу комьюнити Bitcoin Foundation Ukraine.  Новая встреча — новые гости! Встречаем резидентов Cyber.Fund: Марину Гурьеву, Валерия Литвина с Дмитрием Стародубцевым в гостях у BFU. 							<div>
+
+									</div>
+
+								</div>
+								<div>
+									<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
+									<a class="more__link  main-event__buy" href="#">Купить билет</a>
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+				</div>
+
+				<div class="more__posters__container">
+					<button class="btn more__posters">Еще мероприятия</button>
+				</div>
+
 			</div>
 
-			<nav class="navigation">
-				<ul class="navigation__list">
-					<li class="navigation__item navigation__item_main"><a href="index.html" class="navigation__link"> Главная </a></li>
-					<li class="navigation__item "><a href="about.html" class="navigation__link"> О нас </a></li>
-					<li class="navigation__item"><a href="conference.html" class="navigation__link"> Conference zone</a></li>
-					<li class="navigation__item"><a href="coworking.html" class="navigation__link"> Coworking  </a></li>
-					<li class="navigation__item"><a href="freespace.html" class="navigation__link"> Cospace</a></li>
-					<li class="navigation__item"><a href="opened-news.html" class="navigation__link"> Community</a></li>
-					<li class="navigation__item active"><a href="all-poster.html" class="navigation__link"> Мероприятия </a></li>
-					<li class="navigation__item"><a href="innovations.html" class="navigation__link"> Галерея Инноваций</a></li>
-				</ul>
+			<div class="fixed__container">
 
-				<div class="language language_mobile">
+				<section class="section section-5" >
+
+
+					<div class="footer__container">
+
+						<div class="footer__headline">Увидимся в hub 4.0! </div>
+						<div class="footer__map">
+							<iframe style="pointer-events: none;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.6161142511028!2d30.508987676156256!3d50.46687285782605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6c8011bd9b%3A0xd60691de1458adbc!2z0KXQsNCxIDQuMA!5e0!3m2!1suk!2sua!4v1493912115287" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+						<div class="contacts">
+							<div class="contacts__left">
+								<ul class="contact__list">
+									<li class="contact__item"><a href="tel:+380504684040" class="contact__link">	+38 050 468 40 40</a></li>
+									<li class="contact__item"><a href="tel:+380684684040" class="contact__link">+38 068 468 40 40</a></li>
+									<li class="contact__item"><a href="tel:+380442434040" class="contact__link">+38 044 243 40 40</a></li>
+									<li class="contact__item"><a href="mailto:info@4hub.com.ua" class="contact__link">info@4hub.com.ua</a></li>
+								</ul>
+							</div>
+
+							<div class="contacts__right contacts__right__mobile">
+								<ul class="contact__list">
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
+									<li class="contact__item">04071 </li>
+									<li class="contact__item">с 09:00 до 22:00</li>
+									<li class="contact__item">работа коворкинга 24/7</li>
+								</ul>
+							</div>
+
+
+
+
+							<div class="contacts__form__wrap">
+								<form class="contacts__form">
+									<h3 class="contacts__form__title">Хочу быть в курсе событий!</h3>
+									<input class="contacts__form__input__mail" type="email" id="user-email" name="user-email" placeholder="email">
+									<button class="btn contacts__form__btn" type="submit">Подписаться</button>
+								</form>
+							</div>
+
+							<div class="contacts__right">
+								<ul class="contact__list">
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
+									<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
+									<li class="contact__item">04071 </li>
+									<li class="contact__item">с 09:00 до 22:00</li>
+									<li class="contact__item">работа коворкинга 24/7</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer__bottom">
+							<div class="footer__bottom__left">
+								<a class="btn btn-offer" href="#">Договоры оферты</a>
+								<p class="footer__bottom__text">К оплате принимаются международные <br>
+									платежные карты систем Visa и MasterСard, любого банка</p>
+
+									<div class="footer__bottom__pic">
+										<img src="img/content/pay.jpg" alt="pay">
+									</div>
+
+								</div>
+								<div class="footer__bottom__right">
+									<p class="footer__bottom__copyright">
+										© 2017 Все права защищены. <br>
+										Публикация материалов сайта разрешается <br>
+										при наличии прямой гиперссылки на 4hub.com.ua  <br>
+										Безопасность
+									</p>
+								</div>
+							</div>
+
+							<div class="footer__social">
+								<a href="#" class="footer__social__icon">
+									<img src="img/icons/facebook-logo.svg" alt="facebook">
+								</a>
+								<a href="#" class="footer__social__icon">
+									<img src="img/icons/instagram-logo.svg" alt="instagram">
+								</a>
+								<a href="#" class="footer__social__icon">
+									<img src="img/icons/youtube-logo.svg" alt="youtube">
+								</a>
+							</div>
+
+
+
+						</div>
+
+					</section>
+				</div>
+
+				<div class="language">
 					<ul class="language__list">
 						<li class="language__item active"><a href="#" class="language__link">eng</a></li>
 						<li class="language__item"><a href="#" class="language__link">ukr</a></li>
@@ -37,353 +387,21 @@
 					</ul>
 				</div>
 
-			</nav>
-
-
-
-			<button class="burger">
-				<svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-					<title>Show / Hide Navigation</title>
-					<rect class="burger-svg__base" width="50" height="50" fill="#1f201c"/>
-					<g class="burger-svg__bars" fill="#fff">
-						<rect class="burger-svg__bar burger-svg__bar-1" x="14" y="18" width="22" height="2"/>
-						<rect class="burger-svg__bar burger-svg__bar-2" x="14" y="24" width="22" height="2"/>
-						<rect class="burger-svg__bar burger-svg__bar-3" x="14" y="30" width="22" height="2"/>
-					</g>
-				</svg>
-			</button>
-		</header>
-
-
-		<div class="fixed__container">
-
-			<!-- poster filter -->
-
-			<div class="poster__filter">
-				<ul class="poster__filter__list">
-					<li class="poster__filter__item">
-						<a href="#" class="poster__filter__link">— Технологии</a>
-					</li>
-					<li class="poster__filter__item">
-						<a href="#" class="poster__filter__link">— Soft Skills</a>
-					</li>
-					<li class="poster__filter__item">
-						<a href="#" class="poster__filter__link">— Бизнес</a>
-					</li>
-					<li class="poster__filter__item">
-						<a href="#" class="poster__filter__link">— Социальные</a>
-					</li>
-
-				</ul>
-			</div>
-
-			<!-- other events -->
-
-			<div class="other-events__wrap">
-
-				<!-- event item-->
-				<div class="other-events__item" style="background-color:#ff6800;">
-					<div class="main-event ">
-
-						<div class="main-event__date">
-							<div class="main-event__date_day">15 Мая 2017  </div>
-							<div class="main-event__date_hours">17:00 - 20:30 </div>
-							<p class="conference__powered conference__powered__visible conference__powered-static">powered by <span class="bolder">hub 4.0</span></p>
-						</div>
-
-						<div class="main-event__pic">
-							<div class="conference__item ">
-								<div class="conference__item__wrap">
-
-									<div class="conference__pic">
-										<div class="conference__circle">
-											<img class="conference__img" src="img/content/persons/yurchak.png" alt="conf-1">
-										</div>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-
-						<div class="other-events__info">
-							<div class="title other-events__info__name">Александр Юрчак</div>
-							<div class="title other-events__info__title">Hannover Messe-2017</div>
-							<div class="main-event__text">
-								Доки в Україні сперечаються «4.0 — це маркетинг чи дійсно щось нове», в світі Industry 4.0 переходить в фазу зрілості. На Hannover Messe-2017 презентували 500 use cases — результат інтеграції еко-систем, справжнього альянсу ОТ та ІТ.
-
-							</div>
-							<div>
-								<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
-								<a class="more__link  main-event__buy " href="#">Купить билет</a>
-
-							</div>
-
-						</div>
-
-
-
-					</div>
-
-				</div>
-
-
-				<!-- event item-->
-				<div class="other-events__item" style="background-color:#61ac61;">
-					<div class="main-event ">
-
-						<div class="main-event__date">
-							<div class="main-event__date_day">15 Мая 2017  </div>
-							<div class="main-event__date_hours">19:00 - 21:00 </div>
-							<p class="conference__powered  conference__powered-static">powered by <span class="bolder">hub 4.0</span></p>
-						</div>
-
-						<div class="main-event__pic">
-							<div class="conference__item ">
-								<div class="conference__item__wrap">
-
-									<div class="conference__pic">
-										<div class="conference__circle">
-											<img class="conference__img" src="img/content/persons/pilec.png" alt="conf-1">
-										</div>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-
-						<div class="other-events__info">
-							<div class="title other-events__info__name">Евгений Пилецкий</div>
-							<div class="title other-events__info__title">Сознание: грандиозный лабиринт внутри нас</div>
-							<div class="main-event__text">
-								Сознание — величайшая загадка человеческого существования. На лекции мы погрузимся в самое близкое нам переживание, которое вызывает самые сложные вопросы и не дает покоя ученым, философам и мистикам.
-
-							</div>
-							<div >
-								<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
-								<a class="more__link  main-event__buy" href="#">Купить билет</a>
-							</div>
-
-
-						</div>
-
-
-
-					</div>
-
-				</div>
-
-				<!-- event item-->
-				<div class="other-events__item" style="background-color:#52519a;">
-					<div class="main-event ">
-
-						<div class="main-event__date">
-							<div class="main-event__date_day">30 Мая 2017  </div>
-							<div class="main-event__date_hours">19:00 - 21:00 </div>
-						</div>
-
-						<div class="main-event__pic">
-							<div class="conference__item ">
-								<div class="conference__item__wrap">
-
-									<div class="conference__pic">
-										<div class="conference__circle">
-											<img class="conference__img" src="img/content/persons/bratusev.png" alt="conf-1">
-
-										</div>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-
-						<div class="other-events__info">
-							<div class="title other-events__info__name">Сергей Братусев</div>
-							<div class="title other-events__info__title">Технологические тренды-2017</div>
-							<div class="main-event__text">
-
-								Искусственный интеллект, машинное обучение, роботизация и автоматизация, цифровизация и кибербезопасность. Как бизнесу подготовиться к новым вызовам технологической индустрии? Узнаем на примере Google.
-
-							</div>
-							<div class="free-event">
-								<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
-
-								<a class="more__link  main-event__buy main-event__foc" href="#">Купить билет</a>
-
-							</div>
-
-						</div>
-
-
-
-					</div>
-
-				</div>
-
-				<!-- event item-->
-				<div class="other-events__item" style="background-color: #ffd24d">
-					<div class="main-event ">
-
-						<div class="main-event__date">
-							<div class="main-event__date_day">13 Апреля 2017  </div>
-							<div class="main-event__date_hours">18:30 - 21:00 </div>
-						</div>
-
-						<div class="main-event__pic">
-							<div class="conference__item ">
-								<div class="conference__item__wrap">
-
-									<div class="conference__pic">
-										<div class="conference__circle">
-											<img class="conference__img" src="img/content/conference-1.png" alt="conf-1">
-											<p class="conference__powered">powered by <span class="bolder">hub 4.0</span></p>
-										</div>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-
-						<div class="other-events__info">
-							<div class="title other-events__info__name">Александр Канцлер</div>
-							<div class="title other-events__info__title">Проблемы вэд в Украине</div>
-							<div class="main-event__text">
-								13 апреля собираем всех криптодрузей и блокчейн энтузиастов на регулярную встречу комьюнити Bitcoin Foundation Ukraine.  Новая встреча — новые гости! Встречаем резидентов Cyber.Fund: Марину Гурьеву, Валерия Литвина с Дмитрием Стародубцевым в гостях у BFU. 							<div>
-
-							</div>
-
-						</div>
-						<div>
-							<a class="more__link main-event__buy" href="poster.html">Подробнее</a>
-							<a class="more__link  main-event__buy" href="#">Купить билет</a>
-						</div>
-
-
-					</div>
-
-				</div>
-
-
-			</div>
+			</div> <!-- end wrapper  -->
 
 		</div>
-
-		<div class="more__posters__container">
-			<button class="btn more__posters">Еще мероприятия</button>
-		</div>
-
 	</div>
 
-	<div class="fixed__container">
-
-		<section class="section section-5" >
-
-
-			<div class="footer__container">
-
-				<div class="footer__headline">Увидимся в hub 4.0! </div>
-				<div class="footer__map">
-					<iframe style="pointer-events: none;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.6161142511028!2d30.508987676156256!3d50.46687285782605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6c8011bd9b%3A0xd60691de1458adbc!2z0KXQsNCxIDQuMA!5e0!3m2!1suk!2sua!4v1493912115287" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-				<div class="contacts">
-					<div class="contacts__left">
-						<ul class="contact__list">
-							<li class="contact__item"><a href="tel:+380504684040" class="contact__link">	+38 050 468 40 40</a></li>
-							<li class="contact__item"><a href="tel:+380684684040" class="contact__link">+38 068 468 40 40</a></li>
-							<li class="contact__item"><a href="tel:+380442434040" class="contact__link">+38 044 243 40 40</a></li>
-							<li class="contact__item"><a href="mailto:info@4hub.com.ua" class="contact__link">info@4hub.com.ua</a></li>
-						</ul>
-					</div>
-
-					<div class="contacts__right contacts__right__mobile">
-						<ul class="contact__list">
-							<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
-							<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
-							<li class="contact__item">04071 </li>
-							<li class="contact__item">с 09:00 до 22:00</li>
-							<li class="contact__item">работа коворкинга 24/7</li>
-						</ul>
-					</div>
-
-
-
-
-					<div class="contacts__form__wrap">
-						<form class="contacts__form">
-							<h3 class="contacts__form__title">Хочу быть в курсе событий!</h3>
-							<input class="contacts__form__input__mail" type="email" id="user-email" name="user-email" placeholder="email">
-							<button class="btn contacts__form__btn" type="submit">Подписаться</button>
-						</form>
-					</div>
-
-					<div class="contacts__right">
-						<ul class="contact__list">
-							<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">пер.Ярославский 1/3</a></li>
-							<li class="contact__item"><a class="map__link" href="https://goo.gl/maps/HhT8iFkmfr32">	Киев, Украина</a></li>
-							<li class="contact__item">04071 </li>
-							<li class="contact__item">с 09:00 до 22:00</li>
-							<li class="contact__item">работа коворкинга 24/7</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="footer__bottom">
-					<div class="footer__bottom__left">
-						<a class="btn btn-offer" href="#">Договоры оферты</a>
-						<p class="footer__bottom__text">К оплате принимаются международные <br>
-							платежные карты систем Visa и MasterСard, любого банка</p>
-
-							<div class="footer__bottom__pic">
-								<img src="img/content/pay.jpg" alt="pay">
-							</div>
-
-						</div>
-						<div class="footer__bottom__right">
-							<p class="footer__bottom__copyright">
-								© 2017 Все права защищены. <br>
-								Публикация материалов сайта разрешается <br>
-								при наличии прямой гиперссылки на 4hub.com.ua  <br>
-								Безопасность
-							</p>
-						</div>
-					</div>
-
-					<div class="footer__social">
-						<a href="#" class="footer__social__icon">
-							<img src="img/icons/facebook-logo.svg" alt="facebook">
-						</a>
-						<a href="#" class="footer__social__icon">
-							<img src="img/icons/instagram-logo.svg" alt="instagram">
-						</a>
-						<a href="#" class="footer__social__icon">
-							<img src="img/icons/youtube-logo.svg" alt="youtube">
-						</a>
-					</div>
-
-
-
-				</div>
-
-			</section>
-		</div>
-
-		<div class="language">
-			<ul class="language__list">
-				<li class="language__item active"><a href="#" class="language__link">eng</a></li>
-				<li class="language__item"><a href="#" class="language__link">ukr</a></li>
-				<li class="language__item"><a href="#" class="language__link">rus</a></li>
-			</ul>
-		</div>
-
-	</div> <!-- end wrapper  -->
-
 	<script src="js/libs/jQuery2.2.4.js"></script>
+	<script src="js/libs/barba.min.js"></script>
 	<script src="js/libs/owl.carousel.min.js"></script>
+	<script src="js/libs/jquery.fullpage.extensions.min.js"></script>
+	<script src="js/libs/scrolloverflow.min.js"></script>
+	<script src="js/libs/jquery.easings.min.js"></script>
 	<script src="js/libs/jquery.fullpage.min.js"></script>
 	<script src="js/libs/TweenMax.js"></script>
+	<script src="js/libs/imagesLoaded.js"></script>
+	<script src="js/libs/jquery-imagefill.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
