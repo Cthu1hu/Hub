@@ -78,9 +78,9 @@
 	.coworking__main__slider__item__top {
 		margin-bottom: 10px;
 
-		 .freespace__icon {
-		 	margin-top: 75px;
-		 }
+		.freespace__icon {
+			margin-top: 75px;
+		}
 
 	}
 
@@ -105,6 +105,71 @@
 	}
 
 
+}
+
+
+// cow form
+
+.cow__form__wrap {
+
+}
+
+.cow__form {
+	width: 655px;
+	margin: 0 auto;
+	background-color: #00b64e;
+	color: #fff;
+	text-align: center;
+
+	// large
+	&-large {
+
+	}
+
+
+
+	&__title {
+		text-align: center;
+		font-size: 22px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-transform: uppercase;
+		font-family: @GB;
+	}
+
+	&__input {
+		font-family: @G;
+		font-size: 18px;
+		line-height: 1;
+		width: 575px;
+		height: 40px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 30px;
+		padding-left: 15px;
+
+		&-small {
+			width: 275px;
+			margin-right: 20px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+	}
+
+	&__row {
+
+		width: 575px;
+		margin: 0 auto;
+	}
+
+	.btn {
+		margin-bottom: 30px;
+		background-color: red;
+		margin-right: 0;
+	}
 }
 
 
@@ -137,14 +202,41 @@
 
 
 
- @media (max-width:767px){
-
- }
 
 
  @media (max-width:767px){
 
+ 	.cow__form {
 
+ 		width: 90%;
+ 		margin: 0 auto;
+
+ 		&__title {
+ 			padding-top: 15px;
+ 			padding-bottom: 15px;
+ 		}
+
+ 		&__input {
+
+ 			width: 90%;
+ 			margin-bottom: 20px;
+ 			padding-left: 5px;
+
+ 			&-small {
+ 				width: 100%;
+ 				margin-right: 0;
+ 				margin-bottom: 20px;
+ 			}
+ 		}
+ 		&__row {
+
+ 				width: 90%;
+ 		}
+
+ 		.btn {
+ 			margin-bottom: 20px;
+ 		}
+ 	}
 
 
 
@@ -157,6 +249,7 @@
  }
 
  @media (max-width:380px){
+
 
 
  }
