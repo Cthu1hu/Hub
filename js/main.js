@@ -91,6 +91,7 @@ $(function(){
 // full page
 $(function(){
 
+
   var fullpageOptions = {
    //Navigation
    // menu: '.header',
@@ -106,7 +107,6 @@ $(function(){
        $(' #fp-nav ').addClass('dark-nav');
        $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
      }
-
      else {
        $('.header').removeClass('dark-nav');
        $(' #fp-nav ').removeClass('dark-nav');
