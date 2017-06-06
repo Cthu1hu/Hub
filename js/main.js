@@ -597,10 +597,10 @@ $(function () {
          margin: 0
        },
        1169 : {
-         margin: 170
+         margin: 150
        },
        1280 : {
-         margin: 280
+         margin: 260
        }
      }
 
@@ -635,6 +635,11 @@ $(function () {
    $('.main__nav__coworking__container__item').on('click', function () {
     $('.main__nav__coworking__container').removeClass('active');
   });
+
+   $('.main__nav__coworking__container__close').on('click', function () {
+    $('.main__nav__coworking__container').removeClass('active');
+  });
+
 
 
 
