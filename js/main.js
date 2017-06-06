@@ -91,57 +91,45 @@ $(function(){
 // full page
 $(function(){
 
- $('#fullpage').fullpage({
-  //Navigation
-  // menu: '.header',
-  navigation: true,
-  navigationPosition: 'right',
-  showActiveTooltip: true,
-  slidesNavigation: true,
-  scrollOverflow: true,
-  // use afterLoad instead afterSlideLoad
-  afterLoad: function(anchorLink, index){
-    if(index == 2 || index == 4 || index == 5){
-      $('.header').addClass('dark-nav');
-      $(' #fp-nav ').addClass('dark-nav');
-      $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
-    }
+  var fullpageOptions = {
+   //Navigation
+   // menu: '.header',
+   navigation: true,
+   navigationPosition: 'right',
+   showActiveTooltip: true,
+   slidesNavigation: true,
+   scrollOverflow: true,
+   // use afterLoad instead afterSlideLoad
+   afterLoad: function(anchorLink, index){
+     if(index == 2 || index == 4 || index == 5){
+       $('.header').addClass('dark-nav');
+       $(' #fp-nav ').addClass('dark-nav');
+       $('.prevFullSlide, .nextFullSlide').addClass('dark-nav');
+     }
 
-    else {
-      $('.header').removeClass('dark-nav');
-      $(' #fp-nav ').removeClass('dark-nav');
-      $('.prevFullSlide, .nextFullSlide').removeClass('dark-nav');
-
-
-    }
-
-
-  },
-
-  afterResize: function() {
-    $.fn.fullpage.reBuild();
-  }
+     else {
+       $('.header').removeClass('dark-nav');
+       $(' #fp-nav ').removeClass('dark-nav');
+       $('.prevFullSlide, .nextFullSlide').removeClass('dark-nav');
+     }
+   },
+   afterResize: function() {
+     $.fn.fullpage.reBuild();
+   }
+ }
 
 
+ function indexFullpageInit() {
+   if($('body').hasClass('index__body') && $(window).width() <= 767){
+    $.fn.fullpage.destroy('all');
+  } else if($('body').hasClass('index__body') && $(window).width() > 767){
+    $('#fullpage').fullpage(fullpageOptions);
+  };
+};
 
+indexFullpageInit();
 
-});
-
- // destroy on mobile
-
- if( ($('body').hasClass('index__body')) &&  ($(document).width() <= 767)){
-  $.fn.fullpage.destroy();
-  console.log('test');
-
-} else if( $(document).width() > 767){
- //$.fn.fullpage.reBuild();
-}
-
-
-
-
-
-
+$(window).on('resize', indexFullpageInit);
 
 
 $('.prevFullSlide').on('click', function () {
