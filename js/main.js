@@ -120,9 +120,9 @@ $(function(){
 
 
  function indexFullpageInit() {
-   if($('body').hasClass('index__body') && $(window).width() <= 767){
-    $.fn.fullpage.destroy('all');
-  } else if($('body').hasClass('index__body') && $(window).width() > 767){
+   if($('.index-body-mirror').hasClass('index__body') && ($(window).width() <= 767) && $.fn.hasOwnProperty('fullpage')){
+       $.fn.fullpage.destroy('all');
+  } else if($('.index-body-mirror').hasClass('index__body') && $(window).width() > 767){
     $('#fullpage').fullpage(fullpageOptions);
   };
 };
@@ -951,3 +951,82 @@ $(function () {
 
 
            });
+
+  // Preloader animation
+
+  function preloaderFirstStep() {
+    $('body').css({overflow: 'hidden'});
+    $('.transition-container').addClass('active');
+  };
+
+  function preloaderSecondStep() {
+    $('.transition-container').addClass('sec-step');
+    if (!($('.index-body-mirror').hasClass('index__body'))) {
+        $('body').css({overflow: 'auto'});
+    }
+    setTimeout(()=>{
+      $('.transition-container').removeClass('active');
+      $('.transition-container').removeClass('sec-step');
+    }, 600)
+  }
+
+  // BARBA
+
+  $(function() {
+    Barba.Pjax.start();
+
+    var HideShowTransition = Barba.BaseTransition.extend({
+      start: function() {
+        if($.fn.hasOwnProperty('fullpage')) {
+          $.fn.fullpage.destroy('all');
+        };
+
+        Promise
+         .all([this.newContainerLoading, this.fadeOut()])
+         .then(this.fadeIn.bind(this));
+      },
+      fadeOut: function () {
+        preloaderFirstStep();
+        return $(this.oldContainer).animate({ opacity: 0.9 }, 1000).promise();
+      },
+      fadeIn: function() {
+
+        var _this = this;
+        var $el = $(this.newContainer);
+
+        $(this.oldContainer).hide();
+
+        $el.css({
+          visibility : 'visible',
+          opacity : 0.95
+        });
+
+        document.body.scrollTop = 0;
+        preloaderSecondStep();
+        $el.animate({ opacity: 1 }, 1000, function() {
+          _this.done();
+        });
+
+
+      },
+
+      finish: function() {
+        document.body.scrollTop = 0;
+        preloaderSecondStep();
+        this.done();      }
+    });
+
+    Barba.Pjax.getTransition = function() {
+      return HideShowTransition;
+    };
+
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+        
+      });
+  })
+
+  // Preloader
+
+  $(function() {
+    setTimeout(preloaderSecondStep,500);
+  })
