@@ -555,12 +555,15 @@
 	background-color: #00b64e;
 	color: #fff;
 	width: 100%;
-	height: 800px;
+	//height: 800px;
+	height: auto;
 	margin: 0 auto;
 	box-sizing: border-box;
 	position: relative;
 
 	overflow: hidden;
+
+	line-height: 100vh;
 
 	&__wrap {
 		position: fixed;
@@ -618,12 +621,17 @@
 	}
 
 	&__slider__wrap {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		// position: absolute;
+		// top: 50%;
+		// transform: translateY(-50%);
+
+
 
 		width: 122%;
 		margin-right: -22%;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
 
 	}
 
@@ -1036,7 +1044,7 @@
 				padding-bottom: 50px;
 
 				&__close {
-					width: 53px;
+					width: 35px;
 					top: 10px;
 					right: 10px;
 				}
