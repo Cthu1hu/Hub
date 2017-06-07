@@ -243,7 +243,7 @@
 											<div class="coworking__main__slider__item__details__price">3600 грн</div>
 											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
 
-											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
+											<button class="btn more-conference-btn btn-red cow-book-btn-to-popup">Забронировать</button>
 										</li>
 
 									</ul>
@@ -366,7 +366,7 @@
 										<li class="coworking__main__slider__item__details__item">
 											<div class="coworking__main__slider__item__details__price">3600 грн</div>
 											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
-											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
+											<button class="btn more-conference-btn btn-red cow-book-btn-to-popup">Забронировать</button>
 										</li>
 
 									</ul>
@@ -486,7 +486,7 @@
 										<li class="coworking__main__slider__item__details__item">
 											<div class="coworking__main__slider__item__details__price">3600 грн</div>
 											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
-											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
+											<button class="btn more-conference-btn btn-red cow-book-btn-to-popup">Забронировать</button>
 										</li>
 
 									</ul>
@@ -606,7 +606,7 @@
 										<li class="coworking__main__slider__item__details__item">
 											<div class="coworking__main__slider__item__details__price">3600 грн</div>
 											<div class="coworking__main__slider__item__details__time">Стоимость рабочего места в месяц</div>
-											<a href="#" class="btn more-conference-btn btn-red">Забронировать</a>
+											<button class="btn more-conference-btn btn-red cow-book-btn-to-popup">Забронировать</button>
 										</li>
 
 									</ul>
@@ -736,37 +736,23 @@
 
 
 			<!-- cow popup -->
-			<div class="cow__form__wrap">
+			<div class="cow__form_tr-bg"></div>
+			<div class="cow__form__wrap" id="coworking-book-popup">
+				<button class="conference__popup__close conference__popup__close-cow-popup"></button>
 				<form class="cow__form"	>
 					<h3 class="cow__form__title">ЗАБРОНИРОВАТЬ</h3>
-					<input class="cow__form__input" type="text" name="name_hall" placeholder="Название зала">
-					<input class="cow__form__input" type="text" name="name" placeholder="Имя">
-					<input class="cow__form__input" type="number" name="phone" placeholder="Номер телефона">
-					<button class="btn more-conference-btn">Забронировать</button>
-				</form>
-			</div>
-
-			<!-- big popup -->
-			<div class="cow__form__wrap">
-				<form class="cow__form cow__form-large"	>
-					<h3 class="cow__form__title">ЗАБРОНИРОВАТЬ</h3>
-					<input class="cow__form__input" type="text" id="cow-popup-date" name="name_hall" placeholder="Дата">
-					<div class="cow__form__row">
-						<input class="cow__form__input cow__form__input-small" type="text" id="cow-popup-start-time" name="name_hall" placeholder="Время начала">
-						<input class="cow__form__input cow__form__input-small" type="text" id="cow-popup-end-time" name="name_hall" placeholder="Время окончания">
-					</div>
-
-					<select class="cow__form__input" type="text" name="name_hall" placeholder="Название конференц зала">
-						<option disabled selected value="">Название конференц зала</option>
-						<option value="Зал-1">Зал-1</option>
-						<option value="Зал-2">Зал-2</option>
+					<select class="cow__form__input" type="text" name="name_hall" placeholder="Название зала">
+						<option disabled selected value="">Название зала</option>
+						<option value="КОВОРКИНГ #1">КОВОРКИНГ #1</option>
+						<option value="КОВОРКИНГ #2">КОВОРКИНГ #2</option>
+						<option value="КОВОРКИНГ #3">КОВОРКИНГ #3</option>
+						<option value="КОВОРКИНГ #4">КОВОРКИНГ #4</option>
 					</select>
 					<input class="cow__form__input" type="text" name="name" placeholder="Имя">
-					<input class="cow__form__input" type="text" name="phone" placeholder="Телефон">
+					<input class="cow__form__input" type="text" name="phone" placeholder="Номер телефона">
 					<button class="btn more-conference-btn">Забронировать</button>
 				</form>
 			</div>
-
 
 		</div>
 	</div>
