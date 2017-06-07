@@ -1,7 +1,7 @@
 function fullPageMain () {
 
   // full page
-  
+
   var fullpageOptions = {
    //Navigation
    // menu: '.header',
@@ -696,7 +696,7 @@ function ScrollTopFunc(){
 
 
 
-          // coworking 
+          // coworking
 
           function coworkingSlidersFunc() {
 
@@ -1081,6 +1081,3 @@ function ScrollTopFunc(){
                   function preloaderFunc() {
                     setTimeout(preloaderSecondStep,500);
                   };
-                  
-
-
