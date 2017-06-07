@@ -33,7 +33,7 @@ function fullPageMain () {
 
 
  function indexFullpageInit() {
-   if($('.index-body-mirror').hasClass('index__body') && ($(window).width() <= 767) && $.fn.hasOwnProperty('fullpage')){
+   if($('.index-body-mirror').hasClass('index__body') && ($(window).width() <= 767) && $.fn.hasOwnProperty('fullpage') && fullpageInitStatus){
      $.fn.fullpage.destroy('all');
      fullpageInitStatus = false;
    } else if($('.index-body-mirror').hasClass('index__body') && $(window).width() > 767 && !(fullpageInitStatus)){
