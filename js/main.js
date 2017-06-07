@@ -687,20 +687,13 @@ function ScrollTopFunc(){
     $('.page-conference__item__slider__large__item').imagefill();
     $('.page-conference__item__slider__small__item').imagefill();
     $('.coworking__main__slider__item__bottom__slider__item__pic').imagefill();
-
-
-<<<<<<< HEAD
-          // coworking
-=======
     $('.freespace__slider__pic').imagefill();
->>>>>>> refs/remotes/PIMJl9HIH/master
-
   };
 
 
 
 
-  // coworking 
+  // coworking
 
   function coworkingSlidersFunc() {
 
@@ -1097,7 +1090,7 @@ function ScrollTopFunc(){
           // preloaderFirstStep();
           // preloaderSecondStep();
           // preloaderFunc();
-          
+
         });
       };
 
@@ -1116,11 +1109,11 @@ function ScrollTopFunc(){
 
       // call all function
 
-<<<<<<< HEAD
+
                   function preloaderFunc() {
                     setTimeout(preloaderSecondStep,550);
                   };
-=======
+
       fullPageMain();
       ScrollTopFunc();
       indexSliders();
@@ -1146,4 +1139,3 @@ function ScrollTopFunc(){
       preloaderFunc();
 
       barbaFunc();
->>>>>>> refs/remotes/PIMJl9HIH/master
