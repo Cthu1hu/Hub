@@ -206,6 +206,12 @@ function ScrollTopFunc(){
 
       function burgerMenuFunc(){
 
+        $('.navigation__link').on('click', function () {
+          if ($(window).width() < 1200) {
+            $('body').css({overflow:'auto'});
+          }
+        });
+
         var $burger = $('.burger');
         var $bars = $('.burger-svg__bars');
         var $bar = $('.burger-svg__bar');
@@ -1077,6 +1083,17 @@ function ScrollTopFunc(){
           $('.cow-book-btn-to-popup').on('click', coPopupOpen);
           $('.conference__popup__close-cow-popup').on('click', coPopupClose);
           $('.cow__form_tr-bg').on('click', coPopupClose);
+
+          // CONFERENCE SERVICE popup
+
+          $('.btn-to-service-popup').on('click', function () {
+            $('body').css({overflow:'hidden'});
+            $('#service-popup').addClass('active');
+            $('#service-popup').find('.conference__popup__close').one('click', function() {
+              $('#service-popup').removeClass('active');
+              $('body').css({overflow:'auto'});
+            })
+          })
 
        }
 
