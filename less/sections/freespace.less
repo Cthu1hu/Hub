@@ -61,12 +61,10 @@
 				line-height: 1;
 				font-family: @GB;
 				padding-left: 45px;
-				margin-top: -25px;
-				padding-bottom: 25px;
-				color: @Dgreen;
+				top: -30px;
+				color: #61ac61;
 				position: relative;
 				z-index: 2;
-				background-color: #fff;
 			}
 
 			&__text {
@@ -88,6 +86,7 @@
 				left: 0;
 				max-height: 100%;
 				overflow: hidden;
+				z-index: -1;
 			}
 		}
 
@@ -180,16 +179,16 @@
 
 			// height: 0;
    //  	overflow: hidden;
-		}
+ }
 
-		&__price {
+ &__price {
 
-			font-size: 27px;
-			line-height: 0.8;
-			font-family: @GB;
-			color: @Dgreen;
-		}
-	}
+ 	font-size: 27px;
+ 	line-height: 0.8;
+ 	font-family: @GB;
+ 	color: @Dgreen;
+ }
+}
 
 
 }
@@ -205,6 +204,21 @@
 		font-size: 18px;
 		font-family: @G;
 		background-color: transparent;
+		position: relative;
+    padding-bottom: 40px;
+
+    &:after {
+    	content:"";
+    	background: url('../img/icons/bg-arrow.png') no-repeat center;
+    	background-size: contain;
+    	position: absolute;
+    	bottom: 0;
+    	left: calc(~"50% - 29px");
+    	width: 58px;
+    	height: 28px;
+    	display: block;
+    }
+
 	}
 }
 
@@ -271,12 +285,12 @@
 
 @media (max-width:1199px){
 
-.freespace-wrapper {
+	.freespace-wrapper {
 
-	.freespace__icon {
-		width: calc(~"100% - 550px");
+		.freespace__icon {
+			width: calc(~"100% - 550px");
+		}
 	}
-}
 
 }
 
@@ -338,14 +352,15 @@
 
 		}
 
-		 .section-2 {
-		 	margin-left: 10px;
-		 	margin-right: 10px;
-		 }
-	 .freespace__icon {
+		.section-2 {
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-bottom: 0;
+		}
+		.freespace__icon {
 
-	 	width: 100%;
-	 }
+			width: 100%;
+		}
 
 
 		.freespace__more__container {
@@ -361,7 +376,7 @@
 		.freespace__slider__title {
 			margin-left: 0;
 			font-size: 40px;
-   	  top: 22px;
+			top: 22px;
 		}
 
 		.freespace__icon__item {
