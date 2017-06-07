@@ -1079,5 +1079,5 @@ function ScrollTopFunc(){
                   // Preloader
 
                   function preloaderFunc() {
-                    setTimeout(preloaderSecondStep,500);
+                    setTimeout(preloaderSecondStep,550);
                   };
