@@ -1,3 +1,6 @@
+
+var fullpageInitStatus = false;
+
 function fullPageMain () {
 
   // full page
@@ -32,8 +35,10 @@ function fullPageMain () {
  function indexFullpageInit() {
    if($('.index-body-mirror').hasClass('index__body') && ($(window).width() <= 767) && $.fn.hasOwnProperty('fullpage')){
      $.fn.fullpage.destroy('all');
-   } else if($('.index-body-mirror').hasClass('index__body') && $(window).width() > 767){
+     fullpageInitStatus = false;
+   } else if($('.index-body-mirror').hasClass('index__body') && $(window).width() > 767 && !(fullpageInitStatus)){
     $('#fullpage').fullpage(fullpageOptions);
+    fullpageInitStatus = true;
   };
 };
 
@@ -588,7 +593,7 @@ function ScrollTopFunc(){
           $(e.target).addClass('active');
           conferenceMainSlider.trigger('to.owl.carousel', curNumNav);
 
-          $('body').animate({
+          $('body,html').animate({
             scrollTop : $('.coworking__main__content').parent().offset().top
           });
 
@@ -994,21 +999,78 @@ function ScrollTopFunc(){
 
        };
 
+       function coworkingPopupsMain() {
+
+          // DATEPICKER
+          var datepickerOptions = {
+            language: 'ru'
+          };
+
+          $('#cow-popup-date').datepicker(datepickerOptions);
+
+          $.fn.datepicker.language['en'] = {
+              days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+              daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+              daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              months: ['January','February','March','April','May','June', 'July','August','September','October','November','December'],
+              monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              today: 'Today',
+              clear: 'Clear',
+              dateFormat: 'mm/dd/yyyy',
+              timeFormat: 'hh:ii aa',
+              firstDay: 0
+          };
+
+          $.fn.datepicker.language['ua'] = {
+              days: ['неділя', 'понеділок', 'вівторок', 'среда', 'четвер', 'п\'ятница', 'субота'],
+              daysShort: ['нд', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
+              daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+              months: ['Січень','Лютий','Березень','Квітень','Травень','Червень', 'Липень','Серпень','Вересень','Жовтень','Листопад','Грудень'],
+              monthsShort: ['Лют', 'Січ', 'Бер', 'Квіт', 'Трав', 'Черв', 'Лип', 'Серп', 'Вер', 'Жовт', 'Лист', 'Груд'],
+              today: 'Сьогодні',
+              clear: 'Видалити',
+              dateFormat: 'mm/dd/yyyy',
+              timeFormat: 'hh:ii aa',
+              firstDay: 1
+          };
+
+
+          // TIMEPICKER
+          var timepickerShowStatus = false;
+          var timepickerOptions = {
+            now: '10:00',
+            twentyFour: true,
+            timeSeparator: ':',
+            minutesInterval: 30,
+            title: '',
+            show: timepickerShow
+          };
+
+          function timepickerShow () {
+             timepickerShowStatus = true;
+          }
+
+          $('.cow__form.cow__form-large input').on('focus', function () {
+            $('.wickedpicker__close').click();
+          });
+
+          $('#cow-popup-start-time').wickedpicker(timepickerOptions);
+          $('#cow-popup-end-time').wickedpicker(timepickerOptions);
+
+       }
+
 
 
        // Preloader animation
 
 
        function preloaderFirstStep() {
-        $('body').css({overflow: 'hidden'});
         $('.transition-container').addClass('active');
       };
 
       function preloaderSecondStep() {
         $('.transition-container').addClass('sec-step');
-        if (!($('.index-body-mirror').hasClass('index__body'))) {
-          $('body').css({overflow: 'auto'});
-        }
+        document.body.scrollTop = 0;
         setTimeout(()=>{
           $('.transition-container').removeClass('active');
           $('.transition-container').removeClass('sec-step');
@@ -1022,35 +1084,38 @@ function ScrollTopFunc(){
 
         var HideShowTransition = Barba.BaseTransition.extend({
           start: function() {
-            if($.fn.hasOwnProperty('fullpage')) {
-              $.fn.fullpage.destroy('all');
-            };
 
+            preloaderFirstStep();
             Promise
             .all([this.newContainerLoading, this.fadeOut()])
             .then(this.fadeIn.bind(this));
           },
           fadeOut: function () {
-            preloaderFirstStep();
-            return $(this.oldContainer).animate({ opacity: 0.9 }, 1000).promise();
+            return $(this.oldContainer).animate({ opacity: 0.95 }, 1500).promise();
           },
           fadeIn: function() {
 
             var _this = this;
             var $el = $(this.newContainer);
 
+            if($.fn.hasOwnProperty('fullpage') && !($el.has('.index__body').length) && fullpageInitStatus) {
+              $.fn.fullpage.destroy('all');
+              fullpageInitStatus = false;
+            };
+
             $(this.oldContainer).hide();
 
-            $el.css({
-              visibility : 'visible',
-              opacity : 0.95
-            });
+            // $el.css({
+            //   visibility : 'visible',
+            //   opacity : 0.95
+            // });
 
             document.body.scrollTop = 0;
             preloaderSecondStep();
-            $el.animate({ opacity: 1 }, 1000, function() {
-              _this.done();
-            });
+            _this.done();
+            // $el.animate({ opacity: 1 }, 1000, function() {
+            //   _this.done();
+            // });
 
 
           },
@@ -1067,25 +1132,27 @@ function ScrollTopFunc(){
 
         Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
 
-          // fullPageMain();
-          // ScrollTopFunc();
-          // indexSliders();
-          // googleMapFunc();
-          // burgerMenuFunc();
-          // indexConferenceFunc();
-          // innovationSliderFunc();
-          // innovationPageSliders();
-          // freespaceSliderFunc();
-          // newsSliderFunc();
-          // conferenceWasteFunc();
-          // conferenceSlidersFunc();
-          // imageFillFunc();
-          // coworkingSlidersFunc();
-          // animationFunc ();
-          // smoothScrollFunc();
-          // aboutSlidersFunc();
-          // forMobileFunc();
-          // conferencePopupFunc();
+
+          fullPageMain();
+          ScrollTopFunc();
+          indexSliders();
+          googleMapFunc();
+          burgerMenuFunc();
+          indexConferenceFunc();
+          innovationSliderFunc();
+          innovationPageSliders();
+          freespaceSliderFunc();
+          newsSliderFunc();
+          conferenceWasteFunc();
+          conferenceSlidersFunc();
+          imageFillFunc();
+          coworkingSlidersFunc();
+          animationFunc ();
+          smoothScrollFunc();
+          aboutSlidersFunc();
+          forMobileFunc();
+          conferencePopupFunc();
+          coworkingPopupsMain();
 
           // preloaderFirstStep();
           // preloaderSecondStep();
@@ -1109,11 +1176,6 @@ function ScrollTopFunc(){
 
       // call all function
 
-
-                  function preloaderFunc() {
-                    setTimeout(preloaderSecondStep,550);
-                  };
-
       fullPageMain();
       ScrollTopFunc();
       indexSliders();
@@ -1133,6 +1195,7 @@ function ScrollTopFunc(){
       aboutSlidersFunc();
       forMobileFunc();
       conferencePopupFunc();
+      coworkingPopupsMain();
 
       preloaderFirstStep();
       preloaderSecondStep();
