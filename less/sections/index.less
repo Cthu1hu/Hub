@@ -692,9 +692,9 @@
  	font-size: 16px;
  	font-family: @G;
  	text-shadow: 2px 2px 40px black;
-	max-height: 300px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+ 	max-height: 300px;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
  }
 
  &__more__link {
@@ -1608,16 +1608,16 @@
 
 @media (min-width:1300px) and (max-height: 650px) {
 	.footer__social--index {
-			margin-top: -50px;
-			float: left;
-			width: 100%;
-			margin-bottom: 0px;
-		}
+		margin-top: -50px;
+		float: left;
+		width: 100%;
+		margin-bottom: 0px;
+	}
 
-		.contact__item {
-			margin-bottom: 0px;
-			line-height: 18px;
-		}
+	.contact__item {
+		margin-bottom: 0px;
+		line-height: 18px;
+	}
 }
 
 @media (min-width:1023px) and (max-height: 750px){
@@ -1668,21 +1668,21 @@
 		&__item {
 			line-height: 60px;
 
-			&:nth-of-type(3){
+			// &:nth-of-type(3){
 
-				.navigation__link {
+			// 	.navigation__link {
 
-					color: @Dgreen;
-				}
-			}
+			// 		color: @Dgreen;
+			// 	}
+			// }
 
-			&:nth-of-type(7){
+			// &:nth-of-type(7){
 
-				.navigation__link {
+			// 	.navigation__link {
 
-					color: @blue;
-				}
-			}
+			// 		color: @blue;
+			// 	}
+			// }
 		}
 	}
 	.language_mobile {
@@ -1719,23 +1719,28 @@
 	.first-info {
 		margin: 0 auto;
 		width: 95%;
+		display: flex;
+		align-items: center;
+		padding-left: 25px;
+		height: calc(~"100% - 70px");
 	}
 
 	.first-info__title {
 		font-size: 80px;
 		line-height: 1;
+
+
+			&.circle:after {
+
+				top: -17px;
+				left: -14px;
+				width: 50px;
+				height: 51px;
+
+			}
+		
 	}
-	.circle{
 
-		&:after {
-
-			top: 0;
-			left: -8px;
-			width: 50px;
-			height: 51px;
-
-		}
-	}
 
 	.innovationGallery__title .circle-orange {
 		&:after {
@@ -1901,6 +1906,7 @@
 		.section-1 {
 
 			min-height: 550px;
+
 		}
 
 		.section-5 {
