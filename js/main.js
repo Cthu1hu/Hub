@@ -33,7 +33,7 @@ function fullPageMain () {
 
 
  function indexFullpageInit() {
-   if($('.index-body-mirror').hasClass('index__body') && ($(window).width() <= 767) && $.fn.hasOwnProperty('fullpage')){
+   if($('.index-body-mirror').hasClass('index__body') && ($(window).width() <= 767) && $.fn.hasOwnProperty('fullpage') && fullpageInitStatus){
      $.fn.fullpage.destroy('all');
      fullpageInitStatus = false;
    } else if($('.index-body-mirror').hasClass('index__body') && $(window).width() > 767 && !(fullpageInitStatus)){
@@ -1056,6 +1056,27 @@ function ScrollTopFunc(){
 
           $('#cow-popup-start-time').wickedpicker(timepickerOptions);
           $('#cow-popup-end-time').wickedpicker(timepickerOptions);
+
+
+
+          // POPUP LOGIC
+
+          function coPopupOpen() {
+            $('.cow__form__wrap').addClass('active');
+            $('.cow__form_tr-bg').addClass('active');
+          }
+
+          function coPopupClose() {
+            $('.cow__form__wrap').removeClass('active');
+            $('.cow__form_tr-bg').removeClass('active');
+          }
+
+          // COWORKING popup
+
+
+          $('.cow-book-btn-to-popup').on('click', coPopupOpen);
+          $('.conference__popup__close-cow-popup').on('click', coPopupClose);
+          $('.cow__form_tr-bg').on('click', coPopupClose);
 
        }
 

@@ -22,7 +22,7 @@
 }
 
 .coworking-1__main__content {
-	
+
 	.main__nav__coworking__container {
 
 
@@ -110,7 +110,36 @@
 
 // cow form
 
+.wickedpicker {
+	z-index: 93;
+}
+
+.cow__form_tr-bg {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	z-index: 90;
+
+	&.active {
+		display: block;
+	}
+}
+
 .cow__form__wrap {
+	position: fixed;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: top .4s ease-out;
+	z-index: 91;
+
+	&.active {
+		top: 50%;
+	}
 
 }
 
@@ -187,7 +216,7 @@
 
 
 
- //  - -------------------     media   
+ //  - -------------------     media
  @media (max-width:1280px){
 
 
