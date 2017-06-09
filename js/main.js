@@ -1153,7 +1153,7 @@ function ScrollTopFunc(){
 
             if(location.href.indexOf('#') > -1) {
               $('body, html').animate({
-                scrollTop: $(location.hash).offset().top;
+                scrollTop: $(location.hash).offset().top
               })
             }
 
