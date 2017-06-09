@@ -13,6 +13,7 @@ function fullPageMain () {
    showActiveTooltip: true,
    slidesNavigation: true,
    scrollOverflow: true,
+   touchSensitivity: 15,
    // use afterLoad instead afterSlideLoad
    afterLoad: function(anchorLink, index){
      if(index == 2 || index == 4 || index == 5){
@@ -1109,7 +1110,7 @@ function ScrollTopFunc(){
       function preloaderSecondStep() {
         $('.transition-container').addClass('sec-step');
         document.body.scrollTop = 0;
-        setTimeout(()=>{
+        setTimeout(function (){
           $('.transition-container').removeClass('active');
           $('.transition-container').removeClass('sec-step');
         }, 600)
@@ -1151,7 +1152,7 @@ function ScrollTopFunc(){
             document.documentElement.scrollTop = 0;
             document.body.scrollTop = 0;
 
-            if(location.href.indexOf('#') > -1) {
+            if (location.href.indexOf('#') > -1) {
               $('body, html').animate({
                 scrollTop: $(location.hash).offset().top
               });
