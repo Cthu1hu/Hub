@@ -1148,7 +1148,15 @@ function ScrollTopFunc(){
             //   opacity : 0.95
             // });
 
+            document.documentElement.scrollTop = 0;
             document.body.scrollTop = 0;
+
+            if(location.href.indexOf('#') > -1) {
+              $('body, html').animate({
+                scrollTop: $(location.hash).offset().top;
+              })
+            }
+
             preloaderSecondStep();
             _this.done();
             // $el.animate({ opacity: 1 }, 1000, function() {
