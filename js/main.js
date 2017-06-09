@@ -142,7 +142,7 @@ function ScrollTopFunc(){
           navContainer: $('.innovationGallery__slider__controls'),
           navText: ['', ''],
           loop: true,
-          autoHeight: true,
+          // autoHeight: true,
           animateIn: "fadeInRight",
           animateOut: "fadeOutLeft"
         });

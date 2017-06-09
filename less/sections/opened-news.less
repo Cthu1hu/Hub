@@ -136,7 +136,13 @@
 	color: @gray;
 	width: auto;
 	height: 26px;
-	line-height: 26px;
+	line-height: 23px;
+	border: 2px solid transparent;
+
+	&:hover {
+		border: 2px solid @gray;
+		background-color: transparent;
+	}
 }
 
 .news__slider__btn-next {
@@ -224,6 +230,10 @@
 	.more-news-btn {
 
 		background-color: @yellow;
+
+		&:hover {
+			background-color: transparent;
+		}
 	}
 
 

@@ -51,7 +51,7 @@
 		.main-event__buy {
 
 			background-color: @orange;
-			border: 1px solid @orange;
+			border: 2px solid @orange;
 
 			&:hover {
 				color: @orange;
@@ -155,6 +155,11 @@
 	.poster__registration__link {
 		background-color: @orange;
 		color: #fff;
+
+		&:hover {
+			color: @orange;
+			background-color: transparent;
+		}
 	}
 }
 
@@ -603,35 +608,35 @@
 	}
 
 
-		.other-events__wrap .other-events__info .other-events__info__title {
+	.other-events__wrap .other-events__info .other-events__info__title {
 
-			margin-bottom: 10px;
-		}
-		.other-events__wrap .other-events__info .main-event__text {
-			height: auto;
-			max-height: inherit;
-		}
+		margin-bottom: 10px;
+	}
+	.other-events__wrap .other-events__info .main-event__text {
+		height: auto;
+		max-height: inherit;
+	}
 
-		.other-events__wrap .main-event__date {
+	.other-events__wrap .main-event__date {
 
-			font-size: 20px;
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
+		font-size: 20px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 
-		.other-events__wrap {
-			margin-bottom: 0;
+	.other-events__wrap {
+		margin-bottom: 0;
 
-			.other-events__item {
+		.other-events__item {
 
-				float: none;
-				width: 100%;
+			float: none;
+			width: 100%;
+			margin: 0;
+			margin-bottom: 20px;
+
+			&:nth-of-type(2n) {
+
 				margin: 0;
-				margin-bottom: 20px;
-
-				&:nth-of-type(2n) {
-
-					margin: 0;
 					//padding-bottom: 30px;
 				}
 
