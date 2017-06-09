@@ -229,42 +229,12 @@
 			.clearfix;
 		}
 
+
 		.form__input {
 			float: left;
-
-			font-family: @GL;
-			width: 280px;
-			height: 50px;
-			padding-top: 2px;
-			padding-bottom: 0;
-			padding-left: 15px;
-			padding-right: 10px;
-			background-color: #fff;
-			color: @gray;
-			transition: all 0.4s ease-out;
-			line-height: 50px;
-			font-size: 18px;
-			margin-bottom: 33px;
-			box-sizing: border-box;
-			border: 2px solid transparent;
-			transition: 0.3s ease-out;
-
-			&::placeholder {
-				transition: all 0.4s ease-out;
-			}
-
-			&:focus {
-				background-color: transparent;
-				color: white;
-				border-color: white;
-				outline: none;
-
-				&::placeholder {
-					color: white;
-				}
-			}
-
 		}
+
+
 
 		.main__input_second {
 
@@ -298,32 +268,68 @@
 
 }
 
-.error {
-	border: solid 2px red;
-}
+.form__input {
+		//	float: left;
 
-/* не прозрачный placeholder */
-::-webkit-input-placeholder { color: @gray; opacity: 1;  }
-::-moz-placeholder  { color: @gray; opacity: 1;  }/* Firefox 19+ */
-:-moz-placeholder   { color: @gray; opacity: 1;  } /* Firefox 18- */
-:-ms-input-placeholder  { color: @gray; opacity: 1;  }
+		font-family: @GL;
+		width: 280px;
+		height: 50px;
+		padding-top: 2px;
+		padding-bottom: 0;
+		padding-left: 15px;
+		padding-right: 10px;
+		background-color: #fff;
+		color: @gray;
+		transition: all 0.4s ease-out;
+		line-height: 50px;
+		font-size: 18px;
+		margin-bottom: 33px;
+		box-sizing: border-box;
+		border: 2px solid transparent;
+		transition: 0.3s ease-out;
+
+		&::placeholder {
+			transition: all 0.4s ease-out;
+		}
+
+		&:focus {
+			background-color: transparent;
+			color: white;
+			border-color: white;
+			outline: none;
+
+			&::placeholder {
+				color: white;
+			}
+		}
+
+	}
+	.error {
+		border: solid 2px red;
+	}
+
+	/* не прозрачный placeholder */
+	::-webkit-input-placeholder { color: @gray; opacity: 1;  }
+	::-moz-placeholder  { color: @gray; opacity: 1;  }/* Firefox 19+ */
+	:-moz-placeholder   { color: @gray; opacity: 1;  } /* Firefox 18- */
+	:-ms-input-placeholder  { color: @gray; opacity: 1;  }
 
 
-.btn-offer {
+	.btn-offer {
 
-	background-color: @Dgreen;
-	color: #fff;
-	font-size: 12px;
-	font-family: @GB;
-	width: auto;
-	padding: 0 15px;
-	margin-top: -65px;
-	border-radius: 15px;
+		background-color: @Dgreen;
+		color: #fff;
+		font-size: 12px;
+		font-family: @GB;
+		width: auto;
+		padding: 0 15px;
+		margin-top: -65px;
+		border-radius: 15px;
 
-	height: 30px;
-	line-height: 28px;
+		height: 30px;
+		line-height: 28px;
 
-}
+	}
 
 
 //all-innovations__popup
