@@ -1054,12 +1054,18 @@ function ScrollTopFunc(){
           };
 
           function timepickerShow () {
+            if (!(timepickerShowStatus)){
+              $(window).on('scroll', function () {
+                $('.wickedpicker__close').click();
+              });
+            }
              timepickerShowStatus = true;
           }
 
           $('.cow__form.cow__form-large input').on('focus', function () {
             $('.wickedpicker__close').click();
           });
+
 
           $('#cow-popup-start-time').wickedpicker(timepickerOptions);
           $('#cow-popup-end-time').wickedpicker(timepickerOptions);
