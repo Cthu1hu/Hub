@@ -487,7 +487,9 @@ function ScrollTopFunc(){
           nav : true,
           navText: ['', ''],
           loop: true,
-          autoHeight: true
+          autoHeight: true,
+          mouseDrag: false,
+          touchDrag:false
 
         });
 
