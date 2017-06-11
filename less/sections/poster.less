@@ -46,7 +46,7 @@
 	// 		margin-left: 40px;
 	// margin-right: 40px;
 
-	&-o {
+	&-orange {
 
 		.main-event__buy {
 
@@ -74,17 +74,109 @@
 		}
 	}
 
-	&-g {
+	&-green {
+		.main-event {
+			border: 32px solid @Dgreen;
+		}
 
 		.main-event__buy {
 
 			background-color: @Dgreen;
+			border: 2px solid @Dgreen;
+
+			&:hover {
+				color: @Dgreen;
+				background-color: transparent;
+			}
 		}
 		.conference__pic{
 			border: solid 28px @Dgreen;
 		}
 		.conference__circle {
 			background-color: @Dgreen;
+		}
+
+		.main-event__title {
+			color: @Dgreen;
+		}
+
+		.conference__powered {
+			transform: scale(0);
+		}
+
+		.single_poster_container .poster__registration__link {
+			background-color: @Dgreen;
+		}
+	}
+
+	&-blue {
+
+		.main-event {
+			border: 32px solid @blue;
+		}
+
+		.main-event__buy {
+
+			background-color: @blue;
+			border: 2px solid @blue;
+
+			&:hover {
+				color: @blue;
+				background-color: transparent;
+			}
+		}
+		.conference__pic{
+			border: solid 28px @blue;
+		}
+		.conference__circle {
+			background-color: @blue;
+		}
+
+		.main-event__title {
+			color: @blue;
+		}
+
+		.conference__powered {
+			transform: scale(0);
+		}
+
+		.single_poster_container .poster__registration__link {
+			background-color: @blue;
+		}
+	}
+
+	&-yellow {
+
+		.main-event {
+			border: 32px solid @yellow;
+		}
+
+		.main-event__buy {
+
+			background-color: @yellow;
+			border: 2px solid @yellow;
+
+			&:hover {
+				color: @yellow;
+				background-color: transparent;
+			}
+		}
+		.conference__pic{
+			border: solid 28px @yellow;
+		}
+		.conference__circle {
+			background-color: @yellow;
+		}
+
+		.main-event__title {
+			color: @yellow;
+		}
+
+		.conference__powered {
+			transform: scale(0);
+		}
+		.single_poster_container .poster__registration__link {
+			background-color: @yellow;
 		}
 	}
 }
@@ -242,6 +334,27 @@
 				}
 			}
 		}
+
+		&-orange {
+
+			background-color: @orange;
+		}
+
+		&-green {
+
+			background-color: @Dgreen;
+		}
+
+		&-yellow {
+
+			background-color: @yellow;
+		}
+
+		&-blue {
+
+			background-color: @blue;
+		}
+
 
 
 		&:nth-of-type(2n) {
