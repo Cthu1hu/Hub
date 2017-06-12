@@ -770,6 +770,15 @@ function ScrollTopFunc(){
 
   };
 
+  function showAttrImgOnClick() {
+  $('.attr-img-btn').on('click', function () {
+      BigPicture({
+        el: this,
+        imgSrc: $(this).attr('data-certificate-url')
+      });
+  });
+};
+
 
 
 
@@ -1208,6 +1217,7 @@ function ScrollTopFunc(){
           forMobileFunc();
           conferencePopupFunc();
           coworkingPopupsMain();
+          showAttrImgOnClick();
 
           // preloaderFirstStep();
           // preloaderSecondStep();
@@ -1251,6 +1261,7 @@ function ScrollTopFunc(){
       forMobileFunc();
       conferencePopupFunc();
       coworkingPopupsMain();
+      showAttrImgOnClick();
 
       preloaderFirstStep();
       preloaderSecondStep();
