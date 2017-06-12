@@ -4,6 +4,11 @@
 	overflow: visible;
 
 	.section-1 {
+		background: url('../img/content/hub-4gif2.gif'),
+								url('../img/content/forgif.png');
+		background-repeat: no-repeat, no-repeat;
+		background-size: cover, cover;
+		 background-position: -7px 0, 0 0 ;
 
 		.header {
 
@@ -736,10 +741,10 @@
  	background-color: @Dgreen;
 
 
- 		&:hover {
-			transform: scale(1.05);
-			background-color: transparent;
-		}
+ 	&:hover {
+ 		transform: scale(1.05);
+ 		background-color: transparent;
+ 	}
  }
 
 
@@ -1225,6 +1230,7 @@
 
 		display: inline-block;
 		font-size: 15px;
+				transition: 0.2s ease-out;
 
 		&.active {
 
@@ -1232,12 +1238,19 @@
 				color: @Lgreen;
 			}
 		}
+
+		&:hover {
+			transform: scale(1.2);
+		}
 	}
 
 
 	&__link {
 
 		color: @gray;
+
+
+
 
 	}
 
