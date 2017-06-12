@@ -777,7 +777,10 @@ function ScrollTopFunc(){
         imgSrc: $(this).attr('data-certificate-url')
       });
   });
+
+
 };
+     
 
 
 
@@ -1019,10 +1022,37 @@ function ScrollTopFunc(){
 
        function coworkingPopupsMain() {
 
+
+
+
           // DATEPICKER
+
           var datepickerOptions = {
             language: 'ru'
           };
+
+          // при открытии попапа убрал возможность скролла страницы
+
+     
+          // var disableDatePicker = false;
+          // function test () {
+
+          //   if(!disableDatePicker) {
+          //     $(window).on('scroll', function () {
+          //       $( ".datepickers-container" ).datepicker( "hide" );
+          //     });
+          //   }
+          //   disableDatePicker = true;
+          
+          // }
+
+
+          // $(".cow__form__wrap.active").scroll(function(){
+          //  $("#datepickers-container").hide();
+          // });
+
+         
+       
 
           $('#cow-popup-date').datepicker(datepickerOptions);
 
@@ -1088,11 +1118,13 @@ function ScrollTopFunc(){
           function coPopupOpen() {
             $('.cow__form__wrap').addClass('active');
             $('.cow__form_tr-bg').addClass('active');
+            $('body').css({overflow:'hidden'});
           }
 
           function coPopupClose() {
             $('.cow__form__wrap').removeClass('active');
             $('.cow__form_tr-bg').removeClass('active');
+            $('body').css({overflow:'initial'});
           }
 
           // COWORKING popup
@@ -1114,6 +1146,18 @@ function ScrollTopFunc(){
           })
 
        }
+
+       function activeLanguage() {
+         $('.language__item').on('click', function(e) {
+
+           var curLanguage = $(this).parent('.language__list').find('.active');
+                curLanguage.removeClass('active');
+                $(this).addClass('active');
+              
+         });
+         
+       };
+
 
 
 
@@ -1218,6 +1262,7 @@ function ScrollTopFunc(){
           conferencePopupFunc();
           coworkingPopupsMain();
           showAttrImgOnClick();
+          activeLanguage();
 
           // preloaderFirstStep();
           // preloaderSecondStep();
@@ -1266,5 +1311,8 @@ function ScrollTopFunc(){
       preloaderFirstStep();
       preloaderSecondStep();
       preloaderFunc();
+
+      activeLanguage();
+
 
       barbaFunc();
