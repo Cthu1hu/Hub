@@ -70,18 +70,13 @@
 
 	padding-top: 30px;
 
-	&.owl-carousel .owl-nav.disabled,
-	&.owl-carousel .owl-dots.disabled {
+	&.owl-carousel .owl-nav.disabled{
 		display: block !important;
 
 		.owl-prev, .owl-next {
 			position: absolute;
-			//height: 100%;
 			width: 30%;
-			//top: 0;
 			top: 30%;
-			//transform: translateY(-125%);
-			//font-size: 100px;
 			background: url('../img/icons/dark-long-arrow.png') no-repeat;
 			height: 50px;
 
@@ -202,6 +197,33 @@
 		}
 	}
 }
+#new__innovation__slider {
+	.owl-nav	{
+		display: block !important;
+
+		.owl-prev, .owl-next {
+			position: absolute;
+			width: 30%;
+			top: 30%;
+			background: url('../img/icons/dark-long-arrow.png') no-repeat;
+			height: 50px;
+
+		}
+
+		.owl-prev {
+			left: 0;
+			text-align: right;
+			background-position: 0% 50%;
+			transform: rotate(-180deg);
+		}
+
+		.owl-next {
+			right: 0;
+			background-position: 0 50%;
+		}
+	}
+}
+
 
 // form
 .innovations__form__section {
