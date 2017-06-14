@@ -94,9 +94,15 @@ function ScrollTopFunc(){
         //
         // });
 
-        $('#toTop').click(function() {
+        $('#toTop').on('click', function() {
           $('body,html').animate({scrollTop:0},800);
-          $.fn.fullpage.moveTo(1);
+
+           if($('.index-body-mirror').hasClass('index__body')){
+            $.fn.fullpage.moveTo(1);
+                console.log('test');
+                
+           };
+       
         });
 
       };
