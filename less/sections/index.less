@@ -389,7 +389,7 @@
 		margin: 0 auto;
 
 		// conference__item-o
-		&-o {
+		&-orange {
 
 			.conference__item__wrap {
 
@@ -418,8 +418,8 @@
 			}
 		}
 
-		// conference__item-g
-		&-g {
+		// conference__item-green
+		&-green {
 
 			.conference__item__wrap {
 
@@ -449,6 +449,85 @@
 				&:hover {
 					color: @Dgreen;
 					border: 2px solid @Dgreen;
+				}
+			}
+
+			.conference__powered {
+
+				transform: scale(1);
+			}
+		}
+
+				// conference__item-blue
+		&-blue {
+
+			.conference__item__wrap {
+
+				&:after {
+					content: attr(data-date);
+				}
+
+			}
+			.conference__pic{
+				border: solid 28px @blue;
+			}
+			.conference__circle {
+				background-color: @blue;
+			}
+
+			.conference__powered {
+				transform: scale(0);
+			}
+			.conference__info_name {
+				color: @blue;
+			}
+
+			.more__link {
+
+				background-color: @blue;
+
+				&:hover {
+					color: @blue;
+					border: 2px solid @blue;
+				}
+			}
+
+			.conference__powered {
+
+				transform: scale(1);
+			}
+		}
+
+				&-yellow {
+
+			.conference__item__wrap {
+
+				&:after {
+					content: attr(data-date);
+				}
+
+			}
+			.conference__pic{
+				border: solid 28px @yellow;
+			}
+			.conference__circle {
+				background-color: @yellow;
+			}
+
+			.conference__powered {
+				transform: scale(0);
+			}
+			.conference__info_name {
+				color: @yellow;
+			}
+
+			.more__link {
+
+				background-color: @yellow;
+
+				&:hover {
+					color: @yellow;
+					border: 2px solid @yellow;
 				}
 			}
 
