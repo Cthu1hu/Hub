@@ -1568,6 +1568,7 @@
 		background-color: white;
 		z-index: 101;
 		padding-top: 50px;
+		overflow-y: scroll;
 
 		&.active {
 			.navigation__item {
@@ -1801,30 +1802,14 @@
 	}
 
 	.navigation {
-		padding-top: 30px;
+		padding-top: 15px;
 
 		&__list {
 			margin-left: 0;
 		}
 
 		&__item {
-			line-height: 60px;
-
-			// &:nth-of-type(3){
-
-			// 	.navigation__link {
-
-			// 		color: @Dgreen;
-			// 	}
-			// }
-
-			// &:nth-of-type(7){
-
-			// 	.navigation__link {
-
-			// 		color: @blue;
-			// 	}
-			// }
+			line-height: 50px;
 		}
 	}
 	.language_mobile {
@@ -2164,6 +2149,8 @@
 		&_mobile {
 			display: block;
 			margin-left: 0;
+			margin: 0 auto;
+			left: 0;
 		}
 	}
 

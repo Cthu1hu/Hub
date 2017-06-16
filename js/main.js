@@ -100,9 +100,7 @@ function ScrollTopFunc(){
            if($('.index-body-mirror').hasClass('index__body')){
             $.fn.fullpage.moveTo(1);
                 console.log('test');
-                
            };
-       
         });
 
       };
@@ -786,7 +784,7 @@ function ScrollTopFunc(){
 
 
 };
-     
+
 
 
 
@@ -1039,7 +1037,7 @@ function ScrollTopFunc(){
 
           // при открытии попапа убрал возможность скролла страницы
 
-     
+
           // var disableDatePicker = false;
           // function test () {
 
@@ -1049,7 +1047,7 @@ function ScrollTopFunc(){
           //     });
           //   }
           //   disableDatePicker = true;
-          
+
           // }
 
 
@@ -1057,8 +1055,8 @@ function ScrollTopFunc(){
           //  $("#datepickers-container").hide();
           // });
 
-         
-       
+
+
 
           $('#cow-popup-date').datepicker(datepickerOptions);
 
@@ -1154,14 +1152,7 @@ function ScrollTopFunc(){
        }
 
        function activeLanguage() {
-         $('.language__item').on('click', function(e) {
-
-           var curLanguage = $(this).parent('.language__list').find('.active');
-                curLanguage.removeClass('active');
-                $(this).addClass('active');
-              
-         });
-         
+          $('.lang-' + $('#lang').html()).addClass('active');
        };
 
 
@@ -1226,6 +1217,7 @@ function ScrollTopFunc(){
             }
 
             preloaderSecondStep();
+            setTimeout(ScrollTopFunc, 2000);
             _this.done();
             // $el.animate({ opacity: 1 }, 1000, function() {
             //   _this.done();
