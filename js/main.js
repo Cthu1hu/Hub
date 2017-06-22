@@ -598,6 +598,48 @@ function ScrollTopFunc(){
 
       });
 
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      var namesCo = ['evolution', 'intelligence', 'education', 'auditorium', 'room1', 'room2', 'terrasa'];
+
+      if (vars[0]) {
+        $('.main__nav__coworking__container__item').removeClass('active');
+        switch(vars[0]) {
+          case 'evolution': conferenceMainSlider.trigger('to.owl.carousel', 0);
+          $('.main__nav__coworking__container__item[data-num="1"]').addClass('active');
+          break;
+          case 'intelligence': conferenceMainSlider.trigger('to.owl.carousel', 1);
+          $('.main__nav__coworking__container__item[data-num="2"]').addClass('active');
+          console.log('inta');
+          break;
+          case 'education': conferenceMainSlider.trigger('to.owl.carousel', 2);
+          $('.main__nav__coworking__container__item[data-num="3"]').addClass('active');
+          break;
+          case 'auditorium': conferenceMainSlider.trigger('to.owl.carousel', 3);
+          $('.main__nav__coworking__container__item[data-num="4"]').addClass('active');
+          break;
+          case 'room1': conferenceMainSlider.trigger('to.owl.carousel', 4);
+          $('.main__nav__coworking__container__item[data-num="5"]').addClass('active');
+          break;
+          case 'room2': conferenceMainSlider.trigger('to.owl.carousel', 5);
+          $('.main__nav__coworking__container__item[data-num="6"]').addClass('active');
+          break;
+          case 'terrasa': conferenceMainSlider.trigger('to.owl.carousel', 6);
+          $('.main__nav__coworking__container__item[data-num="7"]').addClass('active');
+          break;
+          default:
+          console.log('noAnchor');
+          break;
+        }
+
+        setTimeout(function () {
+          $('body,html').animate({
+            scrollTop: $('#conference__main__slider').offset().top
+          }, 1000);
+        }, 700);
+      }
+
+
        $('.conference__main__slider__wrapper .main__nav__coworking__container__list').on('click', function (e) {
 
         if($(e.target).hasClass('main__nav__coworking__container__item') && !($(e.target).hasClass('active'))) {
@@ -605,6 +647,8 @@ function ScrollTopFunc(){
           $('.main__nav__coworking__container__item.active').removeClass('active');
           $(e.target).addClass('active');
           conferenceMainSlider.trigger('to.owl.carousel', curNumNav);
+
+          window.history.pushState('conference', '', '/conference?' + namesCo[curNumNav]);
 
           $('body,html').animate({
             scrollTop : $('.coworking__main__content').parent().offset().top
@@ -729,6 +773,19 @@ function ScrollTopFunc(){
       animateOut: "fadeOutDown"
     });
 
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    if (vars[0]) {
+      coworkingMainSlider.trigger('to.owl.carousel', (vars[0] - 1));
+      $('.main__nav__coworking__container__item').removeClass('active');
+      $('.main__nav__coworking__container__item[data-num="' + (vars[0] - 1) + '"]').addClass('active');
+      setTimeout(function () {
+        $('body,html').animate({
+          scrollTop: $('.coworking__main__content').offset().top
+        }, 1000);
+      }, 700);
+    }
+
 
     $('.coworking__main__slider__wrap .main__nav__coworking__container__list').on('click', function (e) {
 
@@ -737,6 +794,7 @@ function ScrollTopFunc(){
         $('.main__nav__coworking__container__item.active').removeClass('active');
         $(e.target).addClass('active');
         coworkingMainSlider.trigger('to.owl.carousel', curNumNav);
+        window.history.pushState('coworking', '', '/coworking?' + (curNumNav + 1));
 
       }
 
@@ -1174,6 +1232,55 @@ function ScrollTopFunc(){
         }, 600)
       }
 
+
+      // SUB send
+
+      function subSend() {
+        var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+        var mail = $('.contacts__form__input__mail');
+        var btn = $('.contacts__form__btn');
+
+        mail.focus(function () {
+            btn.attr('disabled', false);
+        });
+
+        mail.blur(function(){
+          if(mail.val() != ''){
+              if(mail.val().search(pattern) == 0){
+                mail.removeClass('error');
+                btn.attr('disabled', false);
+              }else{
+                mail.addClass('error');
+                btn.attr('disabled', true);
+              }
+            }else{
+              mail.addClass('error');
+              btn.attr('disabled', true);
+            }
+        });
+
+        btn.on('click', function (e) {
+          e.preventDefault();
+          $.ajax({
+            url: '../sub/add_subscription.php',
+            type: 'POST',
+            data: mail.val()
+          })
+          .done(function() {
+            console.log("success");
+            mail.val('');
+            $('.sub-popup').fadeIn('slow', function () {
+                $('.sub-popup').find('button').one('click', function () {
+                    $(this).parent().fadeOut('slow');
+                })
+            })
+          })
+          .fail(function() {
+            console.log("error");
+          })
+        })
+      }
+
       // BARBA
 
       function barbaFunc() {
@@ -1262,6 +1369,8 @@ function ScrollTopFunc(){
           showAttrImgOnClick();
           activeLanguage();
 
+          subSend();
+
           // preloaderFirstStep();
           // preloaderSecondStep();
           // preloaderFunc();
@@ -1311,6 +1420,7 @@ function ScrollTopFunc(){
       preloaderFunc();
 
       activeLanguage();
+      subSend();
 
 
       barbaFunc();

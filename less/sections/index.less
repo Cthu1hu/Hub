@@ -1075,7 +1075,6 @@
 
 // section 5  footer
 .footer__container {
-
 	width: 930px;
 	margin: 0 auto;
 
@@ -1121,6 +1120,25 @@
 		height: 100%;
 	}
 
+}
+
+.sub-popup {
+	display: none;
+	position: fixed;
+	max-width: 600px;
+	background-color: #00b64e;
+	padding: 50px 30px;
+	color: white;
+	font-size: 30px;
+	line-height: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+}
+
+.index__body .sub-popup {
+	position: absolute;
 }
 
 .contacts {
@@ -1169,6 +1187,7 @@
 			outline: none;
 			border: 1px solid @gray;
 			border-right: 0px solid white;
+			background-color: white;
 			border-top-left-radius: 20px;
 			border-bottom-left-radius: 20px;
 			display: inline-block;
@@ -1176,6 +1195,13 @@
 			font-size: 12px;
 			font-family: @G;
 			padding-left: 10px;
+			transition: all .3s ease-out;
+
+			&.error {
+				border: 1px solid red;
+				border-right: 0px solid white;
+				background-color: #e2aaaa;
+			}
 		}
 		&__btn {
 			width: 125px;
